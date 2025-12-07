@@ -53,4 +53,3 @@ This project is deployed using **GitHub Pages**.
 
 1.  **Repository Setup:** All code is pushed to the `main` branch.
 2.  **Pages Configuration:** Deployment is configured to build from the **`main`** branch using the **`/ (root)`** directory.
-3.  **Custom Domain:** The `CNAME` file automatically sets the URL to `chaduna.bar` upon deployment. (Note: DNS A/CNAME records must also be configured with the domain registrar to complete this step.)
