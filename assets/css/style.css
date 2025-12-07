@@ -1,0 +1,295 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body.landing {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ===== LANDING PAGE STYLES ===== */
+body.landing {
+    background: url('/assets/img/background/cafe-chaduna-interior.jpg') center center / cover no-repeat fixed;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+/* Logo */
+.logo {
+    width: 200px;
+    max-width: 80%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Menu Link */
+.menu-link {
+    margin-bottom: 50px;
+}
+
+.menu-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 500;
+    letter-spacing: 8px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.menu-link a:hover {
+    transform: scale(1.1);
+}
+
+/* Icons Container */
+.icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Individual icon containers */
+.socials, .address, .phone {
+    margin: 0;
+}
+
+/* Icon images */
+.socials img, .address img, .phone img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+}
+
+.socials img:hover, .address img:hover, .phone img:hover {
+    transform: scale(1.1);
+}
+
+/* Links */
+.socials a, .address a, .phone a {
+    display: inline-block;
+}
+
+/* Address Text */
+.address-text {
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.address-text p {
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Description */
+.description {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+/* Hours */
+.hours {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+.hours-title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.hours p {
+    margin: 3px 0;
+    font-weight: 300;
+}
+
+/* ===== MENU PAGE STYLES ===== */
+body.menu {
+    background: white;
+    color: black;
+    padding: 20px;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.menu-logo {
+    width: 150px;
+    display: block;
+    margin: 20px auto 40px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+a .menu-logo:hover {
+    opacity: 0.8;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.tab {
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    background: none;
+    color: #666;
+    font-family: 'Playfair Display', Georgia, serif;
+    transition: all 0.3s;
+}
+
+.tab.active {
+    color: black;
+    font-weight: 700;
+    margin-bottom: -2px;
+}
+
+.tab:hover {
+    color: black;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Category Headers */
+h2 {
+    font-size: 28px;
+    margin: 30px 0 20px;
+    color: black;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-family: 'Playfair Display', Georgia, serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.category-price {
+    font-size: 36px;
+    color: black;
+    font-weight: 600;
+}
+
+/* Menu Items */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px 0;
+}
+
+.item-name {
+    font-weight: 500;
+    font-size: 22px;
+    flex: 1;
+}
+
+.item-price {
+    font-weight: 600;
+    color: black;
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+.item-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Menu Notes */
+.menu-note {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.menu-note p {
+    margin-bottom: 8px;
+}
+
+.menu-note strong {
+    color: black;
+}
+
+/* Menu Header */
+.menu-header {
+    background: white;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left a,
+.header-right a {
+    display: inline-block;
+}
+
+.header-left img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-right img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.header-left img:hover,
+.header-right img:hover {
+    transform: scale(1.1);
+}

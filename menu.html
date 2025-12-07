@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaduna Menu</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="menu">
+    <header class="menu-header">
+        <div class="header-left">
+            <a href="index.html">
+                <img src="/assets/img/icons/home-black.svg" alt="Home">
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="https://www.instagram.com/cafechaduna" target="_blank">
+                <img src="/assets/img/icons/instagram-black.svg" alt="Instagram">
+            </a>
+            <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank">
+                <img src="/assets/img/icons/maps-black.svg" alt="Location">
+            </a>
+            <a href="tel:+995557629229">
+                <img src="/assets/img/icons/phone-black.svg" alt="Phone">
+            </a>
+
+        </div>
+    </header>
+
+    <div class="menu-container">
+        <a href="index.html">
+            <img src="/assets/img/logos/chaduna-black.png" alt="Chaduna Logo" class="menu-logo">
+        </a>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('food', event)">Food</button>
+            <button class="tab" onclick="showTab('beverage', event)">Beverages</button>
+        </div>
+
+        <!-- Food Tab -->
+        <div id="food" class="tab-content active">
+            <h2>Breakfast <span class="category-price">25</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Chizhi Bizhi Frittata</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Scrambled Egg</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Syrniki</div>
+                    <div class="item-description">Cottage cheese pancake</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Quesadilla</div>
+                    <div class="item-description">Chicken/veggie</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Add Bacon</div>
+                </div>
+                <div class="item-price">+3</div>
+            </div>
+
+            <h2>Bruschetta <span class="category-price">15</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Carrot, Cream, Pumpkin Seed</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Cherry Tomato, Pesto</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Champignon, Garlic, Cream</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Spinach, Blue Cheese, Almond</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bacon, Apple, Cream Cheese</div>
+                </div>
+            </div>
+
+            <h2>Chaduna Special <span class="category-price">30</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Tomato Salad</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Potato with Bacon</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Veggie Casserole</div>
+                </div>
+            </div>
+
+            <h2>Dessert <span class="category-price">12</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Banana Bread</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Cake</div>
+                </div>
+            </div>
+
+            <div class="menu-note">
+                <p>*For allergen information, please ask your server</p>
+                <p>All prices in GEL, include 18% VAT</p>
+                <p><strong>Tips appreciated</strong></p>
+            </div>
+        </div>
+
+        <!-- Beverage Tab -->
+        <div id="beverage" class="tab-content">
+            <h2>Hot Drinks</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Espresso / Double</div>
+                </div>
+                <div class="item-price">6 / 8</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Americano</div>
+                </div>
+                <div class="item-price">6</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Cappuccino / Flat White</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Latte / Double</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Raf</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Cacao / Hot Choco</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Tea / With Mint, Honey</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Alternative Milk</div>
+                    <div class="item-description">Soy, almond, oat</div>
+                </div>
+                <div class="item-price">+2</div>
+            </div>
+
+            <h2>Cold Drinks</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ice Tea</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ice Latte</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Homemade Lemonade</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Borjomi</div>
+                </div>
+                <div class="item-price">3</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bakuriani</div>
+                </div>
+                <div class="item-price">2</div>
+            </div>
+
+            <h2>Wine / Chacha</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Chacha</div>
+                </div>
+                <div class="item-price">10</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">White Glass</div>
+                </div>
+                <div class="item-price">14</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Amber Glass</div>
+                </div>
+                <div class="item-price">16</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Red Glass</div>
+                </div>
+                <div class="item-price">16</div>
+            </div>
+
+            <div class="menu-note">
+                <p>*For allergen information, please ask your server</p>
+                <p>All prices in GEL, include 18% VAT</p>
+                <p><strong>Tips appreciated</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName, event) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+
+            // Add active class to clicked tab
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

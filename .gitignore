@@ -1,0 +1,12 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE Files
+# Use with caution, but often prevents large amounts of churn
+.vscode/
+
+# Temporary and log files
+*.log
+*.tmp
+*~
