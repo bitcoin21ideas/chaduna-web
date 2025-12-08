@@ -1,4 +1,23 @@
 /* Reset */
+:root {
+    /* Colors */
+    --color-white: white;
+    --color-black: black;
+    --text-muted: #666;
+    --bg-light: #f1f1f1;
+    --border-light: #eee;
+    --border-medium: #ddd;
+    --shadow-soft: rgba(0,0,0,0.2);
+
+    /* Fonts */
+    --font-primary: 'Playfair Display', Georgia, serif;
+    --font-secondary: Georgia, 'Times New Roman', serif;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,13 +30,13 @@ html, body.landing {
 }
 
 body {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: var(--font-primary);
 }
 
 /* ===== LANDING PAGE STYLES ===== */
 body.landing {
     background: url('/assets/img/background/cafe-chaduna-interior.jpg') center center / cover no-repeat fixed;
-    color: white;
+    color: var(--color-white);
     text-align: center;
 }
 
@@ -34,8 +53,7 @@ h1 {
 .logo {
     width: 200px;
     max-width: 80%;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    margin: 20px 0 10px;
 }
 
 /* Menu Link */
@@ -44,14 +62,14 @@ h1 {
 }
 
 .menu-link a {
-    color: white;
+    color: var(--color-white);
     text-decoration: none;
     font-size: 50px;
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: var(--font-secondary);
     font-weight: 500;
     letter-spacing: 8px;
     display: inline-block;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-base);
 }
 
 .menu-link a:hover {
@@ -71,18 +89,17 @@ h1 {
     margin: 0;
 }
 
-/* Icon images */
+/* Shared Icon Styles (Landing) */
 .socials img, .address img, .phone img {
     width: 40px;
     height: 40px;
-    transition: transform 0.2s ease;
+    transition: transform var(--transition-fast);
 }
 
 .socials img:hover, .address img:hover, .phone img:hover {
     transform: scale(1.1);
 }
 
-/* Links */
 .socials a, .address a, .phone a {
     display: inline-block;
 }
@@ -91,7 +108,7 @@ h1 {
 .address-text {
     margin-top: 10px;
     font-size: 20px;
-    color: white;
+    color: var(--color-white);
 }
 
 .address-text address {
@@ -102,8 +119,7 @@ h1 {
 
 /* Description */
 .description {
-    margin-top: 0px;
-    margin-bottom: 40px;
+    margin: 0 0 40px;
     font-size: 20px;
     line-height: 1.4;
     letter-spacing: 0.5px;
@@ -111,8 +127,7 @@ h1 {
 
 /* Hours */
 .hours {
-    margin-top: 50px;
-    margin-bottom: 40px;
+    margin: 50px 0 40px;
     font-size: 20px;
     line-height: 1.4;
     letter-spacing: 0.5px;
@@ -133,10 +148,10 @@ h1 {
 
 /* ===== MENU PAGE STYLES ===== */
 body.menu {
-    background: white;
-    color: black;
+    background: var(--color-white);
+    color: var(--color-black);
     padding: 20px;
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: var(--font-primary);
 }
 
 .menu-container {
@@ -149,7 +164,7 @@ body.menu {
     display: block;
     margin: 20px auto 40px;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: opacity var(--transition-base);
 }
 
 a .menu-logo:hover {
@@ -171,19 +186,19 @@ a .menu-logo:hover {
     font-weight: 400;
     border: none;
     background: none;
-    color: #666;
-    font-family: 'Playfair Display', Georgia, serif;
-    transition: all 0.3s;
+    color: var(--text-muted);
+    font-family: var(--font-primary);
+    transition: all var(--transition-base);
 }
 
 .tab.active {
-    color: black;
+    color: var(--color-black);
     font-weight: 700;
     margin-bottom: -2px;
 }
 
 .tab:hover {
-    color: black;
+    color: var(--color-black);
 }
 
 /* Tab Content */
@@ -199,11 +214,11 @@ a .menu-logo:hover {
 h2 {
     font-size: 28px;
     margin: 30px 0 20px;
-    color: black;
-    border-bottom: 1px solid #eee;
+    color: var(--color-black);
+    border-bottom: 1px solid var(--border-light);
     padding-bottom: 10px;
     font-weight: 600;
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: var(--font-primary);
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -211,7 +226,7 @@ h2 {
 
 .category-price {
     font-size: 36px;
-    color: black;
+    color: var(--color-black);
     font-weight: 600;
 }
 
@@ -231,14 +246,14 @@ h2 {
 
 .item-price {
     font-weight: 600;
-    color: black;
+    color: var(--color-black);
     margin-left: 20px;
     font-size: 22px;
 }
 
 .item-description {
     font-size: 14px;
-    color: #666;
+    color: var(--text-muted);
     margin-top: 5px;
 }
 
@@ -246,9 +261,9 @@ h2 {
 .menu-note {
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--border-medium);
     font-size: 14px;
-    color: #666;
+    color: var(--text-muted);
     text-align: center;
 }
 
@@ -257,12 +272,12 @@ h2 {
 }
 
 .menu-note strong {
-    color: black;
+    color: var(--color-black);
 }
 
 /* Menu Header */
 .menu-header {
-    background: white;
+    background: var(--color-white);
     padding: 10px 10px;
     display: flex;
     justify-content: space-between;
@@ -280,7 +295,7 @@ h2 {
 .header-left img {
     width: 28px;
     height: 28px;
-    transition: transform 0.2s ease;
+    transition: transform var(--transition-fast);
 }
 
 .header-right {
@@ -292,7 +307,7 @@ h2 {
 .header-right img {
     width: 24px;
     height: 24px;
-    transition: transform 0.2s ease;
+    transition: transform var(--transition-fast);
 }
 
 .header-left img:hover,
@@ -319,27 +334,27 @@ h2 {
     display: none;
     position: absolute;
     right: 0;
-    background-color: #fff;
+    background-color: var(--color-white);
     min-width: 60px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px var(--shadow-soft);
     z-index: 101;
     border-radius: 4px;
     overflow: hidden;
 }
 
 .lang-dropdown-content a {
-    color: black;
+    color: var(--color-black);
     padding: 10px 15px;
     text-decoration: none;
     display: block;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-primary);
     font-size: 14px;
     text-align: center;
     transition: background-color 0.2s;
 }
 
 .lang-dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: var(--bg-light);
 }
 
 .lang-dropdown.show .lang-dropdown-content {
