@@ -20,7 +20,9 @@ The project uses a standard, organized static file structure to separate content
 ```text
 /
 ├── index.html            // The main landing page/homepage.
-├── menu.html             // The interactive food and beverage menu page.
+├── menus/
+│   ├── menu_en.html      // The interactive food and beverage menu page (English).
+│   └── ...               // Other language menus.
 ├── CNAME                 // GitHub Pages file for custom domain setup (chaduna.bar).
 ├── robots.txt            // Instructions for web crawlers.
 ├── sitemap.xml           // XML sitemap listing all site URLs for search engines.
@@ -43,7 +45,7 @@ The project uses a standard, organized static file structure to separate content
   * **Two-Page Design:** Simple, highly focused structure with a main entry page and a separate menu page.
   * **SEO Ready:** Includes `robots.txt`, `sitemap.xml`, and **Schema.org (JSON-LD)** markup for the `Restaurant` entity to improve search visibility.
   * **Custom Domain:** Configured for the domain `chaduna.bar` using the **`CNAME`** file.
-  * **Responsive Menu:** The menu page (`menu.html`) uses basic JavaScript for tab functionality (`Food` / `Beverages`) to organize items without requiring a full page reload.
+  * **Responsive Menu:** The menu page (`menus/menu_en.html`) uses basic JavaScript for tab functionality (`Food` / `Beverages`) to organize items without requiring a full page reload.
 
 -----
 

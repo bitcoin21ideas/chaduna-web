@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaduna â€” ÐœÐµÐ½ÑŽ</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
+</head>
+<body class="menu">
+    <header class="menu-header">
+        <div class="header-left">
+            <a href="/index.html">
+                <img src="/assets/img/icons/home-black.svg" alt="Home">
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="https://www.instagram.com/cafechaduna" target="_blank">
+                <img src="/assets/img/icons/instagram-black.svg" alt="Instagram">
+            </a>
+            <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank">
+                <img src="/assets/img/icons/maps-black.svg" alt="Location">
+            </a>
+            <a href="tel:+995557629229">
+                <img src="/assets/img/icons/phone-black.svg" alt="Phone">
+            </a>
+            <div class="lang-dropdown">
+                <button onclick="toggleLanguage()" class="lang-dropbtn" aria-label="Select Language">
+                    <img src="/assets/img/icons/language.svg" alt="Language">
+                </button>
+                <div id="langDropdown" class="lang-dropdown-content">
+                    <a href="menu_en.html">EN</a>
+                    <a href="menu_ka.html">KA</a>
+                    <a href="menu_ru.html">RU</a>
+                    <a href="menu_de.html">DE</a>
+                    <a href="menu_fr.html">FR</a>
+                    <a href="menu_it.html">IT</a>
+                    <a href="menu_es.html">ES</a>
+                    <a href="menu_tr.html">TR</a>
+                    <a href="menu_ar.html">AR</a>
+                    <a href="menu_zh.html">ZH</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-container">
+        <a href="/index.html">
+            <img src="/assets/img/logos/chaduna-black.png" alt="Chaduna Logo" class="menu-logo">
+        </a>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('food', event)">Ð•Ð´Ð°</button>
+            <button class="tab" onclick="showTab('beverage', event)">ÐÐ°Ð¿Ð¸Ñ‚ÐºÐ¸</button>
+        </div>
+
+        <!-- Food Tab -->
+        <div id="food" class="tab-content active">
+            <h2>Ð—Ð°Ð²Ñ‚Ñ€Ð°Ðº <span class="category-price">25</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Chizhi Bizhi</div>
+                    <div class="item-description">Ð¯Ð¹Ñ†Ð°, Ð·Ð°Ð¿ÐµÑ‡Ñ‘Ð½Ð½Ñ‹Ðµ Ð² Ð¿Ð¸ÐºÐ°Ð½Ñ‚Ð½Ð¾Ð¼ ÑÐ¾ÑƒÑÐµ Ð¸Ð· Ð¿Ð¾Ð¼Ð¸Ð´Ð¾Ñ€Ð¾Ð², Ð»ÑƒÐºÐ° Ð¸ ÑÐ¿ÐµÑ†Ð¸Ð¹, Ñ ÑÑ‹Ñ€Ð¾Ð¼ Ð¸ Ð·ÐµÐ»ÐµÐ½ÑŒÑŽ</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð¤Ñ€Ð¸Ñ‚Ñ‚Ð°Ñ‚Ð°</div>
+                    <div class="item-description">Ð˜Ñ‚Ð°Ð»ÑŒÑÐ½ÑÐºÐ¸Ð¹ Ð¾Ð¼Ð»ÐµÑ‚ Ñ Ð¾Ð±Ð¶Ð°Ñ€ÐµÐ½Ð½Ñ‹Ð¼Ð¸ ÑˆÐ°Ð¼Ð¿Ð¸Ð½ÑŒÐ¾Ð½Ð°Ð¼Ð¸ Ð¸ Ð¿ÐµÑ€Ñ†ÐµÐ¼, Ð·Ð°Ð¿ÐµÑ‡Ñ‘Ð½Ð½Ñ‹Ð¹ Ð² ÐºÐµÑ†Ð¸ ÑÐ¾ ÑÐ»Ð¸Ð²ÐºÐ°Ð¼Ð¸ Ð¸ ÑÑ‹Ñ€Ð¾Ð¼</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð¯Ð¸Ñ‡Ð½Ð¸Ñ†Ð°-Ð±Ð¾Ð»Ñ‚ÑƒÐ½ÑŒÑ</div>
+                    <div class="item-description">Ð¯Ð¸Ñ‡Ð½Ð¸Ñ†Ð°-Ð±Ð¾Ð»Ñ‚ÑƒÐ½ÑŒÑ Ñ ÑÑ‹Ñ€Ð¾Ð¼, Ñ…Ñ€ÑƒÑÑ‚ÑÑ‰Ð¸Ð¼ Ð±ÐµÐºÐ¾Ð½Ð¾Ð¼ Ð¸ Ð¿Ð¾Ð¼Ð¸Ð´Ð¾Ñ€Ð°Ð¼Ð¸ Ñ‡ÐµÑ€Ñ€Ð¸</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð¡Ñ‹Ñ€Ð½Ð¸ÐºÐ¸</div>
+                    <div class="item-description">ÐŸÐ¾Ð´Ð°ÑŽÑ‚ÑÑ Ñ ÑÐµÐ·Ð¾Ð½Ð½Ñ‹Ð¼Ð¸ Ñ„Ñ€ÑƒÐºÑ‚Ð°Ð¼Ð¸ Ð¸ ÑÐ¼ÐµÑ‚Ð°Ð½Ð¾Ð¹</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ÐšÐµÑÐ°Ð´Ð¸Ð»ÑŒÑ</div>
+                    <div class="item-description">Ð¢Ð¾Ñ€Ñ‚Ð¸Ð»ÑŒÑ Ñ Ñ€Ð°ÑÐ¿Ð»Ð°Ð²Ð»ÐµÐ½Ð½Ñ‹Ð¼ ÑÑ‹Ñ€Ð¾Ð¼ Ð¸ ÐºÑƒÑ€Ð¸Ñ†ÐµÐ¹ Ð¸Ð»Ð¸ Ð¾Ð²Ð¾Ñ‰Ð½Ð¾Ð¹ Ð½Ð°Ñ‡Ð¸Ð½ÐºÐ¾Ð¹</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð±ÐµÐºÐ¾Ð½</div>
+                </div>
+                <div class="item-price">+3</div>
+            </div>
+
+            <h2>Ð‘Ñ€ÑƒÑÐºÐµÑ‚Ñ‚Ð° <span class="category-price">15</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ÐœÐ¾Ñ€ÐºÐ¾Ð²ÑŒ, ÑÐ»Ð¸Ð²ÐºÐ¸, Ñ‚Ñ‹ÐºÐ²ÐµÐ½Ð½Ñ‹Ðµ ÑÐµÐ¼ÐµÑ‡ÐºÐ¸</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ÐŸÐ¾Ð¼Ð¸Ð´Ð¾Ñ€ Ñ‡ÐµÑ€Ñ€Ð¸, Ð¿ÐµÑÑ‚Ð¾</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð¨Ð°Ð¼Ð¿Ð¸Ð½ÑŒÐ¾Ð½, Ñ‡ÐµÑÐ½Ð¾Ðº, ÑÐ»Ð¸Ð²ÐºÐ¸</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð¨Ð¿Ð¸Ð½Ð°Ñ‚, Ð³Ð¾Ð»ÑƒÐ±Ð¾Ð¹ ÑÑ‹Ñ€, Ð¼Ð¸Ð½Ð´Ð°Ð»ÑŒ</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð‘ÐµÐºÐ¾Ð½, ÑÐ±Ð»Ð¾ÐºÐ¾, ÐºÑ€ÐµÐ¼-ÑÑ‹Ñ€</div>
+                </div>
+            </div>
+
+            <h2>Chaduna Special <span class="category-price">30</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">CÐµÐ·Ð¾Ð½Ð½Ñ‹Ð¹ ÑÐ°Ð»Ð°Ñ‚</div>
+                    <div class="item-description">Ð¡Ð°Ð»Ð°Ñ‚ Ð¸Ð· Ð¼Ð¸ÐºÑÐ° Ñ‚Ð¾Ð¼Ð°Ñ‚Ð¾Ð² Ñ Ð¼ÑÑ‚Ð¾Ð¹, ÑÐµÐ·Ð¾Ð½Ð½Ñ‹Ð¼Ð¸ ÑÐ³Ð¾Ð´Ð°Ð¼Ð¸/Ñ„Ñ€ÑƒÐºÑ‚Ð°Ð¼Ð¸, ÑÐµÐ¼ÐµÐ½Ð°Ð¼Ð¸ Ð¸ ÑÐ¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ð¾Ð¹ Ð·Ð°Ð¿Ñ€Ð°Ð²ÐºÐ¾Ð¹</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ÐšÐ°Ñ€Ñ‚Ð¾Ñ„ÐµÐ»ÑŒ Ñ Ð±ÐµÐºÐ¾Ð½Ð¾Ð¼</div>
+                    <div class="item-description">Ð¢ÑƒÑˆÑ‘Ð½Ñ‹Ð¹ ÐºÐ°Ñ€Ñ‚Ð¾Ñ„ÐµÐ»ÑŒ Ñ Ð±ÐµÐºÐ¾Ð½Ð¾Ð¼ Ð¸ Ð»ÑƒÐºÐ¾Ð¼, Ð¿Ð¾Ð´ Ð·Ð°Ð¿ÐµÑ‡Ñ‘Ð½Ð½Ñ‹Ð¼ ÑÑ‹Ñ€Ð¾Ð¼ Ð¸ Ñ‚Ñ€Ð°Ð²Ð°Ð¼Ð¸</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ÐžÐ²Ð¾Ñ‰Ð½Ð°Ñ Ð·Ð°Ð¿ÐµÐºÐ°Ð½ÐºÐ°</div>
+                    <div class="item-description">Ð—Ð°Ð¿ÐµÐºÐ°Ð½ÐºÐ° Ð¸Ð· ÐºÐ°Ñ€Ñ‚Ð¾Ñ„ÐµÐ»Ñ, Ð¿ÐµÑ€Ñ†Ð°, Ñ†ÑƒÐºÐ¸Ð½Ð¸ Ð¸ Ð¼Ð¾Ñ€ÐºÐ¾Ð²Ð¸ Ð² ÑÐ»Ð¸Ð²Ð¾Ñ‡Ð½Ð¾Ð¼ ÑÐ¾ÑƒÑÐµ Ñ ÑÑ‹Ñ€Ð¾Ð¼ Ð¸ Ð¼ÑÑ‚Ð¾Ð¹</div>
+                </div>
+            </div>
+
+            <h2>Ð”ÐµÑÐµÑ€Ñ‚ <span class="category-price">12</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð‘Ð°Ð½Ð°Ð½Ð¾Ð²Ñ‹Ð¹ Ñ…Ð»ÐµÐ±</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ÐŸÐ¸Ñ€Ð¾Ð³</div>
+                </div>
+            </div>
+
+            <div class="menu-note">
+                <p>*ÐŸÐ¾ Ð²Ð¾Ð¿Ñ€Ð¾ÑÐ°Ð¼ Ð°Ð»Ð»ÐµÑ€Ð³ÐµÐ½Ð¾Ð² â€” ÑÐ¿Ñ€Ð°ÑˆÐ¸Ð²Ð°Ð¹Ñ‚Ðµ Ð¾Ñ„Ð¸Ñ†Ð¸Ð°Ð½Ñ‚Ð°</p>
+                <p>Ð’ÑÐµ Ñ†ÐµÐ½Ñ‹ Ð² GEL, Ð²ÐºÐ»ÑŽÑ‡Ð°ÑŽÑ‚ 18% ÐÐ”Ð¡</p>
+                <p><strong>Ð§Ð°ÐµÐ²Ñ‹Ðµ Ð¿Ñ€Ð¸Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‚ÑÑ</strong></p>
+            </div>
+        </div>
+
+        <!-- Beverage Tab -->
+        <div id="beverage" class="tab-content">
+            <h2>Ð“Ð¾Ñ€ÑÑ‡Ð¸Ðµ Ð½Ð°Ð¿Ð¸Ñ‚ÐºÐ¸</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð­ÑÐ¿Ñ€ÐµÑÑÐ¾ / Ð”Ð²Ð¾Ð¹Ð½Ð¾Ð¹</div>
+                </div>
+                <div class="item-price">6 / 8</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ÐÐ¼ÐµÑ€Ð¸ÐºÐ°Ð½Ð¾</div>
+                </div>
+                <div class="item-price">6</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ÐšÐ°Ð¿ÑƒÑ‡Ð¸Ð½Ð¾ / Ð¤Ð»ÑÑ‚ Ð£Ð°Ð¹Ñ‚</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð›Ð°Ñ‚Ñ‚Ðµ / Ð”Ð²Ð¾Ð¹Ð½Ð¾Ð¹</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð Ð°Ñ„</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ÐšÐ°ÐºÐ°Ð¾ / Ð“Ð¾Ñ€ÑÑ‡Ð¸Ð¹ ÑˆÐ¾ÐºÐ¾Ð»Ð°Ð´</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð§Ð°Ð¹ / Ð¡ Ð¼ÑÑ‚Ð¾Ð¹, Ñ Ð¼Ñ‘Ð´Ð¾Ð¼</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ÐÐ»ÑŒÑ‚ÐµÑ€Ð½Ð°Ñ‚Ð¸Ð²Ð½Ð¾Ðµ Ð¼Ð¾Ð»Ð¾ÐºÐ¾</div>
+                    <div class="item-description">Ð¡Ð¾ÐµÐ²Ð¾Ðµ, Ð¼Ð¸Ð½Ð´Ð°Ð»ÑŒÐ½Ð¾Ðµ, Ð¾Ð²ÑÑÐ½Ð¾Ðµ</div>
+                </div>
+                <div class="item-price">+2</div>
+            </div>
+
+            <h2>Ð¥Ð¾Ð»Ð¾Ð´Ð½Ñ‹Ðµ Ð½Ð°Ð¿Ð¸Ñ‚ÐºÐ¸</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ÐÐ¹Ñ-Ñ‚Ð¸</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ÐÐ¹Ñ-Ð»Ð°Ñ‚Ñ‚Ðµ</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð”Ð¾Ð¼Ð°ÑˆÐ½Ð¸Ð¹ Ð»Ð¸Ð¼Ð¾Ð½Ð°Ð´</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð‘Ð¾Ñ€Ð¶Ð¾Ð¼Ð¸</div>
+                </div>
+                <div class="item-price">3</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð‘Ð°ÐºÑƒÑ€Ð¸Ð°Ð½Ð¸</div>
+                </div>
+                <div class="item-price">2</div>
+            </div>
+
+            <h2>Ð’Ð¸Ð½Ð¾ / Ð§Ð°Ñ‡Ð°</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð§Ð°Ñ‡Ð°</div>
+                </div>
+                <div class="item-price">10</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð‘ÐµÐ»Ð¾Ðµ (Ð±Ð¾ÐºÐ°Ð»)</div>
+                </div>
+                <div class="item-price">14</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ð¯Ð½Ñ‚Ð°Ñ€Ð½Ð¾Ðµ (Ð±Ð¾ÐºÐ°Ð»)</div>
+                </div>
+                <div class="item-price">16</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ÐšÑ€Ð°ÑÐ½Ð¾Ðµ (Ð±Ð¾ÐºÐ°Ð»)</div>
+                </div>
+                <div class="item-price">16</div>
+            </div>
+
+            <div class="menu-note">
+                <p>*ÐŸÐ¾ Ð²Ð¾Ð¿Ñ€Ð¾ÑÐ°Ð¼ Ð°Ð»Ð»ÐµÑ€Ð³ÐµÐ½Ð¾Ð² Ð¸ Ð¿Ñ€ÐµÐ´Ð¿Ð¾Ñ‡Ñ‚ÐµÐ½Ð¸Ð¹ Ð¾Ð±Ñ€Ð°Ñ‰Ð°Ð¹Ñ‚ÐµÑÑŒ Ðº Ð¾Ñ„Ð¸Ñ†Ð¸Ð°Ð½Ñ‚Ñƒ</p>
+                <p>Ð’ÑÐµ Ñ†ÐµÐ½Ñ‹ Ð² GEL, Ð²ÐºÐ»ÑŽÑ‡Ð°ÑŽÑ‚ 18% ÐÐ”Ð¡</p>
+                <p><strong>Ð§Ð°ÐµÐ²Ñ‹Ðµ Ð¿Ñ€Ð¸Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‚ÑÑ</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName, event) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    
+        function toggleLanguage() {
+            document.querySelector('.lang-dropdown').classList.toggle('show');
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.closest('.lang-dropbtn')) {
+                var dropdowns = document.getElementsByClassName("lang-dropdown");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

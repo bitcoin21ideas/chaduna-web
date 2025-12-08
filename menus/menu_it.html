@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaduna Menu</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
+</head>
+<body class="menu">
+    <header class="menu-header">
+        <div class="header-left">
+            <a href="/index.html">
+                <img src="/assets/img/icons/home-black.svg" alt="Home">
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="https://www.instagram.com/cafechaduna" target="_blank">
+                <img src="/assets/img/icons/instagram-black.svg" alt="Instagram">
+            </a>
+            <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank">
+                <img src="/assets/img/icons/maps-black.svg" alt="Posizione">
+            </a>
+            <a href="tel:+995557629229">
+                <img src="/assets/img/icons/phone-black.svg" alt="Telefono">
+            </a>
+            <div class="lang-dropdown">
+                <button onclick="toggleLanguage()" class="lang-dropbtn" aria-label="Select Language">
+                    <img src="/assets/img/icons/language.svg" alt="Language">
+                </button>
+                <div id="langDropdown" class="lang-dropdown-content">
+                    <a href="menu_en.html">EN</a>
+                    <a href="menu_ka.html">KA</a>
+                    <a href="menu_ru.html">RU</a>
+                    <a href="menu_de.html">DE</a>
+                    <a href="menu_fr.html">FR</a>
+                    <a href="menu_it.html">IT</a>
+                    <a href="menu_es.html">ES</a>
+                    <a href="menu_tr.html">TR</a>
+                    <a href="menu_ar.html">AR</a>
+                    <a href="menu_zh.html">ZH</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-container">
+        <a href="/index.html">
+            <img src="/assets/img/logos/chaduna-black.png" alt="Chaduna Logo" class="menu-logo">
+        </a>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('food', event)">Cibo</button>
+            <button class="tab" onclick="showTab('beverage', event)">Bevande</button>
+        </div>
+
+        <!-- Food Tab -->
+        <div id="food" class="tab-content active">
+            <h2>Colazione <span class="category-price">25</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Chizhi Bizhi</div>
+                    <div class="item-description">Uova cotte al forno in una salsa saporita di pomodori, cipolle e spezie, servite con formaggio ed erbe aromatiche</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Frittata</div>
+                    <div class="item-description">Frittata aperta in stile italiano con funghi saltati e peperoni, finita in un ketsi con panna, formaggio ed erbe</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Uova strapazzate</div>
+                    <div class="item-description">Uova strapazzate ricoperte con uno strato di formaggio, bacon croccante e pomodorini tagliati in quarti</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Syrniki</div>
+                    <div class="item-description">Pancake di ricotta serviti con frutta di stagione</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Quesadilla</div>
+                    <div class="item-description">Tortilla piegata in stile taco, farcita con formaggio fuso e un mix saporito di pollo o verdure</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Aggiungi bacon</div>
+                </div>
+                <div class="item-price">+3</div>
+            </div>
+
+            <h2>Bruschetta <span class="category-price">15</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Carota, panna, semi di zucca</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Pomodorini, pesto</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Funghi, aglio, panna</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Spinaci, formaggio blu, mandorle</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bacon, mela, formaggio cremoso</div>
+                </div>
+            </div>
+
+            <h2>Specialità Chaduna <span class="category-price">30</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Insalata di pomodori</div>
+                    <div class="item-description">Insalata di pomodori misti freschi con menta, frutta/bacche di stagione, semi e condimento speciale</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Patate con bacon</div>
+                    <div class="item-description">Patate a fette stufate, bacon e cipolla, finite con formaggio fuso ed erbe aromatiche</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Sformato di verdure</div>
+                    <div class="item-description">Uno sformato saporito di patate, peperoni, zucchine e carote stufate nella panna, finito in un ketsi con formaggio e menta</div>
+                </div>
+            </div>
+
+            <h2>Dessert <span class="category-price">12</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Pane alla banana</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Torta</div>
+                </div>
+            </div>
+
+            <div class="menu-note">
+                <p>*Per informazioni sugli allergeni, si prega di chiedere al cameriere</p>
+                <p>Tutti i prezzi in GEL, includono il 18% di IVA</p>
+                <p><strong>Le mance sono apprezzate</strong></p>
+            </div>
+        </div>
+
+        <!-- Beverage Tab -->
+        <div id="beverage" class="tab-content">
+            <h2>Bevande calde</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Espresso / Doppio</div>
+                </div>
+                <div class="item-price">6 / 8</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Americano</div>
+                </div>
+                <div class="item-price">6</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Cappuccino / Flat White</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Latte / Doppio</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Raf</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Cacao / Cioccolata calda</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Tè / Con menta, miele</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Latte alternativo</div>
+                    <div class="item-description">Soia, mandorla, avena</div>
+                </div>
+                <div class="item-price">+2</div>
+            </div>
+
+            <h2>Bevande fredde</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Tè freddo</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Latte freddo</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Limonata fatta in casa</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Borjomi</div>
+                </div>
+                <div class="item-price">3</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bakuriani</div>
+                </div>
+                <div class="item-price">2</div>
+            </div>
+
+            <h2>Vino / Chacha</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Chacha</div>
+                </div>
+                <div class="item-price">10</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bicchiere di bianco</div>
+                </div>
+                <div class="item-price">14</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bicchiere ambrato</div>
+                </div>
+                <div class="item-price">16</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bicchiere di rosso</div>
+                </div>
+                <div class="item-price">16</div>
+            </div>
+
+            <div class="menu-note">
+                <p>*Per informazioni sugli allergeni e preferenze alimentari, si prega di confermare con il cameriere</p>
+                <p>Tutti i prezzi in GEL, includono il 18% di IVA</p>
+                <p><strong>Le mance sono apprezzate</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName, event) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    
+        function toggleLanguage() {
+            document.querySelector('.lang-dropdown').classList.toggle('show');
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.closest('.lang-dropbtn')) {
+                var dropdowns = document.getElementsByClassName("lang-dropdown");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

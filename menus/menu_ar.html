@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaduna - القائمة</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
+</head>
+<body class="menu">
+    <header class="menu-header" dir="ltr">
+        <div class="header-left">
+            <a href="/index.html">
+                <img src="/assets/img/icons/home-black.svg" alt="الرئيسية">
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="https://www.instagram.com/cafechaduna" target="_blank">
+                <img src="/assets/img/icons/instagram-black.svg" alt="إنستغرام">
+            </a>
+            <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank">
+                <img src="/assets/img/icons/maps-black.svg" alt="الموقع">
+            </a>
+            <a href="tel:+995557629229">
+                <img src="/assets/img/icons/phone-black.svg" alt="الهاتف">
+            </a>
+            <div class="lang-dropdown">
+                <button onclick="toggleLanguage()" class="lang-dropbtn" aria-label="Select Language">
+                    <img src="/assets/img/icons/language.svg" alt="Language">
+                </button>
+                <div id="langDropdown" class="lang-dropdown-content">
+                    <a href="menu_en.html">EN</a>
+                    <a href="menu_ka.html">KA</a>
+                    <a href="menu_ru.html">RU</a>
+                    <a href="menu_de.html">DE</a>
+                    <a href="menu_fr.html">FR</a>
+                    <a href="menu_it.html">IT</a>
+                    <a href="menu_es.html">ES</a>
+                    <a href="menu_tr.html">TR</a>
+                    <a href="menu_ar.html">AR</a>
+                    <a href="menu_zh.html">ZH</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-container">
+        <a href="/index.html">
+            <img src="/assets/img/logos/chaduna-black.png" alt="Chaduna Logo" class="menu-logo">
+        </a>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('food', event)">الطعام</button>
+            <button class="tab" onclick="showTab('beverage', event)">المشروبات</button>
+        </div>
+
+        <!-- Food Tab -->
+        <div id="food" class="tab-content active">
+            <h2>الإفطار <span class="category-price">25</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Chizhi Bizhi</div>
+                    <div class="item-description">بيض مخبوز في صلصة لذيذة من الطماطم والبصل والتوابل، يقدم مع الجبن والأعشاب</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">فريتاتا</div>
+                    <div class="item-description">عجة إيطالية مفتوحة مع الفطر والفلفل الحلو المقلي، تنتهي في كيتسي مع الكريمة والجبن والأعشاب</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">بيض مخفوق</div>
+                    <div class="item-description">بيض مخفوق مغطى بطبقة من الجبن، لحم الخنزير المقدد المقرمش، وطماطم كرزية مقطعة إلى أرباع</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">سيرنيكي</div>
+                    <div class="item-description">فطائر الجبن القريش تقدم مع الفواكه الموسمية</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">كاساديا</div>
+                    <div class="item-description">تورتيلا مطوية بأسلوب التاكو، محشوة بالجبن المذاب ومزيج الدجاج أو الخضار اللذيذ</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">إضافة لحم الخنزير المقدد</div>
+                </div>
+                <div class="item-price">+3</div>
+            </div>
+
+            <h2>بروشيتا <span class="category-price">15</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">جزر، كريمة، بذور اليقطين</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">طماطم كرزية، بيستو</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">فطر، ثوم، كريمة</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">سبانخ، جبنة زرقاء، لوز</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">لحم الخنزير المقدد، تفاح، جبنة كريمية</div>
+                </div>
+            </div>
+
+            <h2>Chaduna خاص <span class="category-price">30</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">سلطة الطماطم</div>
+                    <div class="item-description">سلطة طماطم طازجة مشكلة مع النعناع، والفواكه/التوت الموسمي، والبذور، وصلصة خاصة</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">بطاطس مع لحم الخنزير المقدد</div>
+                    <div class="item-description">بطاطس مطهوة مقطعة، لحم الخنزير المقدد والبصل، تنتهي بالجبن المذاب والأعشاب</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">طاجن الخضار</div>
+                    <div class="item-description">طاجن لذيذ من البطاطس والفلفل الحلو والكوسا والجزر المطهو في الكريمة، ينتهي في كيتسي مع الجبن والنعناع</div>
+                </div>
+            </div>
+
+            <h2>الحلوى <span class="category-price">12</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">خبز الموز</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">كعكة</div>
+                </div>
+            </div>
+
+            <div class="menu-note">
+                <p>*للحصول على معلومات حول مسببات الحساسية، يرجى سؤال النادل</p>
+                <p>جميع الأسعار بالجيل، تشمل 18٪ ضريبة القيمة المضافة</p>
+                <p><strong>البقشيش موضع تقدير</strong></p>
+            </div>
+        </div>
+
+        <!-- Beverage Tab -->
+        <div id="beverage" class="tab-content">
+            <h2>المشروبات الساخنة</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">إسبريسو / مزدوج</div>
+                </div>
+                <div class="item-price">6 / 8</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">أمريكانو</div>
+                </div>
+                <div class="item-price">6</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">كابتشينو / فلات وايت</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">لاتيه / مزدوج</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">راف</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">كاكاو / شوكولاتة ساخنة</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">شاي / مع النعناع، العسل</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">حليب بديل</div>
+                    <div class="item-description">صويا، لوز، شوفان</div>
+                </div>
+                <div class="item-price">+2</div>
+            </div>
+
+            <h2>المشروبات الباردة</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">شاي مثلج</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">لاتيه مثلج</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">ليمونادة منزلية</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">بورجومي</div>
+                </div>
+                <div class="item-price">3</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">باكورياني</div>
+                </div>
+                <div class="item-price">2</div>
+            </div>
+
+            <h2>النبيذ / تشاتشا</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">تشاتشا</div>
+                </div>
+                <div class="item-price">10</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">نبيذ أبيض (كأس)</div>
+                </div>
+                <div class="item-price">14</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">نبيذ كهرماني (كأس)</div>
+                </div>
+                <div class="item-price">16</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">نبيذ أحمر (كأس)</div>
+                </div>
+                <div class="item-price">16</div>
+            </div>
+
+            <div class="menu-note">
+                <p>*للحصول على معلومات حول مسببات الحساسية والتفضيلات الغذائية، يرجى التأكيد مع النادل</p>
+                <p>جميع الأسعار بالجيل، تشمل 18٪ ضريبة القيمة المضافة</p>
+                <p><strong>البقشيش موضع تقدير</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName, event) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    
+        function toggleLanguage() {
+            document.querySelector('.lang-dropdown').classList.toggle('show');
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.closest('.lang-dropbtn')) {
+                var dropdowns = document.getElementsByClassName("lang-dropdown");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

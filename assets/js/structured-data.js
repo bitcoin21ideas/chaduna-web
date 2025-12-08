@@ -4,7 +4,7 @@ const structuredData = {
   "name": "Chaduna",
   "alternateName": "Cafe Chaduna",
   "description": "Cozy cafe and wine bar serving breakfast, brunch, lunch and dinner. Famous for syrniki, bruschetta, shakshuka, omelette, cottage cheese pancakes, quesadilla, frittata and more.",
-  "image": "https://chaduna.bar/asseys/img/logos/chaduna-white.png",
+  "image": "https://chaduna.bar/assets/img/logos/chaduna-white.png",
   "url": "https://chaduna.bar",
   "@id": "https://chaduna.bar",
   "telephone": "+995557629229",
@@ -50,7 +50,7 @@ const structuredData = {
     "Breakfast",
     "Brunch"
   ],
-  "menu": "https://chaduna.bar/menu.html",
+  "menu": "https://chaduna.bar/menus/menu_en.html",
   "acceptsReservations": "True",
   "hasMenu": {
     "@type": "Menu",

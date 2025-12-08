@@ -293,3 +293,95 @@ h2 {
 .header-right img:hover {
     transform: scale(1.1);
 }
+
+/* Language Dropdown */
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.lang-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 101;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.lang-dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.lang-dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.lang-dropdown.show .lang-dropdown-content {
+    display: block;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .menu-link a {
+        font-size: 36px;
+        letter-spacing: 5px;
+    }
+
+    .description, .hours, .address-text {
+        font-size: 16px;
+    }
+
+    .hours-title {
+        font-size: 16px;
+    }
+    
+    /* Menu Page Mobile */
+    .menu-logo {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .category-price {
+        font-size: 26px;
+    }
+
+    .item-name, .item-price {
+        font-size: 18px;
+    }
+    
+    .menu-item {
+        align-items: flex-start;
+    }
+}
