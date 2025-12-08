@@ -18,6 +18,28 @@
     --transition-base: 0.3s ease;
 }
 
+/* Dark Mode Styles */
+body.dark-mode {
+    --color-white: black;
+    --color-black: white;
+    --text-muted: #aaa;
+    --bg-light: #222;
+    --border-light: #333;
+    --border-medium: #444;
+    --shadow-soft: rgba(255,255,255,0.1);
+}
+
+body.dark-mode .menu-header {
+    background: var(--color-white);
+    border-bottom: 1px solid var(--border-light);
+}
+
+body.dark-mode .header-left img,
+body.dark-mode .header-right img:not(#theme-icon),
+body.dark-mode .lang-dropbtn img:not(#theme-icon) {
+    filter: invert(1);
+}
+
 * {
     margin: 0;
     padding: 0;

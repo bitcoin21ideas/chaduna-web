@@ -27,6 +27,11 @@
             <a href="tel:+995557629229">
                 <img src="/assets/img/icons/phone-black.svg" alt="Telefon">
             </a>
+
+            <button onclick="toggleTheme()" class="lang-dropbtn" aria-label="Toggle Theme" style="cursor: pointer; border: none; background: none;">
+                <img id="theme-icon" src="/assets/img/icons/night.svg" alt="Theme" style="width: 24px; height: 24px;">
+            </button>
+            
             <div class="lang-dropdown">
                 <button onclick="toggleLanguage()" class="lang-dropbtn" aria-label="Select Language">
                     <img src="/assets/img/icons/language.svg" alt="Language">
@@ -282,31 +287,5 @@
         </div>
     </div>
 
-    <script>
-        function showTab(tabName, event) {
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
-            const tabs = document.querySelectorAll('.tab');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            document.getElementById(tabName).classList.add('active');
-            event.currentTarget.classList.add('active');
-        }
-    
-        function toggleLanguage() {
-            document.querySelector('.lang-dropdown').classList.toggle('show');
-        }
-
-        window.onclick = function(event) {
-            if (!event.target.closest('.lang-dropbtn')) {
-                var dropdowns = document.getElementsByClassName("lang-dropdown");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
-</body>
+    <script src="../assets/js/menu.js"></script></body>
 </html>
