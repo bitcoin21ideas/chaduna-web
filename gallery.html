@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaduna Food Gallery</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
+</head>
+<body class="menu">
+    <header class="menu-header">
+        <div class="header-left">
+            <a href="/index.html">
+                <img src="/assets/img/icons/home-black.svg" alt="Home">
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="https://www.instagram.com/cafechaduna" target="_blank">
+                <img src="/assets/img/icons/instagram-black.svg" alt="Instagram">
+            </a>
+            <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank">
+                <img src="/assets/img/icons/maps-black.svg" alt="Location">
+            </a>
+            <a href="tel:+995557629229">
+                <img src="/assets/img/icons/phone-black.svg" alt="Phone">
+            </a>
+
+            <button onclick="toggleTheme()" class="lang-dropbtn" aria-label="Toggle Theme" style="cursor: pointer; border: none; background: none;">
+                <img id="theme-icon" src="/assets/img/icons/night.svg" alt="Theme" style="width: 24px; height: 24px;">
+            </button>
+            
+            <div class="lang-dropdown">
+                <button onclick="toggleLanguage()" class="lang-dropbtn" aria-label="Select Language">
+                    <img src="/assets/img/icons/language.svg" alt="Language">
+                </button>
+                <div id="langDropdown" class="lang-dropdown-content">
+                    <a href="/menus/menu_en.html">EN</a>
+                    <a href="/menus/menu_ka.html">KA</a>
+                    <a href="/menus/menu_ru.html">RU</a>
+                    <a href="/menus/menu_de.html">DE</a>
+                    <a href="/menus/menu_fr.html">FR</a>
+                    <a href="/menus/menu_it.html">IT</a>
+                    <a href="/menus/menu_es.html">ES</a>
+                    <a href="/menus/menu_tr.html">TR</a>
+                    <a href="/menus/menu_ar.html">AR</a>
+                    <a href="/menus/menu_zh.html">ZH</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-container">
+        <a href="/index.html">
+            <img src="/assets/img/logos/chaduna-black.png" alt="Chaduna Logo" class="menu-logo">
+        </a>
+
+        <h2>Food Gallery</h2>
+
+        <div class="gallery-grid">
+            <img src="/assets/img/food/01.jpg" alt="Food Image" onclick="openLightbox(this)">
+            <img src="/assets/img/food/02.jpg" alt="Food Image" onclick="openLightbox(this)">
+            <img src="/assets/img/food/03.jpg" alt="Food Image" onclick="openLightbox(this)">
+            <img src="/assets/img/food/031.jpg" alt="Food Image" onclick="openLightbox(this)">
+            <img src="/assets/img/food/04.jpg" alt="Food Image" onclick="openLightbox(this)">
+            <img src="/assets/img/food/05.jpg" alt="Food Image" onclick="openLightbox(this)">
+            <img src="/assets/img/food/06.jpg" alt="Food Image" onclick="openLightbox(this)">
+            <img src="/assets/img/food/051.jpg" alt="Food Image" onclick="openLightbox(this)">
+            <img src="/assets/img/food/052.jpg" alt="Food Image" onclick="openLightbox(this)">
+            <img src="/assets/img/food/07.jpg" alt="Food Image" onclick="openLightbox(this)">
+            <img src="/assets/img/food/08.jpg" alt="Food Image" onclick="openLightbox(this)">
+            <img src="/assets/img/food/09.jpg" alt="Food Image" onclick="openLightbox(this)">
+            <img src="/assets/img/food/10.jpg" alt="Food Image" onclick="openLightbox(this)">
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close">&times;</span>
+        <a class="lightbox-prev" onclick="changeImage(-1, event)">&#10094;</a>
+        <a class="lightbox-next" onclick="changeImage(1, event)">&#10095;</a>
+        <img class="lightbox-content" id="lightbox-img" alt="Gallery Image Fullscreen" onclick="toggleZoom(event)">
+    </div>
+
+    <script src="/assets/js/menu.js"></script>
+    <script>
+        let currentImageIndex = 0;
+        const galleryImages = [
+            "/assets/img/food/01.jpg",
+            "/assets/img/food/02.jpg",
+            "/assets/img/food/03.jpg",
+            "/assets/img/food/031.jpg",
+            "/assets/img/food/04.jpg",
+            "/assets/img/food/05.jpg",
+            "/assets/img/food/06.jpg",
+            "/assets/img/food/051.jpg",
+            "/assets/img/food/052.jpg",
+            "/assets/img/food/07.jpg",
+            "/assets/img/food/08.jpg",
+            "/assets/img/food/09.jpg",
+            "/assets/img/food/10.jpg"
+        ];
+
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            // Find index of clicked image
+            const srcPath = img.getAttribute('src'); // Use getAttribute to get raw value from HTML
+            currentImageIndex = galleryImages.findIndex(path => srcPath.endsWith(path.split('/').pop()));
+            if (currentImageIndex === -1) currentImageIndex = 0; // Fallback
+
+            updateLightboxImage();
+            
+            // Reset zoom state
+            resetZoom();
+            
+            lightbox.style.display = 'flex';
+            requestAnimationFrame(() => {
+                lightbox.classList.add('active');
+            });
+            document.body.style.overflow = 'hidden';
+        }
+
+        function updateLightboxImage() {
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = galleryImages[currentImageIndex];
+        }
+
+        function changeImage(n, event) {
+            if (event) event.stopPropagation();
+            currentImageIndex += n;
+            if (currentImageIndex >= galleryImages.length) {
+                currentImageIndex = 0;
+            } else if (currentImageIndex < 0) {
+                currentImageIndex = galleryImages.length - 1;
+            }
+            updateLightboxImage();
+            resetZoom();
+        }
+
+        function resetZoom() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.classList.remove('scroll-mode');
+            lightboxImg.classList.remove('zoomed');
+            lightbox.style.display = 'flex'; // Ensure flex layout for centered image
+        }
+
+        function toggleZoom(event) {
+            event.stopPropagation(); // Prevent closing when clicking image
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            
+            if (img.classList.contains('zoomed')) {
+                img.classList.remove('zoomed');
+                lightbox.classList.remove('scroll-mode');
+                lightbox.style.display = 'flex';
+            } else {
+                img.classList.add('zoomed');
+                lightbox.classList.add('scroll-mode');
+                lightbox.style.display = 'block';
+            }
+        }
+
+        function closeLightbox(event) {
+            // Close if clicking background or close button
+            if (event.target.id === 'lightbox' || event.target.classList.contains('lightbox-close') || event.target.closest('.lightbox-close')) {
+                const lightbox = document.getElementById('lightbox');
+                lightbox.classList.remove('active');
+                setTimeout(() => {
+                    lightbox.style.display = 'none';
+                    resetZoom();
+                    document.getElementById('lightbox-img').src = '';
+                }, 300);
+                document.body.style.overflow = '';
+            }
+        }
+        
+        document.addEventListener('keydown', function(event) {
+            const lightbox = document.getElementById('lightbox');
+            if (!lightbox.classList.contains('active')) return;
+
+            if (event.key === "Escape") {
+               closeLightbox({ target: { id: 'lightbox' } });
+            } else if (event.key === "ArrowLeft") {
+                changeImage(-1);
+            } else if (event.key === "ArrowRight") {
+                changeImage(1);
+            }
+        });
+
+        // Touch Swipe Support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        const lightbox = document.getElementById('lightbox');
+        lightbox.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        lightbox.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            // Only swipe if not zoomed in? 
+            // Better UX: if zoomed in, swipe pans. If fit to screen, swipe changes image.
+            // For simplicity, let's only swipe change if not zoomed.
+            const img = document.getElementById('lightbox-img');
+            if (img.classList.contains('zoomed')) return;
+
+            if (touchEndX < touchStartX - 50) { // Swipe Left
+                changeImage(1);
+            }
+            if (touchEndX > touchStartX + 50) { // Swipe Right
+                changeImage(-1);
+            }
+        }
+    </script>
+</body>
+</html>
