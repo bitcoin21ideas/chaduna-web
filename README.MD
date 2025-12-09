@@ -1,6 +1,6 @@
 # Chaduna Static Website ☕🍷
 
-This repository contains the source code for the static website for Chaduna, a café and wine bar in Tbilisi. The site is a two-page deployment designed for fast loading and mobile responsiveness, primarily serving as a landing page and an interactive menu.
+This repository contains the source code for the static website for Chaduna, a café and wine bar in Tbilisi. The site is designed for fast loading and mobile responsiveness, primarily serving as a landing page, an interactive menu, and a hub for the coworking space.
 
 -----
 
@@ -8,7 +8,7 @@ This repository contains the source code for the static website for Chaduna, a c
 
 The project is hosted via GitHub Pages and is configured to use a custom domain.
 
-  * **Live URL:** [`https://chaduna.bar`](https://www.google.com/search?q=%5Bhttps://chaduna.bar%5D\(https://chaduna.bar\))
+  * **Live URL:** [`https://chaduna.bar`](https://chaduna.bar)
   * **GitHub Pages URL:** `https://bitcoin21ideas.github.io/chaduna-web/`
 
 -----
@@ -20,6 +20,8 @@ The project uses a standard, organized static file structure to separate content
 ```text
 /
 ├── index.html            // The main landing page/homepage.
+├── hub.html              // Coworking space landing page (pricing, timing, info).
+├── gallery.html          // Food gallery page with lightbox.
 ├── menus/
 │   ├── menu_en.html      // The interactive food and beverage menu page (English).
 │   └── ...               // Other language menus.
@@ -31,18 +33,22 @@ The project uses a standard, organized static file structure to separate content
     ├── css/
     │   └── style.css     // All shared site styling (renamed from global-style.css).
     ├── js/
+    │   ├── menu.js       // Shared logic (Theme, Language, Tabs).
     │   └── structured-data.js // JavaScript file for schema.org data (JSON-LD).
     └── img/
         ├── logos/        // Site logos.
         ├── icons/        // SVG icons for social media, maps, and phone.
-        └── bg/           // Large background images.
+        ├── bg/           // Large background images.
+        └── food/         // Food photography for the gallery.
 ```
 
 -----
 
 ## ✨ Key Features
 
-  * **Two-Page Design:** Simple, highly focused structure with a main entry page and a separate menu page.
+  * **Multi-Page Layout:** Includes a main entry page, a dedicated menu system, a coworking hub page, and a food gallery.
+  * **Coworking Hub:** A dedicated page (`hub.html`) providing general information about the coworking space, including pricing (Day/Week/Month), opening hours, and location.
+  * **Food Gallery:** A visual showcase (`gallery.html`) of the menu offerings with a lightbox viewer.
   * **SEO Ready:** Includes `robots.txt`, `sitemap.xml`, and **Schema.org (JSON-LD)** markup for the `Restaurant` entity to improve search visibility.
   * **Custom Domain:** Configured for the domain `chaduna.bar` using the **`CNAME`** file.
   * **Responsive Menu:** The menu page (`menus/menu_en.html`) uses basic JavaScript for tab functionality (`Food` / `Beverages`) to organize items without requiring a full page reload.
