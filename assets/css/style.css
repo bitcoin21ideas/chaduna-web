@@ -629,6 +629,10 @@ body.hub-page .container {
     font-size: 20px;
     margin-bottom: 60px;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 /* Override menu link styles for hub page to use adaptive colors */
@@ -665,5 +669,7 @@ body.dark-mode.hub-page .address img {
     }
     .hub-pricing {
         font-size: 18px;
+        flex-direction: column;
+        gap: 15px;
     }
 }
