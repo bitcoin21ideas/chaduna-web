@@ -82,7 +82,17 @@ h1 {
     margin-bottom: 50px;
 }
 
-.menu-link a {
+/* Navigation Links Container */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.menu-link a,
+.nav-links a {
     color: var(--color-white);
     text-decoration: none;
     font-size: 50px;
@@ -93,7 +103,8 @@ h1 {
     transition: transform var(--transition-base);
 }
 
-.menu-link a:hover {
+.menu-link a:hover,
+.nav-links a:hover {
     transform: scale(1.1);
 }
 
@@ -392,7 +403,8 @@ h2 {
         width: 150px;
     }
 
-    .menu-link a {
+    .menu-link a,
+    .nav-links a {
         font-size: 36px;
         letter-spacing: 5px;
     }
@@ -620,7 +632,8 @@ body.hub-page .container {
 }
 
 /* Override menu link styles for hub page to use adaptive colors */
-body.hub-page .menu-link a {
+body.hub-page .menu-link a,
+body.hub-page .nav-links a {
     color: var(--color-black);
 }
 
