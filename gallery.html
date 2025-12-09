@@ -206,9 +206,6 @@
         });
 
         function handleSwipe() {
-            // Only swipe if not zoomed in? 
-            // Better UX: if zoomed in, swipe pans. If fit to screen, swipe changes image.
-            // For simplicity, let's only swipe change if not zoomed.
             const img = document.getElementById('lightbox-img');
             if (img.classList.contains('zoomed')) return;
 

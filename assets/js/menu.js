@@ -44,11 +44,11 @@ function toggleTheme() {
     // Update icon and logo
     if (isDark) {
         themeIcon.src = '/assets/img/icons/day.svg';
-        logo.src = '/assets/img/logos/chaduna-white.png';
+        if (logo) logo.src = '/assets/img/logos/chaduna-white.png';
         localStorage.setItem('theme', 'dark');
     } else {
         themeIcon.src = '/assets/img/icons/night.svg';
-        logo.src = '/assets/img/logos/chaduna-black.png';
+        if (logo) logo.src = '/assets/img/logos/chaduna-black.png';
         localStorage.setItem('theme', 'light');
     }
 }
@@ -61,7 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
         document.body.classList.add('dark-mode');
         document.getElementById('theme-icon').src = '/assets/img/icons/day.svg';
-        document.querySelector('.menu-logo').src = '/assets/img/logos/chaduna-white.png';
+        const logo = document.querySelector('.menu-logo');
+        if (logo) logo.src = '/assets/img/logos/chaduna-white.png';
     }
 });
 

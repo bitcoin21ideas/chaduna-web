@@ -574,3 +574,83 @@ h2 {
         background: rgba(0,0,0,0.5); /* Make more visible on mobile */
     }
 }
+
+/* ===== HUB PAGE STYLES ===== */
+body.hub-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    background: var(--color-white); /* Clean background like menu */
+    color: var(--color-black);
+}
+
+body.hub-page .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hub-title {
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 100px; /* Large */
+    margin: 0;
+    line-height: 1;
+    color: var(--color-black);
+}
+
+.hub-subtitle {
+    font-family: var(--font-primary);
+    font-weight: 300; /* Thinner */
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    color: var(--color-black);
+}
+
+.hub-pricing {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    margin-bottom: 60px;
+    font-weight: 500;
+}
+
+/* Override menu link styles for hub page to use adaptive colors */
+body.hub-page .menu-link a {
+    color: var(--color-black);
+}
+
+body.hub-page .address-text {
+    color: var(--color-black);
+}
+
+/* Hub page specific icon handling */
+body.hub-page .socials img, 
+body.hub-page .address img {
+    filter: invert(1); /* Make white icons black for light mode */
+}
+
+/* In Dark Mode, hub page background becomes dark (via body.dark-mode) 
+   and text becomes white. Icons need to be white.
+*/
+body.dark-mode.hub-page .socials img,
+body.dark-mode.hub-page .address img {
+    filter: none; /* Revert to original white */
+}
+
+/* Responsive adjustments for Hub */
+@media (max-width: 768px) {
+    .hub-title {
+        font-size: 60px;
+    }
+    .hub-subtitle {
+        font-size: 20px;
+    }
+    .hub-pricing {
+        font-size: 18px;
+    }
+}
