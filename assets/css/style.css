@@ -348,9 +348,38 @@ h2 {
     transition: transform var(--transition-fast);
 }
 
-.header-left img:hover,
-.header-right img:hover {
+/* Icon Swap Animation */
+.header-left a,
+.header-right a,
+.lang-dropbtn {
+    position: relative;
+}
+
+.header-left .hover-icon,
+.header-right .hover-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.header-left a:hover .normal-icon,
+.header-right a:hover .normal-icon,
+.lang-dropbtn:hover .normal-icon {
+    opacity: 0;
+}
+
+.header-left a:hover .hover-icon,
+.header-right a:hover .hover-icon,
+.lang-dropbtn:hover .hover-icon {
+    opacity: 1;
     transform: scale(1.1);
+}
+
+.header-left .normal-icon,
+.header-right .normal-icon {
+    transition: opacity var(--transition-fast);
 }
 
 /* Language Dropdown */
@@ -373,6 +402,7 @@ h2 {
     display: none;
     position: absolute;
     right: 0;
+    top: calc(100% + 20px);
     background-color: var(--color-white);
     min-width: 60px;
     box-shadow: 0px 8px 16px 0px var(--shadow-soft);
