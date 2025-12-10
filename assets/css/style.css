@@ -20,26 +20,6 @@
     --transition-base: 0.3s ease;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-    --color-white: black;
-    --color-black: white;
-    --text-muted: #aaa;
-    --bg-light: #222;
-    --border-light: #333;
-    --border-medium: #444;
-    --shadow-soft: rgba(255,255,255,0.1);
-}
-
-body.dark-mode .menu-header {
-    background: var(--color-white);
-}
-
-body.dark-mode .header-left img,
-body.dark-mode .header-right img:not(#theme-icon),
-body.dark-mode .lang-dropbtn img:not(#theme-icon) {
-    filter: invert(1);
-}
 
 * {
     margin: 0;
@@ -63,10 +43,6 @@ body.landing {
     text-align: center;
 }
 
-body.dark-mode.landing {
-    background: var(--color-black);
-    color: var(--color-white);
-}
 
 .container {
     padding: 40px 20px;
@@ -129,16 +105,6 @@ h1 {
     margin: 0;
 }
 
-/* In Dark Mode, we need white icons (invert black ones) */
-body.dark-mode.landing .logo {
-    filter: invert(1);
-}
-
-body.dark-mode.landing .socials img,
-body.dark-mode.landing .address img,
-body.dark-mode.landing .phone img {
-    filter: invert(1);
-}
 .socials img, .address img, .phone img {
     width: 40px;
     height: 40px;
@@ -181,11 +147,6 @@ body.dark-mode.landing .phone img {
     color: var(--color-black);
 }
 
-body.dark-mode .menu-link a,
-body.dark-mode .nav-links a,
-body.dark-mode .address-text {
-    color: var(--color-white);
-}
 
 .address-text address {
     margin: 0;
@@ -365,7 +326,8 @@ h2 {
 
 .header-left a,
 .header-right a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
 
 .header-left img {
@@ -394,7 +356,8 @@ h2 {
 /* Language Dropdown */
 .lang-dropdown {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
 
 .lang-dropbtn {
@@ -700,27 +663,13 @@ body.hub-page .address img {
     filter: none; /* Default black icons */
 }
 
-/* In Dark Mode, hub page background becomes dark (via body.dark-mode) 
-   and text becomes white. Icons need to be white (invert black to white).
-*/
-body.dark-mode.hub-page .socials img,
-body.dark-mode.hub-page .address img {
-    filter: invert(1);
-}
 
 /* Revert inversion for the hover icon so it displays true green */
 body.hub-page .socials a:hover .icon-hover,
 body.hub-page .address a:hover .icon-hover {
     filter: none;
 }
-body.dark-mode.hub-page .socials a:hover .icon-hover,
-body.dark-mode.hub-page .address a:hover .icon-hover {
-    filter: none;
-}
 
-/* In Dark Mode, hub page background becomes dark (via body.dark-mode) 
-   and text becomes white. Icons need to be white.
-*/
 
 /* Responsive adjustments for Hub */
 @media (max-width: 768px) {
