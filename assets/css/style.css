@@ -3,6 +3,8 @@
     /* Colors */
     --color-white: white;
     --color-black: black;
+    --color-accent: #89393E;
+    --color-hub-accent: #063017;
     --text-muted: #666;
     --bg-light: #f1f1f1;
     --border-light: #eee;
@@ -56,9 +58,14 @@ body {
 
 /* ===== LANDING PAGE STYLES ===== */
 body.landing {
-    background: url('/assets/img/background/cafe-chaduna-interior.jpg') center center / cover no-repeat fixed;
-    color: var(--color-white);
+    background: var(--color-white);
+    color: var(--color-black);
     text-align: center;
+}
+
+body.dark-mode.landing {
+    background: var(--color-black);
+    color: var(--color-white);
 }
 
 .container {
@@ -93,7 +100,7 @@ h1 {
 
 .menu-link a,
 .nav-links a {
-    color: var(--color-white);
+    color: var(--color-black);
     text-decoration: none;
     font-size: 50px;
     font-family: var(--font-secondary);
@@ -106,6 +113,7 @@ h1 {
 .menu-link a:hover,
 .nav-links a:hover {
     transform: scale(1.1);
+    color: var(--color-accent);
 }
 
 /* Icons Container */
@@ -121,7 +129,16 @@ h1 {
     margin: 0;
 }
 
-/* Shared Icon Styles (Landing) */
+/* In Dark Mode, we need white icons (invert black ones) */
+body.dark-mode.landing .logo {
+    filter: invert(1);
+}
+
+body.dark-mode.landing .socials img,
+body.dark-mode.landing .address img,
+body.dark-mode.landing .phone img {
+    filter: invert(1);
+}
 .socials img, .address img, .phone img {
     width: 40px;
     height: 40px;
@@ -134,12 +151,39 @@ h1 {
 
 .socials a, .address a, .phone a {
     display: inline-block;
+    position: relative;
+}
+
+.icon-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.socials a:hover .icon-hover,
+.address a:hover .icon-hover,
+.phone a:hover .icon-hover {
+    opacity: 1;
+}
+
+.socials a:hover .icon-normal,
+.address a:hover .icon-normal,
+.phone a:hover .icon-normal {
+    opacity: 0;
 }
 
 /* Address Text */
 .address-text {
     margin-top: 10px;
     font-size: 20px;
+    color: var(--color-black);
+}
+
+body.dark-mode .menu-link a,
+body.dark-mode .nav-links a,
+body.dark-mode .address-text {
     color: var(--color-white);
 }
 
@@ -641,6 +685,11 @@ body.hub-page .nav-links a {
     color: var(--color-black);
 }
 
+body.hub-page .menu-link a:hover,
+body.hub-page .nav-links a:hover {
+    color: var(--color-hub-accent);
+}
+
 body.hub-page .address-text {
     color: var(--color-black);
 }
@@ -648,16 +697,30 @@ body.hub-page .address-text {
 /* Hub page specific icon handling */
 body.hub-page .socials img, 
 body.hub-page .address img {
-    filter: invert(1); /* Make white icons black for light mode */
+    filter: none; /* Default black icons */
+}
+
+/* In Dark Mode, hub page background becomes dark (via body.dark-mode) 
+   and text becomes white. Icons need to be white (invert black to white).
+*/
+body.dark-mode.hub-page .socials img,
+body.dark-mode.hub-page .address img {
+    filter: invert(1);
+}
+
+/* Revert inversion for the hover icon so it displays true green */
+body.hub-page .socials a:hover .icon-hover,
+body.hub-page .address a:hover .icon-hover {
+    filter: none;
+}
+body.dark-mode.hub-page .socials a:hover .icon-hover,
+body.dark-mode.hub-page .address a:hover .icon-hover {
+    filter: none;
 }
 
 /* In Dark Mode, hub page background becomes dark (via body.dark-mode) 
    and text becomes white. Icons need to be white.
 */
-body.dark-mode.hub-page .socials img,
-body.dark-mode.hub-page .address img {
-    filter: none; /* Revert to original white */
-}
 
 /* Responsive adjustments for Hub */
 @media (max-width: 768px) {
