@@ -49,7 +49,10 @@ The project uses a standard, organized static file structure to separate content
   * **Multi-Page Layout:** Includes a main entry page, a dedicated menu system, a coworking hub page, and a food gallery.
   * **Coworking Hub:** A dedicated page (`hub.html`) providing general information about the coworking space, including pricing (Day/Week/Month), opening hours, and location.
   * **Food Gallery:** A visual showcase (`gallery.html`) of the menu offerings with a lightbox viewer.
-  * **SEO Ready:** Includes `robots.txt`, `sitemap.xml`, and **Schema.org (JSON-LD)** markup for the `Restaurant` entity to improve search visibility.
+  * **Advanced SEO & Structured Data:** Comprehensive **Schema.org (JSON-LD)** markup with language-aware detection supporting 10 languages (en, ru, de, tr, fr, es, it, ka, zh, ar). Includes `Restaurant` and `LocalBusiness` schemas with enhanced location keywords, wine-related properties, menu item translations, and pricing offers. All food images and logo variants are included in structured data for better discoverability.
+  * **AI Assistant Optimization:** Chatbot-friendly structured data with FAQ schema, trending features, timing, and location information optimized for AI assistants and search engines.
+  * **Multi-Language Menu Support:** Automatic menu item extraction from menu pages with full translations and alternate names for popular dishes across all supported languages.
+  * **Sitemap & Crawler Support:** Includes `robots.txt` and `sitemap.xml` with all pages (hub, gallery, menus) listed for search engine indexing.
   * **Custom Domain:** Configured for the domain `chaduna.bar` using the **`CNAME`** file.
   * **Responsive Menu:** The menu page (`menus/menu_en.html`) uses basic JavaScript for tab functionality (`Food` / `Beverages`) to organize items without requiring a full page reload.
 
