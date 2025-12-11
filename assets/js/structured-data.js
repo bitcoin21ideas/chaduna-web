@@ -441,7 +441,8 @@ function generateHubStructuredData(baseUrl, pageLang) {
     }],
     // Additional images
     "image": [
-      `${baseUrl}/assets/img/logos/chaduna-white.png`
+      `${baseUrl}/assets/img/logos/chaduna-white.png`,
+      `${baseUrl}/assets/img/logos/chaduna-black.png`
     ],
     // Opening hours in text format
     "openingHours": "Mo-Su 10:00-20:00"
@@ -849,7 +850,20 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
     // Additional images for better context
     "image": [
       `${baseUrl}/assets/img/logos/chaduna-white.png`,
-      `${baseUrl}/assets/img/background/cafe-chaduna-interior.jpg`
+      `${baseUrl}/assets/img/logos/chaduna-black.png`,
+      `${baseUrl}/assets/img/food/01.jpg`,
+      `${baseUrl}/assets/img/food/02.jpg`,
+      `${baseUrl}/assets/img/food/03.jpg`,
+      `${baseUrl}/assets/img/food/031.jpg`,
+      `${baseUrl}/assets/img/food/04.jpg`,
+      `${baseUrl}/assets/img/food/05.jpg`,
+      `${baseUrl}/assets/img/food/051.jpg`,
+      `${baseUrl}/assets/img/food/052.jpg`,
+      `${baseUrl}/assets/img/food/06.jpg`,
+      `${baseUrl}/assets/img/food/07.jpg`,
+      `${baseUrl}/assets/img/food/08.jpg`,
+      `${baseUrl}/assets/img/food/09.jpg`,
+      `${baseUrl}/assets/img/food/10.jpg`
     ],
     // Opening hours in text format (some AI bots prefer this)
     "openingHours": "Tu-Su 10:00-23:00, Mo 10:00-15:00"
