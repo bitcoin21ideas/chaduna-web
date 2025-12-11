@@ -473,7 +473,7 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
       faq3Question: "Where is Chaduna located?",
       faq3Answer: "Chaduna is located at 18 Galaktion Tabidze Street, near Liberty Square, in downtown Tbilisi, old city. We are close to Liberty Square metro station, making us easily accessible.",
       faq4Question: "What are your opening hours?",
-      faq4Answer: "We are open Tuesday through Sunday from 10:00 to 23:00, and Monday from 10:00 to 15:00.",
+      faq4Answer: "We are open Tuesday through Sunday from 09:00 to 23:00, and Monday from 09:00 to 15:00.",
       faq5Question: "Do you offer takeout?",
       faq5Answer: "Yes, we offer both dine-in and takeout services. You can enjoy our food and wine in our cozy space or take it to go.",
       // Feature list translations
@@ -501,7 +501,7 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
       faq3Question: "Где находится Chaduna?",
       faq3Answer: "Chaduna находится по адресу ул. Галактиона Табидзе, 18, рядом с площадью Свободы, в центре Тбилиси, в старом городе.",
       faq4Question: "Какие у вас часы работы?",
-      faq4Answer: "Мы работаем со вторника по воскресенье с 10:00 до 23:00, и в понедельник с 10:00 до 15:00.",
+      faq4Answer: "Мы работаем со вторника по воскресенье с 09:00 до 23:00, и в понедельник с 09:00 до 15:00.",
       faq5Question: "Вы предлагаете еду на вынос?",
       faq5Answer: "Да, мы предлагаем как обслуживание в зале, так и на вынос. Вы можете насладиться нашей едой и вином в нашем уютном пространстве или взять заказ с собой.",
       feature1: "Славится сырниками (творожными оладьями)",
@@ -527,7 +527,7 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
       faq3Question: "Wo befindet sich Chaduna?",
       faq3Answer: "Chaduna befindet sich in der Galaktion Tabidze Straße 18, in der Nähe des Freiheitsplatzes, im Zentrum von Tiflis, in der Altstadt. Wir sind in der Nähe der U-Bahn-Station Freiheitsplatz, was uns leicht erreichbar macht.",
       faq4Question: "Wie sind Ihre Öffnungszeiten?",
-      faq4Answer: "Wir sind von Dienstag bis Sonntag von 10:00 bis 23:00 Uhr geöffnet, und montags von 10:00 bis 15:00 Uhr.",
+      faq4Answer: "Wir sind von Dienstag bis Sonntag von 09:00 bis 23:00 Uhr geöffnet, und montags von 09:00 bis 15:00 Uhr.",
       faq5Question: "Bieten Sie Essen zum Mitnehmen an?",
       faq5Answer: "Ja, wir bieten sowohl Vor-Ort-Service als auch Essen zum Mitnehmen. Sie können unser Essen und Wein in unserem gemütlichen Raum genießen oder zum Mitnehmen bestellen.",
       feature1: "Bekannt für Syrniki (Quarkpfannkuchen)",
@@ -553,7 +553,7 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
       faq3Question: "Chaduna nerede bulunuyor?",
       faq3Answer: "Chaduna, Galaktion Tabidze Caddesi 18 numarada, Özgürlük Meydanı yakınında, Tiflis şehir merkezinde, eski şehirde yer almaktadır. Özgürlük Meydanı metro istasyonuna yakınız, bu da bizi kolayca erişilebilir kılıyor.",
       faq4Question: "Çalışma saatleriniz nedir?",
-      faq4Answer: "Salı'dan Pazar'a 10:00-23:00, Pazartesi 10:00-15:00 saatleri arasında açığız.",
+      faq4Answer: "Salı'dan Pazar'a 09:00-23:00, Pazartesi 09:00-15:00 saatleri arasında açığız.",
       faq5Question: "Paket servis sunuyor musunuz?",
       faq5Answer: "Evet, hem içeride yemek hem de paket servis hizmeti sunuyoruz. Yemeklerimizi ve şarabımızı samimi mekanımızda tadabilir veya paket servis olarak alabilirsiniz.",
       feature1: "Syrniki (lor peyniri kızartması) ile ünlü",
@@ -579,7 +579,7 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
       faq3Question: "Où se trouve Chaduna?",
       faq3Answer: "Chaduna se trouve au 18 rue Galaktion Tabidze, près de la place de la Liberté, au centre-ville de Tbilissi, dans la vieille ville. Nous sommes près de la station de métro place de la Liberté, ce qui nous rend facilement accessibles.",
       faq4Question: "Quels sont vos horaires d'ouverture?",
-      faq4Answer: "Nous sommes ouverts du mardi au dimanche de 10h00 à 23h00, et le lundi de 10h00 à 15h00.",
+      faq4Answer: "Nous sommes ouverts du mardi au dimanche de 09h00 à 23h00, et le lundi de 09h00 à 15h00.",
       faq5Question: "Offrez-vous la vente à emporter?",
       faq5Answer: "Oui, nous offrons à la fois le service sur place et à emporter. Vous pouvez déguster notre nourriture et vin dans notre espace cosy ou l'emporter.",
       feature1: "Célèbre pour les syrniki (crêpes au fromage blanc)",
@@ -605,7 +605,7 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
       faq3Question: "¿Dónde está ubicado Chaduna?",
       faq3Answer: "Chaduna está ubicado en la calle Galaktion Tabidze 18, cerca de la Plaza de la Libertad, en el centro de Tbilisi, en la ciudad vieja. Estamos cerca de la estación de metro Plaza de la Libertad, lo que nos hace fácilmente accesibles.",
       faq4Question: "¿Cuáles son sus horarios de apertura?",
-      faq4Answer: "Estamos abiertos de martes a domingo de 10:00 a 23:00, y los lunes de 10:00 a 15:00.",
+      faq4Answer: "Estamos abiertos de martes a domingo de 09:00 a 23:00, y los lunes de 09:00 a 15:00.",
       faq5Question: "¿Ofrecen comida para llevar?",
       faq5Answer: "Sí, ofrecemos tanto servicio para comer aquí como para llevar. Puede disfrutar de nuestra comida y vino en nuestro acogedor espacio o llevarlo para llevar.",
       feature1: "Famoso por syrniki (tortitas de requesón)",
@@ -631,7 +631,7 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
       faq3Question: "Dove si trova Chaduna?",
       faq3Answer: "Chaduna si trova in via Galaktion Tabidze 18, vicino a Piazza della Libertà, nel centro di Tbilisi, nella città vecchia. Siamo vicini alla stazione della metropolitana Piazza della Libertà, il che ci rende facilmente accessibili.",
       faq4Question: "Quali sono i vostri orari di apertura?",
-      faq4Answer: "Siamo aperti dal martedì alla domenica dalle 10:00 alle 23:00, e il lunedì dalle 10:00 alle 15:00.",
+      faq4Answer: "Siamo aperti dal martedì alla domenica dalle 09:00 alle 23:00, e il lunedì dalle 09:00 alle 15:00.",
       faq5Question: "Offrite cibo da asporto?",
       faq5Answer: "Sì, offriamo sia servizio da mangiare qui che da asporto. Potete gustare il nostro cibo e vino nel nostro spazio accogliente o portarlo via.",
       feature1: "Famoso per syrniki (frittelle di ricotta)",
@@ -657,7 +657,7 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
       faq3Question: "სად მდებარეობს Chaduna?",
       faq3Answer: "Chaduna მდებარეობს გალაქტიონ ტაბიძის ქუჩა 18-ში, თავისუფლების მოედნის მახლობლად, თბილისის ცენტრში, ძველ ქალაქში. ვართ თავისუფლების მოედნის მეტროსადგურთან ახლოს, რაც ხდის ჩვენ მიწვდომად.",
       faq4Question: "რა გაქვთ სამუშაო საათები?",
-      faq4Answer: "ვართ ღია სამშაბათიდან კვირამდე 10:00-23:00, ხოლო ორშაბათს 10:00-15:00.",
+      faq4Answer: "ვართ ღია სამშაბათიდან კვირამდე 09:00-23:00, ხოლო ორშაბათს 09:00-15:00.",
       faq5Question: "გაქვთ წასაღებად მომსახურება?",
       faq5Answer: "დიახ, ვთავაზობთ როგორც დარბაზში, ასევე წასაღებად მომსახურებას. შეგიძლიათ ისიამოვნოთ ჩვენი საჭმლით და ღვინით ჩვენს მყუდრო სივრცეში ან წაიღოთ წასაღებად.",
       feature1: "ცნობილია სირნიკებით (ნაყინის ბლინებით)",
@@ -683,7 +683,7 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
       faq3Question: "Chaduna在哪里？",
       faq3Answer: "Chaduna位于Galaktion Tabidze街18号，自由广场附近，第比利斯市中心，老城区。我们靠近自由广场地铁站，交通便利。",
       faq4Question: "你们的营业时间是什么？",
-      faq4Answer: "我们周二至周日10:00-23:00营业，周一10:00-15:00营业。",
+      faq4Answer: "我们周二至周日09:00-23:00营业，周一09:00-15:00营业。",
       faq5Question: "你们提供外带服务吗？",
       faq5Answer: "是的，我们提供堂食和外带服务。您可以在我们舒适的空间内享用我们的食物和葡萄酒，也可以外带。",
       feature1: "以syrniki（白软干酪煎饼）闻名",
@@ -709,7 +709,7 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
       faq3Question: "أين يقع Chaduna؟",
       faq3Answer: "يقع Chaduna في شارع Galaktion Tabidze 18، بالقرب من ساحة الحرية، في وسط تبليسي، في المدينة القديمة. نحن قريبون من محطة مترو ساحة الحرية، مما يجعلنا في متناول اليد بسهولة.",
       faq4Question: "ما هي ساعات العمل لديكم؟",
-      faq4Answer: "نحن مفتوحون من الثلاثاء إلى الأحد من 10:00 إلى 23:00، والاثنين من 10:00 إلى 15:00.",
+      faq4Answer: "نحن مفتوحون من الثلاثاء إلى الأحد من 09:00 إلى 23:00، والاثنين من 09:00 إلى 15:00.",
       faq5Question: "هل تقدمون طلبات خارجية؟",
       faq5Answer: "نعم، نقدم خدمة تناول الطعام في المطعم والطلبات الخارجية. يمكنك الاستمتاع بطعامنا ونبيذنا في مساحتنا الدافئة أو أخذه للخارج.",
       feature1: "مشهور بسيرنيكي (فطائر الجبن القريش)",
@@ -766,13 +766,13 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "10:00",
+        "opens": "09:00",
         "closes": "23:00"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Monday",
-        "opens": "10:00",
+        "opens": "09:00",
         "closes": "15:00"
       }
     ],
@@ -866,7 +866,7 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
       `${baseUrl}/assets/img/food/10.jpg`
     ],
     // Opening hours in text format (some AI bots prefer this)
-    "openingHours": "Tu-Su 10:00-23:00, Mo 10:00-15:00"
+    "openingHours": "Tu-Su 09:00-23:00, Mo 09:00-15:00"
   };
 
   // Dynamic Menu Generation
