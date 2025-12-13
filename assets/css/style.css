@@ -60,11 +60,6 @@ h1 {
     margin: 20px 0 10px;
 }
 
-/* Menu Link */
-.menu-link {
-    margin-bottom: 50px;
-}
-
 /* Navigation Links Container */
 .nav-links {
     display: flex;
@@ -74,23 +69,76 @@ h1 {
     align-items: center;
 }
 
-.menu-link a,
 .nav-links a {
     color: var(--color-black);
     text-decoration: none;
     font-size: 50px;
     font-family: var(--font-secondary);
     font-weight: 500;
-    letter-spacing: 8px;
     display: inline-block;
     transition: transform var(--transition-base);
 }
 
-.menu-link a:hover,
 .nav-links a:hover {
     transform: scale(1.1);
     color: var(--color-accent);
 }
+
+/* Specific styling for .hub link on landing page */
+body.landing .nav-links a[href="hub.html"]:hover {
+    color: var(--color-hub-accent);
+}
+
+.hub-description {
+    margin: 20px 0;
+    font-family: 'Playfair Display';
+    text-align: center;
+    font-size: 20px;
+    line-height: 2;
+}
+
+.hub-features {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+.hub-features li {
+    margin: 5px 0;
+}
+
+.hub-passes {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pass-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.pass-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 40px;
+}
+
+.pass-label {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.pass-price {
+    font-size: 1em;
+    color: #333;
+}
+
 
 /* Icons Container */
 .icons-container {
@@ -229,13 +277,13 @@ a .menu-logo:hover {
 }
 
 .tab.active {
-    color: var(--color-black);
+    color: var(--color-accent);
     font-weight: 700;
     margin-bottom: -2px;
 }
 
 .tab:hover {
-    color: var(--color-black);
+    color: var(--color-accent);
 }
 
 /* Tab Content */
@@ -419,7 +467,7 @@ h2 {
     font-family: var(--font-primary);
     font-size: 14px;
     text-align: center;
-    transition: background-color 0.2s;
+    transition: background-color var(--transition-fast);
 }
 
 .lang-dropdown-content a:hover {
@@ -440,7 +488,6 @@ h2 {
         width: 150px;
     }
 
-    .menu-link a,
     .nav-links a {
         font-size: 36px;
     }
@@ -498,7 +545,7 @@ h2 {
     object-fit: cover;
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
     box-shadow: 0 4px 6px var(--shadow-soft);
 }
 
@@ -524,7 +571,7 @@ h2 {
     justify-content: center;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity var(--transition-base);
 }
 
 .lightbox.active {
@@ -547,7 +594,7 @@ h2 {
     border-radius: 4px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     cursor: zoom-in;
-    transition: max-width 0.3s, max-height 0.3s;
+    transition: max-width var(--transition-base), max-height var(--transition-base);
 }
 
 .lightbox-content.zoomed {
@@ -566,7 +613,7 @@ h2 {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.2s;
+    transition: color var(--transition-fast);
     z-index: 1001;
     background: rgba(0,0,0,0.5);
     width: 50px;
@@ -593,7 +640,7 @@ h2 {
     color: white;
     font-weight: bold;
     font-size: 30px;
-    transition: 0.3s ease;
+    transition: var(--transition-base);
     border-radius: 0 3px 3px 0;
     user-select: none;
     z-index: 1002;
@@ -671,15 +718,18 @@ body.hub-page .container {
     flex-wrap: wrap;
 }
 
-/* Override menu link styles for hub page to use adaptive colors */
-body.hub-page .menu-link a,
+/* Override nav link styles for hub page */
 body.hub-page .nav-links a {
     color: var(--color-black);
 }
 
-body.hub-page .menu-link a:hover,
 body.hub-page .nav-links a:hover {
     color: var(--color-hub-accent);
+}
+
+/* Keep chaduna link red on hub page */
+body.hub-page .nav-links a[href="index.html"]:hover {
+    color: var(--color-accent);
 }
 
 body.hub-page .address-text {

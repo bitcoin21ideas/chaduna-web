@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaduna Menü</title>
@@ -10,285 +10,302 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <script defer src="/assets/js/structured-data.js"></script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
-</head>
-<body class="menu">
+  </head>
+  <body class="menu">
     <header class="menu-header">
-        <div class="header-left">
-            <a href="/index.html">
-                <img src="/assets/img/icons/home-black.svg" alt="Ana Sayfa" class="normal-icon">
-                <img src="/assets/img/icons/home-red.svg" alt="Ana Sayfa" class="hover-icon">
-            </a>
-        </div>
-        <div class="header-right">
-            <a href="https://www.instagram.com/cafechaduna" target="_blank">
-                <img src="/assets/img/icons/instagram-black.svg" alt="Instagram" class="normal-icon">
-                <img src="/assets/img/icons/instagram-red.svg" alt="Instagram" class="hover-icon">
-            </a>
-            <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank">
-                <img src="/assets/img/icons/maps-black.svg" alt="Konum" class="normal-icon">
-                <img src="/assets/img/icons/maps-red.svg" alt="Konum" class="hover-icon">
-            </a>
-            <a href="tel:+995557629229">
-                <img src="/assets/img/icons/phone-black.svg" alt="Telefon" class="normal-icon">
-                <img src="/assets/img/icons/phone-red.svg" alt="Telefon" class="hover-icon">
-            </a>
-
-            
-            <div class="lang-dropdown">
-                <button onclick="toggleLanguage()" class="lang-dropbtn" aria-label="Select Language">
-                    <img src="/assets/img/icons/language.svg" alt="Language" class="normal-icon">
-                    <img src="/assets/img/icons/language-red.svg" alt="Language" class="hover-icon">
-                </button>
-                <div id="langDropdown" class="lang-dropdown-content">
-                    <a href="menu_en.html">EN</a>
-                    <a href="menu_ka.html">KA</a>
-                    <a href="menu_ru.html">RU</a>
-                    <a href="menu_de.html">DE</a>
-                    <a href="menu_fr.html">FR</a>
-                    <a href="menu_it.html">IT</a>
-                    <a href="menu_es.html">ES</a>
-                    <a href="menu_tr.html">TR</a>
-                    <a href="menu_ar.html">AR</a>
-                    <a href="menu_zh.html">ZH</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="menu-container">
+      <div class="header-left">
         <a href="/index.html">
-            <img src="/assets/img/logos/chaduna-black.png" alt="Chaduna Logo" class="menu-logo">
+          <img src="/assets/img/icons/home-black.svg" alt="Ana Sayfa" class="normal-icon">
+          <img src="/assets/img/icons/home-red.svg" alt="Ana Sayfa" class="hover-icon">
         </a>
-
-        <div class="tabs">
-            <button class="tab active" onclick="showTab('food', event)">Yemekler</button>
-            <button class="tab" onclick="showTab('beverage', event)">İçecekler</button>
+      </div>
+      <div class="header-right">
+        <a href="https://www.instagram.com/cafechaduna" target="_blank">
+          <img src="/assets/img/icons/instagram-black.svg" alt="Instagram" class="normal-icon">
+          <img src="/assets/img/icons/instagram-red.svg" alt="Instagram" class="hover-icon">
+        </a>
+        <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank">
+          <img src="/assets/img/icons/maps-black.svg" alt="Konum" class="normal-icon">
+          <img src="/assets/img/icons/maps-red.svg" alt="Konum" class="hover-icon">
+        </a>
+        <a href="tel:+995557629229">
+          <img src="/assets/img/icons/phone-black.svg" alt="Telefon" class="normal-icon">
+          <img src="/assets/img/icons/phone-red.svg" alt="Telefon" class="hover-icon">
+        </a>
+        
+        <div class="lang-dropdown">
+          <button onclick="toggleLanguage()" class="lang-dropbtn" aria-label="Select Language">
+            <img src="/assets/img/icons/language.svg" alt="Language" class="normal-icon">
+            <img src="/assets/img/icons/language-red.svg" alt="Language" class="hover-icon">
+          </button>
+          <div id="langDropdown" class="lang-dropdown-content">
+            <a href="menu_en.html">EN</a>
+            <a href="menu_ka.html">KA</a>
+            <a href="menu_ru.html">RU</a>
+            <a href="menu_de.html">DE</a>
+            <a href="menu_fr.html">FR</a>
+            <a href="menu_it.html">IT</a>
+            <a href="menu_es.html">ES</a>
+            <a href="menu_tr.html">TR</a>
+            <a href="menu_ar.html">AR</a>
+            <a href="menu_zh.html">ZH</a>
+          </div>
         </div>
-
-        <!-- Food Tab -->
-        <div id="food" class="tab-content active">
-            <h2>Kahvaltı <span class="category-price">25</span></h2>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Chizhi Bizhi</div>
-                    <div class="item-description">Domates, soğan ve baharatlardan oluşan lezzetli sosda pişirilmiş yumurta, peynir ve otlarla servis edilir</div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Frittata</div>
-                    <div class="item-description">Sotelenmiş mantar ve biberli İtalyan usulü omlet, krema, peynir ve otlarla ketsi'de pişirilir</div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Çırpılmış Yumurta</div>
-                    <div class="item-description">Peynir, çıtır pastırma ve çeyrek kiraz domatesleriyle servis edilen çırpılmış yumurta</div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Syrniki</div>
-                    <div class="item-description">Mevsim meyveleriyle servis edilen lor peyniri kızartması</div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Quesadilla</div>
-                    <div class="item-description">Erimiş peynir ve tavuklu veya sebzeli harçla doldurulmuş taco tarzı tortilla</div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Pastırma Ekle</div>
-                </div>
-                <div class="item-price">+3</div>
-            </div>
-
-            <h2>Bruschetta <span class="category-price">15</span></h2>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Havuç, Krema, Kabak Çekirdeği</div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Kiraz Domates, Pesto</div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Mantar, Sarımsak, Krema</div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Ispanak, Mavi Peynir, Badem</div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Pastırma, Elma, Krem Peynir</div>
-                </div>
-            </div>
-
-            <h2>Chaduna Özel <span class="category-price">30</span></h2>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Domates Salatası</div>
-                    <div class="item-description">Nane, mevsim meyveleri/çilekleri, tohumlar ve özel soslu karışık taze domates salatası</div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Pastırmalı Patates</div>
-                    <div class="item-description">Dilimlenmiş patates haşlaması, pastırma ve soğan, eritilmiş peynir ve otlarla tamamlanır</div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Sebze Güveç</div>
-                    <div class="item-description">Kremada haşlanmış patates, biber, kabak ve havuçtan oluşan lezzetli güveç, ketsi'de peynir ve naneyle tamamlanır</div>
-                </div>
-            </div>
-
-            <h2>Tatlı <span class="category-price">12</span></h2>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Muzlu Kek</div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Pasta</div>
-                </div>
-            </div>
-
-            <div class="menu-note">
-                <p>*Alerjen bilgisi için lütfen garsonunuza sorunuz</p>
-                <p>Tüm fiyatlar GEL cinsindendir, %18 KDV dahildir</p>
-                <p><strong>Bahşiş takdir edilir</strong></p>
-            </div>
+      </div>
+    </header>
+    
+    <div class="menu-container">
+      <a href="/index.html">
+        <img src="/assets/img/logos/chaduna-black.png" alt="Chaduna Logo" class="menu-logo">
+      </a>
+      
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('food', event)">Yemekler</button>
+        <button class="tab" onclick="showTab('beverage', event)">İçecekler</button>
+      </div>
+      
+      <!-- Food Tab -->
+      <div id="food" class="tab-content active">
+        <h2>Kahvaltı <span class="category-price">25</span></h2>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Chizhi Bizhi</div>
+            <div class="item-description">Domates, soğan ve baharatlardan oluşan lezzetli sosda pişirilmiş yumurta, peynir ve otlarla servis edilir</div>
+          </div>
         </div>
-
-        <!-- Beverage Tab -->
-        <div id="beverage" class="tab-content">
-            <h2>Sıcak İçecekler</h2>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Espresso / Çift</div>
-                </div>
-                <div class="item-price">6 / 8</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Americano</div>
-                </div>
-                <div class="item-price">6</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Cappuccino / Flat White</div>
-                </div>
-                <div class="item-price">9 / 11</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Latte / Çift</div>
-                </div>
-                <div class="item-price">9 / 11</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Raf</div>
-                </div>
-                <div class="item-price">9</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Kakao / Sıcak Çikolata</div>
-                </div>
-                <div class="item-price">9</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Çay / Naneli, Ballı</div>
-                </div>
-                <div class="item-price">9 / 11</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Alternatif Süt</div>
-                    <div class="item-description">Soya, badem, yulaf</div>
-                </div>
-                <div class="item-price">+2</div>
-            </div>
-
-            <h2>Soğuk İçecekler</h2>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Buzlu Çay</div>
-                </div>
-                <div class="item-price">9</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Buzlu Latte</div>
-                </div>
-                <div class="item-price">9</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Ev Yapımı Limonata</div>
-                </div>
-                <div class="item-price">9</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Borjomi</div>
-                </div>
-                <div class="item-price">3</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Bakuriani</div>
-                </div>
-                <div class="item-price">2</div>
-            </div>
-
-            <h2>Şarap / Chacha</h2>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Chacha</div>
-                </div>
-                <div class="item-price">10</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Beyaz Şarap (Kadeh)</div>
-                </div>
-                <div class="item-price">14</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Amber Şarap (Kadeh)</div>
-                </div>
-                <div class="item-price">16</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Kırmızı Şarap (Kadeh)</div>
-                </div>
-                <div class="item-price">16</div>
-            </div>
-
-            <div class="menu-note">
-                <p>*Alerjen bilgisi ve diyet tercihleri için lütfen garsonunuzla görüşünüz</p>
-                <p>Tüm fiyatlar GEL cinsindendir, %18 KDV dahildir</p>
-                <p><strong>Bahşiş takdir edilir</strong></p>
-            </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Frittata</div>
+            <div class="item-description">Sotelenmiş mantar ve biberli İtalyan usulü omlet, krema, peynir ve otlarla ketsi'de pişirilir</div>
+          </div>
         </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Çırpılmış Yumurta</div>
+            <div class="item-description">Peynir, çıtır pastırma ve çeyrek kiraz domatesleriyle servis edilen çırpılmış yumurta</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Syrniki</div>
+            <div class="item-description">Mevsim meyveleriyle servis edilen lor peyniri kızartması</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Quesadilla</div>
+            <div class="item-description">Erişmiş peynir ve tavuklu veya sebzeli harçla doldurulmuş taco tarzı tortilla</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Pastırma Ekle</div>
+          </div>
+          <div class="item-price">+3</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Ekmek Ekle</div>
+          </div>
+          <div class="item-price">+3</div>
+        </div>
+        
+        <h2>Bruschetta <span class="category-price">15</span></h2>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Havuç Bruschetta</div>
+            <div class="item-description">Havuç, sarımsak, krema, kabak çekirdeği</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Pesto Bruschetta</div>
+            <div class="item-description">Kiraz domates, pesto, susam tohumu</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Mantar Bruschetta</div>
+            <div class="item-description">Mantar, sarımsak, krema, ayçiçeği tohumu</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Ispanak Bruschetta</div>
+            <div class="item-description">Ispanak, sarımsak, mavi peynir, badem parçaları</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Pastırma ve Elma Bruschetta</div>
+            <div class="item-description">Pastırma, elma, bal, limon suyu, krem peynir, susam tohumu</div>
+          </div>
+        </div>
+        
+        <h2>Chaduna Özel <span class="category-price">30</span></h2>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Domates Salatası</div>
+            <div class="item-description">Nane, mevsim meyveleri/çilekleri, tohumlar ve özel soslu karışık taze domates salatası</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Pastırmalı Patates</div>
+            <div class="item-description">Dilimlenmiş patates haşlaması, pastırma ve soğan, eritilmiş peynir ve otlarla tamamlanır</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Sebze Güveç</div>
+            <div class="item-description">Kremada haşlanmış patates, biber, kabak ve havuçtan oluşan lezzetli güveç, ketsi'de peynir ve naneyle tamamlanır</div>
+          </div>
+        </div>
+        
+        <h2>Tatlı <span class="category-price">12</span></h2>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Muzlu Kek</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Pasta</div>
+          </div>
+        </div>
+        
+        <div class="menu-note">
+          <p>*Alerjen bilgisi için lütfen garsonunuza sorunuz</p>
+          <p>Tüm fiyatlar GEL cinsindendir, %18 KDV dahildir</p>
+          <p><strong>Bahşiş takdir edilir</strong></p>
+        </div>
+      </div>
+      
+      <!-- Beverage Tab -->
+      <div id="beverage" class="tab-content">
+        <h2>Sıcak İçecekler</h2>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Espresso / Çift</div>
+          </div>
+          <div class="item-price">6 / 8</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Americano</div>
+          </div>
+          <div class="item-price">6</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Cappuccino / Flat White</div>
+          </div>
+          <div class="item-price">9 / 11</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Latte / Çift</div>
+          </div>
+          <div class="item-price">9 / 11</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Raf</div>
+          </div>
+          <div class="item-price">9</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Kakao / Sıcak Çikolata</div>
+          </div>
+          <div class="item-price">9</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Çay</div>
+          </div>
+          <div class="item-price">9</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Alternatif Süt</div>
+            <div class="item-description">Badem, yulaf, fındık, muz, hindistan cevizi</div>
+          </div>
+          <div class="item-price">+3</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Nane, bal ekle</div>
+          </div>
+          <div class="item-price">+2</div>
+        </div>
+        
+        <h2>Soğuk İçecekler</h2>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Buzlu Çay</div>
+          </div>
+          <div class="item-price">9</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Buzlu Latte</div>
+          </div>
+          <div class="item-price">9</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Ev Yapımı Limonata</div>
+          </div>
+          <div class="item-price">9</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Borjomi</div>
+          </div>
+          <div class="item-price">3</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Bakuriani</div>
+          </div>
+          <div class="item-price">2</div>
+        </div>
+        
+        <h2>Şarap / Chacha</h2>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Chacha</div>
+          </div>
+          <div class="item-price">10</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Beyaz Şarap (Kadeh)</div>
+          </div>
+          <div class="item-price">14</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Amber Şarap (Kadeh)</div>
+          </div>
+          <div class="item-price">16</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="item-name">Kırmızı Şarap (Kadeh)</div>
+          </div>
+          <div class="item-price">16</div>
+        </div>
+        
+        <div class="menu-note">
+          <p>*Alerjen bilgisi ve diyet tercihleri için lütfen garsonunuzla görüşünüz</p>
+          <p>Tüm fiyatlar GEL cinsindendir, %18 KDV dahildir</p>
+          <p><strong>Bahşiş takdir edilir</strong></p>
+        </div>
+      </div>
     </div>
-
-    <script src="../assets/js/menu.js"></script></body>
+    
+    <script src="../assets/js/menu.js"></script>
+  </body>
 </html>
