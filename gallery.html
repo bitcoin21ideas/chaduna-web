@@ -38,19 +38,78 @@
         <h2>Food Gallery</h2>
 
         <div class="gallery-grid">
-            <img src="/assets/img/food/01.jpg" alt="Food Image" onclick="openLightbox(this)">
-            <img src="/assets/img/food/02.jpg" alt="Food Image" onclick="openLightbox(this)">
-            <img src="/assets/img/food/03.jpg" alt="Food Image" onclick="openLightbox(this)">
-            <img src="/assets/img/food/031.jpg" alt="Food Image" onclick="openLightbox(this)">
-            <img src="/assets/img/food/04.jpg" alt="Food Image" onclick="openLightbox(this)">
-            <img src="/assets/img/food/05.jpg" alt="Food Image" onclick="openLightbox(this)">
-            <img src="/assets/img/food/06.jpg" alt="Food Image" onclick="openLightbox(this)">
-            <img src="/assets/img/food/051.jpg" alt="Food Image" onclick="openLightbox(this)">
-            <img src="/assets/img/food/052.jpg" alt="Food Image" onclick="openLightbox(this)">
-            <img src="/assets/img/food/07.jpg" alt="Food Image" onclick="openLightbox(this)">
-            <img src="/assets/img/food/08.jpg" alt="Food Image" onclick="openLightbox(this)">
-            <img src="/assets/img/food/09.jpg" alt="Food Image" onclick="openLightbox(this)">
-            <img src="/assets/img/food/10.jpg" alt="Food Image" onclick="openLightbox(this)">
+            <img src="/assets/img/food/all-dishes.webp" alt="All dishes" onclick="openLightbox(this)">
+            <img src="/assets/img/food/selection.webp" alt="Chaduna dishes" onclick="openLightbox(this)">
+            <img src="/assets/img/food/bruschettas.webp" alt="All Bruschettas" onclick="openLightbox(this)">
+        </div>
+
+        <h2>Breakfast</h2>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="/assets/img/food/breakfast/chizhi-bizhi.webp" alt="Chizhi Bizhi" onclick="openLightbox(this)">
+                <p class="dish-name">Chizhi Bizhi</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/img/food/breakfast/frittata.webp" alt="Frittata" onclick="openLightbox(this)">
+                <p class="dish-name">Frittata</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/img/food/breakfast/scrambled-eggs.webp" alt="Scrambled Eggs" onclick="openLightbox(this)">
+                <p class="dish-name">Scrambled Eggs</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/img/food/breakfast/syrniki.webp" alt="Syrniki" onclick="openLightbox(this)">
+                <p class="dish-name">Syrniki</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/img/food/breakfast/quesadilla.webp" alt="Quesadilla" onclick="openLightbox(this)">
+                <p class="dish-name">Quesadilla</p>
+            </div>
+        </div>
+
+        <h2>Bruschetta</h2>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="/assets/img/food/bruschetta/carrot-br.webp" alt="Carrot Bruschetta" onclick="openLightbox(this)">
+                <p class="dish-name">Carrot Bruschetta</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/img/food/bruschetta/pesto-br.webp" alt="Pesto Bruschetta" onclick="openLightbox(this)">
+                <p class="dish-name">Pesto Bruschetta</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/img/food/bruschetta/champignon-br.webp" alt="Champignon Bruschetta" onclick="openLightbox(this)">
+                <p class="dish-name">Champignon Bruschetta</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/img/food/bruschetta/spinach-br.webp" alt="Spinach Bruschetta" onclick="openLightbox(this)">
+                <p class="dish-name">Spinach Bruschetta</p>
+            </div>
+            <div class="gallery-item">
+            <img src="/assets/img/food/bruschetta/pesto-br.webp" alt="Pesto Bruschetta" onclick="openLightbox(this)">
+                <p class="dish-name">Bacon and Apple Bruschetta</p>
+            </div>
+        </div>
+
+        <h2>Chaduna Special</h2>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="/assets/img/food/special/tomato-salad.webp" alt="Tomato Salad" onclick="openLightbox(this)">
+                <p class="dish-name">Tomato Salad</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/img/food/special/potato.webp" alt="Potato with Bacon" onclick="openLightbox(this)">
+                <p class="dish-name">Potato with Bacon</p>
+            </div>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="/assets/img/food/special/veggie-casserole.webp" alt="Veggie Casserole" onclick="openLightbox(this)">
+                <p class="dish-name">Veggie Casserole</p>
+            </div>
         </div>
     </div>
 
@@ -65,19 +124,22 @@
     <script>
         let currentImageIndex = 0;
         const galleryImages = [
-            "/assets/img/food/01.jpg",
-            "/assets/img/food/02.jpg",
-            "/assets/img/food/03.jpg",
-            "/assets/img/food/031.jpg",
-            "/assets/img/food/04.jpg",
-            "/assets/img/food/05.jpg",
-            "/assets/img/food/06.jpg",
-            "/assets/img/food/051.jpg",
-            "/assets/img/food/052.jpg",
-            "/assets/img/food/07.jpg",
-            "/assets/img/food/08.jpg",
-            "/assets/img/food/09.jpg",
-            "/assets/img/food/10.jpg"
+            "/assets/img/food/all-dishes.webp",
+            "/assets/img/food/selection.webp",
+            "/assets/img/food/bruschettas.webp",
+            "/assets/img/food/breakfast/chizhi-bizhi.webp",
+            "/assets/img/food/breakfast/scrambled-eggs.webp",
+            "/assets/img/food/breakfast/frittata.webp",
+            "/assets/img/food/breakfast/syrniki.webp",
+            "/assets/img/food/breakfast/quesadilla.webp",
+            "/assets/img/food/bruschetta/carrot-br.webp",
+            "/assets/img/food/bruschetta/pesto-br.webp",
+            "/assets/img/food/bruschetta/champignon-br.webp",
+            "/assets/img/food/bruschetta/spinach-br.webp",
+            "/assets/img/food/bruschetta/bacon-br.webp",
+            "/assets/img/food/special/tomato-salad.webp",
+            "/assets/img/food/special/potato.webp",
+            "/assets/img/food/special/veggie-casserole.webp",
         ];
 
         function openLightbox(img) {

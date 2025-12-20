@@ -554,6 +554,25 @@ h2 {
     box-shadow: 0 8px 12px var(--shadow-soft);
 }
 
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item img {
+    margin-bottom: 10px;
+}
+
+.dish-name {
+    text-align: center;
+    font-size: 16px;
+    color: var(--color-black);
+    margin: 0;
+    font-family: var(--font-primary);
+    font-weight: 500;
+}
+
 /* Lightbox */
 .lightbox {
     display: none;
