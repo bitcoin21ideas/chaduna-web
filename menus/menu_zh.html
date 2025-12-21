@@ -1,311 +1,312 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chaduna 菜单</title>
-<link rel="stylesheet" href="/assets/css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-<script defer src="/assets/js/structured-data.js"></script>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaduna 菜单</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer src="/assets/js/structured-data.js"></script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
 </head>
 <body class="menu">
-<header class="menu-header">
-<div class="header-left">
-<a href="/index.html">
-<img src="/assets/img/icons/home-black.svg" alt="主页" class="normal-icon">
-<img src="/assets/img/icons/home-red.svg" alt="主页" class="hover-icon">
-</a>
-</div>
-<div class="header-right">
-<a href="https://www.instagram.com/cafechaduna" target="_blank">
-<img src="/assets/img/icons/instagram-black.svg" alt="Instagram" class="normal-icon">
-<img src="/assets/img/icons/instagram-red.svg" alt="Instagram" class="hover-icon">
-</a>
-<a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank">
-<img src="/assets/img/icons/maps-black.svg" alt="位置" class="normal-icon">
-<img src="/assets/img/icons/maps-red.svg" alt="位置" class="hover-icon">
-</a>
-<a href="tel:+995557629229">
-<img src="/assets/img/icons/phone-black.svg" alt="电话" class="normal-icon">
-<img src="/assets/img/icons/phone-red.svg" alt="电话" class="hover-icon">
-</a>
-  
-<div class="lang-dropdown">
-<button onclick="toggleLanguage()" class="lang-dropbtn" aria-label="Select Language">
-<img src="/assets/img/icons/language.svg" alt="Language" class="normal-icon">
-<img src="/assets/img/icons/language-red.svg" alt="Language" class="hover-icon">
-</button>
-<div id="langDropdown" class="lang-dropdown-content">
-<a href="menu_en.html">EN</a>
-<a href="menu_ka.html">KA</a>
-<a href="menu_ru.html">RU</a>
-<a href="menu_de.html">DE</a>
-<a href="menu_fr.html">FR</a>
-<a href="menu_it.html">IT</a>
-<a href="menu_es.html">ES</a>
-<a href="menu_tr.html">TR</a>
-<a href="menu_ar.html">AR</a>
-<a href="menu_zh.html">ZH</a>
-</div>
-</div>
-</div>
-</header>
-  
-<div class="menu-container">
-<a href="/index.html">
-<img src="/assets/img/logos/chaduna-black.png" alt="Chaduna Logo" class="menu-logo">
-</a>
-  
-<div class="tabs">
-<button class="tab active" onclick="showTab('food', event)">食物</button>
-<button class="tab" onclick="showTab('beverage', event)">饮料</button>
-</div>
-  
-<!-- Food Tab -->
-<div id="food" class="tab-content active">
-<h2>早餐 <span class="category-price">25</span></h2>
-<div class="menu-item">
-<div>
-<div class="item-name">Chizhi Bizhi</div>
-<div class="item-description">鸡蛋在番茄、洋葱和香料的美味酱汁中烘烤,配以奶酪和香草</div>
-</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">意式烘蛋</div>
-<div class="item-description">意大利式开放式煎蛋卷配炒蘑菇和甜椒,在ketsi中加奶油、奶酪和香草完成</div>
-</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">炒鸡蛋</div>
-<div class="item-description">炒鸡蛋上面铺有奶酪、脆培根和四分之一樱桃番茄</div>
-</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">奶酪煎饼</div>
-<div class="item-description">农家奶酪煎饼配时令水果</div>
-</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">墨西哥卷饼</div>
-<div class="item-description">玉米饼折成塔可式,填充融化的奶酪和美味的鸡肉或蔬菜混合物</div>
-</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">添加培根</div>
-</div>
-<div class="item-price">+3</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">添加面包</div>
-</div>
-<div class="item-price">+3</div>
-</div>
-  
-<h2>意式烤面包 <span class="category-price">15</span></h2>
-<div class="menu-item">
-<div>
-<div class="item-name">胡萝卜意式烤面包</div>
-<div class="item-description">胡萝卜、大蒜、奶油、南瓜籽</div>
-</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">香蒜酱意式烤面包</div>
-<div class="item-description">樱桃番茄、香蒜酱、芝麻</div>
-</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">蘑菇意式烤面包</div>
-<div class="item-description">蘑菇、大蒜、奶油、葵花籽</div>
-</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">菠菜意式烤面包</div>
-<div class="item-description">菠菜、大蒜、蓝纹奶酪、杏仁片</div>
-</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">培根苹果意式烤面包</div>
-<div class="item-description">培根、苹果、蜂蜜、柠檬汁、奶油奶酪、芝麻</div>
-</div>
-</div>
-  
-<h2>Chaduna 特色 <span class="category-price">30</span></h2>
-<div class="menu-item">
-<div>
-<div class="item-name">番茄沙拉</div>
-<div class="item-description">新鲜混合番茄沙拉,配薄荷、时令水果/浆果、种子和特制调味汁</div>
-</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">培根土豆</div>
-<div class="item-description">炖切片土豆、培根和洋葱,最后加上融化的奶酪和香草</div>
-</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">蔬菜砂锅</div>
-<div class="item-description">土豆、甜椒、西葫芦和胡萝卜在奶油中炖煮的美味砂锅,在ketsi中用奶酪和薄荷完成</div>
-</div>
-</div>
-  
-<h2>甜点 <span class="category-price">12</span></h2>
-<div class="menu-item">
-<div>
-<div class="item-name">香蕉面包</div>
-</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">蛋糕</div>
-</div>
-</div>
-  
-<div class="menu-note">
-<p>*有关过敏原信息,请咨询您的服务员</p>
-<p>所有价格以格鲁吉亚拉里计,含18%增值税</p>
-<p><strong>欢迎小费</strong></p>
-</div>
-</div>
-  
-<!-- Beverage Tab -->
-<div id="beverage" class="tab-content">
-<h2>热饮</h2>
-<div class="menu-item">
-<div>
-<div class="item-name">浓缩咖啡 / 双份</div>
-</div>
-<div class="item-price">6 / 8</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">美式咖啡</div>
-</div>
-<div class="item-price">6</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">卡布奇诺 / 馥芮白</div>
-</div>
-<div class="item-price">9 / 11</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">拿铁 / 双份</div>
-</div>
-<div class="item-price">9 / 11</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">拉夫咖啡</div>
-</div>
-<div class="item-price">9</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">可可 / 热巧克力</div>
-</div>
-<div class="item-price">9</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">茶</div>
-</div>
-<div class="item-price">9</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">替代奶</div>
-<div class="item-description">杏仁、燕麦、榛子、香蕉、椰子</div>
-</div>
-<div class="item-price">+3</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">添加薄荷、蜂蜜</div>
-</div>
-<div class="item-price">+2</div>
-</div>
-  
-<h2>冷饮</h2>
-<div class="menu-item">
-<div>
-<div class="item-name">冰茶</div>
-</div>
-<div class="item-price">9</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">冰拿铁</div>
-</div>
-<div class="item-price">9</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">自制柠檬水</div>
-</div>
-<div class="item-price">9</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">博尔若米矿泉水</div>
-</div>
-<div class="item-price">3</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">巴库里亚尼矿泉水</div>
-</div>
-<div class="item-price">2</div>
-</div>
-  
-<h2>葡萄酒 / 恰恰酒</h2>
-<div class="menu-item">
-<div>
-<div class="item-name">恰恰酒</div>
-</div>
-<div class="item-price">10</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">白葡萄酒(杯)</div>
-</div>
-<div class="item-price">14</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">琥珀葡萄酒(杯)</div>
-</div>
-<div class="item-price">16</div>
-</div>
-<div class="menu-item">
-<div>
-<div class="item-name">红葡萄酒(杯)</div>
-</div>
-<div class="item-price">16</div>
-</div>
-  
-<div class="menu-note">
-<p>*有关过敏原信息和饮食偏好,请与您的服务员确认</p>
-<p>所有价格以格鲁吉亚拉里计,含18%增值税</p>
-<p><strong>欢迎小费</strong></p>
-</div>
-</div>
-</div>
-  
-<script src="../assets/js/menu.js"></script>
+    <header class="menu-header">
+        <div class="header-left">
+            <a href="/index.html">
+                <img src="/assets/img/icons/home-black.svg" alt="主页" class="normal-icon">
+                <img src="/assets/img/icons/home-red.svg" alt="主页" class="hover-icon">
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="https://www.instagram.com/cafechaduna" target="_blank">
+                <img src="/assets/img/icons/instagram-black.svg" alt="Instagram" class="normal-icon">
+                <img src="/assets/img/icons/instagram-red.svg" alt="Instagram" class="hover-icon">
+            </a>
+            <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank">
+                <img src="/assets/img/icons/maps-black.svg" alt="位置" class="normal-icon">
+                <img src="/assets/img/icons/maps-red.svg" alt="位置" class="hover-icon">
+            </a>
+            <a href="tel:+995557629229">
+                <img src="/assets/img/icons/phone-black.svg" alt="电话" class="normal-icon">
+                <img src="/assets/img/icons/phone-red.svg" alt="电话" class="hover-icon">
+            </a>
+
+            <div class="lang-dropdown">
+                <button onclick="toggleLanguage()" class="lang-dropbtn" aria-label="Select Language">
+                    <img src="/assets/img/icons/language.svg" alt="Language" class="normal-icon">
+                    <img src="/assets/img/icons/language-red.svg" alt="Language" class="hover-icon">
+                </button>
+                <div id="langDropdown" class="lang-dropdown-content">
+                    <a href="menu_en.html">EN</a>
+                    <a href="menu_ka.html">KA</a>
+                    <a href="menu_ru.html">RU</a>
+                    <a href="menu_de.html">DE</a>
+                    <a href="menu_fr.html">FR</a>
+                    <a href="menu_it.html">IT</a>
+                    <a href="menu_es.html">ES</a>
+                    <a href="menu_tr.html">TR</a>
+                    <a href="menu_ar.html">AR</a>
+                    <a href="menu_zh.html">ZH</a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="menu-container">
+        <a href="/index.html">
+            <img src="/assets/img/logos/chaduna-black.png" alt="Chaduna Logo" class="menu-logo">
+        </a>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('food', event)">美食</button>
+            <button class="tab" onclick="showTab('beverage', event)">饮品</button>
+        </div>
+
+        <!-- Food Tab -->
+        <div id="food" class="tab-content active">
+            <h2>早餐 <span class="category-price">25</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Chizhi Bizhi</div>
+                    <div class="item-description">鸡蛋、番茄、洋葱、奶酪、香料和香草</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">意式烘蛋</div>
+                    <div class="item-description">鸡蛋、蘑菇、甜椒、大蒜、奶酪、奶油</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">炒鸡蛋</div>
+                    <div class="item-description">鸡蛋、奶酪、樱桃番茄、香料和香草</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">俄式奶酪饼</div>
+                    <div class="item-description">配时令水果的奶酪薄饼</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">墨西哥玉米饼</div>
+                    <div class="item-description">鸡肉或蔬菜、甜椒、奶酪、洋葱</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">添加培根</div>
+                </div>
+                <div class="item-price">+3</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">添加面包</div>
+                </div>
+                <div class="item-price">+3</div>
+            </div>
+
+            <h2>意式烤面包 <span class="category-price">15</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">胡萝卜意式烤面包</div>
+                    <div class="item-description">胡萝卜、大蒜、奶油、南瓜籽</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">青酱意式烤面包</div>
+                    <div class="item-description">樱桃番茄、青酱、芝麻</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">蘑菇意式烤面包</div>
+                    <div class="item-description">蘑菇、大蒜、奶油、葵花籽</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">菠菜意式烤面包</div>
+                    <div class="item-description">菠菜、大蒜、蓝纹奶酪、杏仁片</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">培根苹果意式烤面包</div>
+                    <div class="item-description">培根、苹果、蜂蜜、柠檬汁、奶油奶酪、芝麻</div>
+                </div>
+            </div>
+
+            <h2>Chaduna 特色 <span class="category-price">30</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">番茄沙拉</div>
+                    <div class="item-description">新鲜混合番茄、时令水果、浆果、奶酪、特制调味汁</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">培根土豆</div>
+                    <div class="item-description">土豆、培根、樱桃番茄、洋葱、奶油、奶酪</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">蔬菜砂锅</div>
+                    <div class="item-description">土豆、胡萝卜、甜椒、西葫芦、樱桃番茄、奶油、奶酪</div>
+                </div>
+            </div>
+
+            <h2>甜品 <span class="category-price">12</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">香蕉面包</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">蛋糕</div>
+                </div>
+            </div>
+
+            <div class="menu-note">
+                <p>*有关过敏原信息,请咨询服务员</p>
+                <p>所有价格均以格鲁吉亚拉里计,含18%增值税</p>
+                <p><strong>欢迎给小费</strong></p>
+            </div>
+        </div>
+
+        <!-- Beverage Tab -->
+        <div id="beverage" class="tab-content">
+            <h2>热饮</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">浓缩咖啡 / 双份</div>
+                </div>
+                <div class="item-price">6 / 8</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">美式咖啡</div>
+                </div>
+                <div class="item-price">6</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">卡布奇诺 / 馥芮白</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">拿铁 / 双份</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">拉夫咖啡</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">可可 / 热巧克力</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">茶</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">替代奶</div>
+                    <div class="item-description">杏仁、燕麦、榛子、香蕉、椰子</div>
+                </div>
+                <div class="item-price">+3</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">添加薄荷、蜂蜜</div>
+                </div>
+                <div class="item-price">+2</div>
+            </div>
+
+            <h2>冷饮</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">冰茶</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">冰拿铁</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">自制柠檬水</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">博尔若米矿泉水</div>
+                </div>
+                <div class="item-price">3</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">巴库里阿尼矿泉水</div>
+                </div>
+                <div class="item-price">2</div>
+            </div>
+
+            <h2>葡萄酒 / 恰恰酒</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">恰恰酒</div>
+                </div>
+                <div class="item-price">10</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">白葡萄酒(杯)</div>
+                </div>
+                <div class="item-price">14</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">琥珀葡萄酒(杯)</div>
+                </div>
+                <div class="item-price">16</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">红葡萄酒(杯)</div>
+                </div>
+                <div class="item-price">16</div>
+            </div>
+
+            <div class="menu-note">
+                <p>*有关过敏原信息,请咨询服务员</p>
+                <p>所有价格均以格鲁吉亚拉里计,含18%增值税</p>
+                <p><strong>欢迎给小费</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/menu.js"></script>
 </body>
 </html>

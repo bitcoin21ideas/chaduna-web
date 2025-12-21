@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaduna Menu</title>
@@ -10,302 +10,303 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <script defer src="/assets/js/structured-data.js"></script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
-  </head>
-  <body class="menu">
+</head>
+<body class="menu">
     <header class="menu-header">
-      <div class="header-left">
-        <a href="/index.html">
-          <img src="/assets/img/icons/home-black.svg" alt="Accueil" class="normal-icon">
-          <img src="/assets/img/icons/home-red.svg" alt="Accueil" class="hover-icon">
-        </a>
-      </div>
-      <div class="header-right">
-        <a href="https://www.instagram.com/cafechaduna" target="_blank">
-          <img src="/assets/img/icons/instagram-black.svg" alt="Instagram" class="normal-icon">
-          <img src="/assets/img/icons/instagram-red.svg" alt="Instagram" class="hover-icon">
-        </a>
-        <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank">
-          <img src="/assets/img/icons/maps-black.svg" alt="Localisation" class="normal-icon">
-          <img src="/assets/img/icons/maps-red.svg" alt="Localisation" class="hover-icon">
-        </a>
-        <a href="tel:+995557629229">
-          <img src="/assets/img/icons/phone-black.svg" alt="Téléphone" class="normal-icon">
-          <img src="/assets/img/icons/phone-red.svg" alt="Téléphone" class="hover-icon">
-        </a>
-        
-        <div class="lang-dropdown">
-          <button onclick="toggleLanguage()" class="lang-dropbtn" aria-label="Select Language">
-            <img src="/assets/img/icons/language.svg" alt="Language" class="normal-icon">
-            <img src="/assets/img/icons/language-red.svg" alt="Language" class="hover-icon">
-          </button>
-          <div id="langDropdown" class="lang-dropdown-content">
-            <a href="menu_en.html">EN</a>
-            <a href="menu_ka.html">KA</a>
-            <a href="menu_ru.html">RU</a>
-            <a href="menu_de.html">DE</a>
-            <a href="menu_fr.html">FR</a>
-            <a href="menu_it.html">IT</a>
-            <a href="menu_es.html">ES</a>
-            <a href="menu_tr.html">TR</a>
-            <a href="menu_ar.html">AR</a>
-            <a href="menu_zh.html">ZH</a>
-          </div>
+        <div class="header-left">
+            <a href="/index.html">
+                <img src="/assets/img/icons/home-black.svg" alt="Accueil" class="normal-icon">
+                <img src="/assets/img/icons/home-red.svg" alt="Accueil" class="hover-icon">
+            </a>
         </div>
-      </div>
+        <div class="header-right">
+            <a href="https://www.instagram.com/cafechaduna" target="_blank">
+                <img src="/assets/img/icons/instagram-black.svg" alt="Instagram" class="normal-icon">
+                <img src="/assets/img/icons/instagram-red.svg" alt="Instagram" class="hover-icon">
+            </a>
+            <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank">
+                <img src="/assets/img/icons/maps-black.svg" alt="Localisation" class="normal-icon">
+                <img src="/assets/img/icons/maps-red.svg" alt="Localisation" class="hover-icon">
+            </a>
+            <a href="tel:+995557629229">
+                <img src="/assets/img/icons/phone-black.svg" alt="Téléphone" class="normal-icon">
+                <img src="/assets/img/icons/phone-red.svg" alt="Téléphone" class="hover-icon">
+            </a>
+
+            <div class="lang-dropdown">
+                <button onclick="toggleLanguage()" class="lang-dropbtn" aria-label="Select Language">
+                    <img src="/assets/img/icons/language.svg" alt="Language" class="normal-icon">
+                    <img src="/assets/img/icons/language-red.svg" alt="Language" class="hover-icon">
+                </button>
+                <div id="langDropdown" class="lang-dropdown-content">
+                    <a href="menu_en.html">EN</a>
+                    <a href="menu_ka.html">KA</a>
+                    <a href="menu_ru.html">RU</a>
+                    <a href="menu_de.html">DE</a>
+                    <a href="menu_fr.html">FR</a>
+                    <a href="menu_it.html">IT</a>
+                    <a href="menu_es.html">ES</a>
+                    <a href="menu_tr.html">TR</a>
+                    <a href="menu_ar.html">AR</a>
+                    <a href="menu_zh.html">ZH</a>
+                </div>
+            </div>
+
+        </div>
     </header>
-    
+
     <div class="menu-container">
-      <a href="/index.html">
-        <img src="/assets/img/logos/chaduna-black.png" alt="Chaduna Logo" class="menu-logo">
-      </a>
-      
-      <div class="tabs">
-        <button class="tab active" onclick="showTab('food', event)">Nourriture</button>
-        <button class="tab" onclick="showTab('beverage', event)">Boissons</button>
-      </div>
-      
-      <!-- Food Tab -->
-      <div id="food" class="tab-content active">
-        <h2>Petit-déjeuner <span class="category-price">25</span></h2>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Chizhi Bizhi</div>
-            <div class="item-description">Œufs cuits au four dans une sauce savoureuse de tomates, oignons et épices, servis avec du fromage et des herbes</div>
-          </div>
+        <a href="/index.html">
+            <img src="/assets/img/logos/chaduna-black.png" alt="Chaduna Logo" class="menu-logo">
+        </a>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('food', event)">Nourriture</button>
+            <button class="tab" onclick="showTab('beverage', event)">Boissons</button>
         </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Frittata</div>
-            <div class="item-description">Omelette italienne ouverte avec champignons sautés et poivrons, finie dans un ketsi avec crème, fromage et herbes</div>
-          </div>
+
+        <!-- Food Tab -->
+        <div id="food" class="tab-content active">
+            <h2>Petit déjeuner <span class="category-price">25</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Chizhi Bizhi</div>
+                    <div class="item-description">Œufs, tomates, oignons, fromage, épices et herbes</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Frittata</div>
+                    <div class="item-description">Œufs, champignons, poivrons, ail, fromage, crème</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Œufs brouillés</div>
+                    <div class="item-description">Œufs, fromage, tomates cerises, épices et herbes</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Syrniki</div>
+                    <div class="item-description">Crêpes au fromage blanc servies avec des fruits de saison</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Quesadilla</div>
+                    <div class="item-description">Poulet ou légumes, poivron, fromage, oignon</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ajouter du bacon</div>
+                </div>
+                <div class="item-price">+3</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ajouter du pain</div>
+                </div>
+                <div class="item-price">+3</div>
+            </div>
+
+            <h2>Bruschetta <span class="category-price">15</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bruschetta aux carottes</div>
+                    <div class="item-description">Carotte, ail, crème, graines de courge</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bruschetta au pesto</div>
+                    <div class="item-description">Tomate cerise, pesto, graines de sésame</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bruschetta aux champignons</div>
+                    <div class="item-description">Champignon, ail, crème, graines de tournesol</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bruschetta aux épinards</div>
+                    <div class="item-description">Épinards, ail, fromage bleu, flocons d'amande</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bruschetta bacon et pomme</div>
+                    <div class="item-description">Bacon, pomme, miel, jus de citron, fromage à la crème, graines de sésame</div>
+                </div>
+            </div>
+
+            <h2>Chaduna Spécial <span class="category-price">30</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Salade de tomates</div>
+                    <div class="item-description">Tomates fraîches mélangées, fruits de saison, baies, fromage, vinaigrette spéciale</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Pommes de terre au bacon</div>
+                    <div class="item-description">Pommes de terre, bacon, tomates cerises, oignon, crème, fromage</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Gratin de légumes</div>
+                    <div class="item-description">Pommes de terre, carotte, poivron, courgette, tomates cerises, crème, fromage</div>
+                </div>
+            </div>
+
+            <h2>Dessert <span class="category-price">12</span></h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Cake à la banane</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Gâteau</div>
+                </div>
+            </div>
+
+            <div class="menu-note">
+                <p>*Pour les informations sur les allergènes, veuillez demander à votre serveur</p>
+                <p>Tous les prix sont en GEL, TVA 18% comprise</p>
+                <p><strong>Les pourboires sont appréciés</strong></p>
+            </div>
         </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Œufs brouillés</div>
-            <div class="item-description">Œufs brouillés garnis d'une couche de fromage, de bacon croustillant et de tomates cerises coupées en quartiers</div>
-          </div>
+
+        <!-- Beverage Tab -->
+        <div id="beverage" class="tab-content">
+            <h2>Boissons chaudes</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Espresso / Double</div>
+                </div>
+                <div class="item-price">6 / 8</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Americano</div>
+                </div>
+                <div class="item-price">6</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Cappuccino / Flat White</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Latte / Double</div>
+                </div>
+                <div class="item-price">9 / 11</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Raf</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Cacao / Chocolat chaud</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Thé</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Lait alternatif</div>
+                    <div class="item-description">Amande, avoine, noisette, banane, noix de coco</div>
+                </div>
+                <div class="item-price">+3</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Ajouter menthe, miel</div>
+                </div>
+                <div class="item-price">+2</div>
+            </div>
+
+            <h2>Boissons froides</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Thé glacé</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Latte glacé</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Limonade maison</div>
+                </div>
+                <div class="item-price">9</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Borjomi</div>
+                </div>
+                <div class="item-price">3</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Bakuriani</div>
+                </div>
+                <div class="item-price">2</div>
+            </div>
+
+            <h2>Vin / Chacha</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Chacha</div>
+                </div>
+                <div class="item-price">10</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Vin blanc (verre)</div>
+                </div>
+                <div class="item-price">14</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Vin ambré (verre)</div>
+                </div>
+                <div class="item-price">16</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Vin rouge (verre)</div>
+                </div>
+                <div class="item-price">16</div>
+            </div>
+
+            <div class="menu-note">
+                <p>*Pour les informations sur les allergènes, veuillez demander à votre serveur</p>
+                <p>Tous les prix sont en GEL, TVA 18% comprise</p>
+                <p><strong>Les pourboires sont appréciés</strong></p>
+            </div>
         </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Syrniki</div>
-            <div class="item-description">Galettes de fromage blanc servies avec des fruits de saison</div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Quesadilla</div>
-            <div class="item-description">Tortilla pliée façon taco, garnie de fromage fondu et d'un mélange savoureux de poulet ou de légumes</div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Ajouter du bacon</div>
-          </div>
-          <div class="item-price">+3</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Ajouter du pain</div>
-          </div>
-          <div class="item-price">+3</div>
-        </div>
-        
-        <h2>Bruschetta <span class="category-price">15</span></h2>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Bruschetta aux carottes</div>
-            <div class="item-description">Carotte, ail, crème, graines de courge</div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Bruschetta pesto</div>
-            <div class="item-description">Tomate cerise, pesto, graines de sésame</div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Bruschetta aux champignons</div>
-            <div class="item-description">Champignon, ail, crème, graines de tournesol</div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Bruschetta aux épinards</div>
-            <div class="item-description">Épinards, ail, fromage bleu, amandes effilées</div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Bruschetta bacon et pomme</div>
-            <div class="item-description">Bacon, pomme, miel, jus de citron, fromage à la crème, graines de sésame</div>
-          </div>
-        </div>
-        
-        <h2>Spécialité Chaduna <span class="category-price">30</span></h2>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Salade de tomates</div>
-            <div class="item-description">Salade de tomates mélangées fraîches avec menthe, fruits/baies de saison, graines et vinaigrette spéciale</div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Pommes de terre au bacon</div>
-            <div class="item-description">Pommes de terre mijotées tranchées, bacon et oignon, finies avec du fromage fondu et des herbes</div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Casserole de légumes</div>
-            <div class="item-description">Une casserole savoureuse de pommes de terre, poivrons, courgettes et carottes mijotés dans la crème, finie dans un ketsi avec fromage et menthe</div>
-          </div>
-        </div>
-        
-        <h2>Dessert <span class="category-price">12</span></h2>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Pain à la banane</div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Gâteau</div>
-          </div>
-        </div>
-        
-        <div class="menu-note">
-          <p>*Pour les informations sur les allergènes, veuillez demander à votre serveur</p>
-          <p>Tous les prix en GEL, incluent 18% de TVA</p>
-          <p><strong>Pourboires appréciés</strong></p>
-        </div>
-      </div>
-      
-      <!-- Beverage Tab -->
-      <div id="beverage" class="tab-content">
-        <h2>Boissons chaudes</h2>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Espresso / Double</div>
-          </div>
-          <div class="item-price">6 / 8</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Americano</div>
-          </div>
-          <div class="item-price">6</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Cappuccino / Flat White</div>
-          </div>
-          <div class="item-price">9 / 11</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Latte / Double</div>
-          </div>
-          <div class="item-price">9 / 11</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Raf</div>
-          </div>
-          <div class="item-price">9</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Cacao / Chocolat chaud</div>
-          </div>
-          <div class="item-price">9</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Thé</div>
-          </div>
-          <div class="item-price">9</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Lait alternatif</div>
-            <div class="item-description">Amande, avoine, noisette, banane, coco</div>
-          </div>
-          <div class="item-price">+3</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Ajouter menthe, miel</div>
-          </div>
-          <div class="item-price">+2</div>
-        </div>
-        
-        <h2>Boissons froides</h2>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Thé glacé</div>
-          </div>
-          <div class="item-price">9</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Latte glacé</div>
-          </div>
-          <div class="item-price">9</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Limonade maison</div>
-          </div>
-          <div class="item-price">9</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Borjomi</div>
-          </div>
-          <div class="item-price">3</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Bakuriani</div>
-          </div>
-          <div class="item-price">2</div>
-        </div>
-        
-        <h2>Vin / Chacha</h2>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Chacha</div>
-          </div>
-          <div class="item-price">10</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Verre de blanc</div>
-          </div>
-          <div class="item-price">14</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Verre d'ambré</div>
-          </div>
-          <div class="item-price">16</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="item-name">Verre de rouge</div>
-          </div>
-          <div class="item-price">16</div>
-        </div>
-        
-        <div class="menu-note">
-          <p>*Pour les informations sur les allergènes et préférences alimentaires, veuillez confirmer avec votre serveur</p>
-          <p>Tous les prix en GEL, incluent 18% de TVA</p>
-          <p><strong>Pourboires appréciés</strong></p>
-        </div>
-      </div>
     </div>
-    
+
     <script src="../assets/js/menu.js"></script>
-  </body>
+</body>
 </html>
