@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const baseUrl = 'https://chaduna.bar';
+  const baseUrl = 'https://chaduna.com';
   
   // Detect page language from HTML lang attribute
   const pageLang = document.documentElement.lang || 'en';
@@ -776,7 +776,7 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
         "closes": "15:00"
       }
     ],
-    "servesCuisine": ["Georgian", "European", "Cafe", "Breakfast", "Brunch", "Lunch", "Dinner", "White wine", "Red wine", "Rose wine", "Amber Wine", "Georgian wine", "Chacha"],
+    "servesCuisine": ["Georgian", "European", "Cafe", "Coffee", "Breakfast", "Brunch", "Lunch", "Dinner", "White wine", "Red wine", "Rose wine", "Amber Wine", "Georgian wine", "Chacha"],
     "sameAs": ["https://www.instagram.com/cafechaduna"],
     "amenityFeature": [
       { "@type": "LocationFeatureSpecification", "name": t.dineIn, "value": true },
@@ -866,7 +866,8 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
       `${baseUrl}/assets/img/food/10.jpg`
     ],
     // Opening hours in text format (some AI bots prefer this)
-    "openingHours": "Tu-Su 09:00-23:00, Mo 09:00-15:00"
+    "openingHours": "Tu-Su 09:00-23:00, Mo 09:00-15:00",
+    "keywords": "cafe tbilisi, coffee tbilisi, breakfast tbilisi, brunch tbilisi, wine bar tbilisi, georgian wine tbilisi, wine by glass tbilisi, espresso tbilisi, cappuccino tbilisi, latte tbilisi, syrniki tbilisi, bruschetta tbilisi, liberty square cafe, downtown tbilisi cafe, old city tbilisi cafe, liberty square metro cafe, breakfast downtown tbilisi, coffee downtown tbilisi, wine downtown tbilisi"
   };
 
   // Dynamic Menu Generation
@@ -929,7 +930,43 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
                         fr: "Crêpes au fromage blanc",
                         es: "Tortitas de requesón",
                         it: "Frittelle di ricotta",
-                        ka: "ნაყინის ბლინები"
+                        ka: "ნაყინის ბლინები",
+                        zh: "白软干酪煎饼",
+                        ar: "فطائر الجبن القريش"
+                    };
+                    if (altNames[pageLang]) item.alternateName = altNames[pageLang];
+                }
+                
+                // Chizhi Bizhi - Georgian breakfast dish
+                if (itemNameLower.includes('chizhi') || itemNameLower.includes('чижи') || itemNameLower.includes('бижи')) {
+                    const altNames = {
+                        en: "Georgian scrambled eggs with tomatoes",
+                        ru: "Грузинские яйца с помидорами",
+                        de: "Georgische Rühreier mit Tomaten",
+                        tr: "Domatesli Gürcü yumurtası",
+                        fr: "Œufs brouillés géorgiens aux tomates",
+                        es: "Huevos revueltos georgianos con tomates",
+                        it: "Uova strapazzate georgiane con pomodori",
+                        ka: "ქართული კვერცხი პომიდვრებით",
+                        zh: "格鲁吉亚番茄炒蛋",
+                        ar: "بيض مخفوق جورجي مع الطماطم"
+                    };
+                    if (altNames[pageLang]) item.alternateName = altNames[pageLang];
+                }
+                
+                // Scrambled Eggs
+                if (itemNameLower.includes('scrambled') || itemNameLower.includes('скрэмбл') || itemNameLower.includes('strapazzate')) {
+                    const altNames = {
+                        en: "Scrambled eggs",
+                        ru: "Яичница-болтунья",
+                        de: "Rühreier",
+                        tr: "Çırpılmış yumurta",
+                        fr: "Œufs brouillés",
+                        es: "Huevos revueltos",
+                        it: "Uova strapazzate",
+                        ka: "შეწვნილი კვერცხი",
+                        zh: "炒鸡蛋",
+                        ar: "بيض مخفوق"
                     };
                     if (altNames[pageLang]) item.alternateName = altNames[pageLang];
                 }
@@ -965,14 +1002,128 @@ function generateRestaurantStructuredData(baseUrl, pageLang) {
                     if (altNames[pageLang]) item.alternateName = altNames[pageLang];
                 }
                 
+                if (itemNameLower.includes('white glass') || itemNameLower.includes('белое') || (itemNameLower.includes('бокал') && itemNameLower.includes('бел'))) {
+                    const altNames = {
+                        en: "White Wine",
+                        ru: "Белое вино",
+                        de: "Weißwein",
+                        tr: "Beyaz Şarap",
+                        fr: "Vin blanc",
+                        es: "Vino blanco",
+                        it: "Vino bianco",
+                        ka: "თეთრი ღვინო",
+                        zh: "白葡萄酒",
+                        ar: "نبيذ أبيض"
+                    };
+                    if (altNames[pageLang]) item.alternateName = altNames[pageLang];
+                }
+                
+                if (itemNameLower.includes('red glass') || itemNameLower.includes('красное') || (itemNameLower.includes('бокал') && itemNameLower.includes('красн'))) {
+                    const altNames = {
+                        en: "Red Wine",
+                        ru: "Красное вино",
+                        de: "Rotwein",
+                        tr: "Kırmızı Şarap",
+                        fr: "Vin rouge",
+                        es: "Vino tinto",
+                        it: "Vino rosso",
+                        ka: "წითელი ღვინო",
+                        zh: "红葡萄酒",
+                        ar: "نبيذ أحمر"
+                    };
+                    if (altNames[pageLang]) item.alternateName = altNames[pageLang];
+                }
+                
+                if (itemNameLower.includes('amber glass') || itemNameLower.includes('янтарное') || (itemNameLower.includes('бокал') && itemNameLower.includes('янтарн'))) {
+                    const altNames = {
+                        en: "Amber Wine",
+                        ru: "Янтарное вино",
+                        de: "Bernsteinwein",
+                        tr: "Kahverengi Şarap",
+                        fr: "Vin ambré",
+                        es: "Vino ambar",
+                        it: "Vino ambrato",
+                        ka: "ქარვისფერი ღვინო",
+                        zh: "琥珀葡萄酒",
+                        ar: "نبيذ أمبر"
+                    };
+                    if (altNames[pageLang]) item.alternateName = altNames[pageLang];
+                }
+                
+                if (itemNameLower.includes('espresso')) {
+                    const altNames = {
+                        en: "Espresso Coffee",
+                        ru: "Эспрессо",
+                        de: "Espresso",
+                        tr: "Espresso",
+                        fr: "Café expresso",
+                        es: "Café expreso",
+                        it: "Caffè espresso",
+                        ka: "ესპრესო",
+                        zh: "意式浓缩咖啡",
+                        ar: "إسبرسو"
+                    };
+                    if (altNames[pageLang]) item.alternateName = altNames[pageLang];
+                }
+                
+                if (itemNameLower.includes('americano')) {
+                    const altNames = {
+                        en: "Americano Coffee",
+                        ru: "Американо",
+                        de: "Americano",
+                        tr: "Americano",
+                        fr: "Café américain",
+                        es: "Café americano",
+                        it: "Caffè americano",
+                        ka: "ამერიკანო",
+                        zh: "美式咖啡",
+                        ar: "أمريكانو"
+                    };
+                    if (altNames[pageLang]) item.alternateName = altNames[pageLang];
+                }
+                
+                if (itemNameLower.includes('cappuccino') || itemNameLower.includes('капучино')) {
+                    const altNames = {
+                        en: "Cappuccino Coffee",
+                        ru: "Капучино",
+                        de: "Cappuccino",
+                        tr: "Kapuçino",
+                        fr: "Cappuccino",
+                        es: "Capuchino",
+                        it: "Cappuccino",
+                        ka: "კაპუჩინო",
+                        zh: "卡布奇诺",
+                        ar: "كابتشينو"
+                    };
+                    if (altNames[pageLang]) item.alternateName = altNames[pageLang];
+                }
+                
+                if (itemNameLower.includes('latte') || itemNameLower.includes('латте')) {
+                    const altNames = {
+                        en: "Latte Coffee",
+                        ru: "Латте",
+                        de: "Latte",
+                        tr: "Latte",
+                        fr: "Café latte",
+                        es: "Café con leche",
+                        it: "Caffè latte",
+                        ka: "ლატე",
+                        zh: "拿铁咖啡",
+                        ar: "لاتيه"
+                    };
+                    if (altNames[pageLang]) item.alternateName = altNames[pageLang];
+                }
+                
                 if (descEl) {
                     item.description = descEl.textContent.trim();
                 }
                 
                 const rawPrice = priceEl ? priceEl.textContent.trim() : currentSectionPrice;
                 if (rawPrice) {
-                    const match = rawPrice.match(/[\d.]+/);
-                    const priceVal = match ? match[0] : rawPrice;
+                    // Handle multiple prices (e.g., "6 / 8" or "9 / 11")
+                    // Use the first price for structured data
+                    const priceMatch = rawPrice.match(/[\d.]+/);
+                    const priceVal = priceMatch ? priceMatch[0] : rawPrice;
                     
                     item.offers = {
                         "@type": "Offer",
