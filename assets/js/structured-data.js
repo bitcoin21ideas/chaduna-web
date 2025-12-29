@@ -122,9 +122,9 @@ function aggregateRating() {
   return {
     "@type": "AggregateRating",
     "ratingValue": averageRating,
-    "reviewCount": totalReviews.toString(),
-    "bestRating": "5",
-    "worstRating": "1"
+    "reviewCount": totalReviews,
+    "bestRating": 5,
+    "worstRating": 1
   };
 }
 
@@ -133,7 +133,7 @@ function buildCafeSchema(baseUrl, lang) {
 
   const business = {
     "@context": "https://schema.org",
-    "@type": ["Cafe", "Wine Bar"],
+    "@type": ["Restaurant", "Cafe", "Bar"],
     "@id": `${baseUrl}#business`,
     "name": "Chaduna",
     "alternateName": "Cafe Chaduna",
