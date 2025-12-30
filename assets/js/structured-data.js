@@ -63,7 +63,6 @@ function buildHubSchema(baseUrl, lang) {
     "name": t.name,
     "description": t.description,
     "url": `${baseUrl}/hub`,
-    "inLanguage": lang,
     "telephone": "+995557629229",
     "priceRange": "₾₾",
     "image": `${baseUrl}/assets/img/logos/hub-logo.png`,
@@ -84,13 +83,9 @@ function buildHubSchema(baseUrl, lang) {
       feature(t.flexibleWorkspace)
     ],
     "knowsAbout": ["coworking", "remote work", "digital nomads", "day pass workspace"],
-    "audience": {
-      "@type": "Audience",
-      "audienceType": t.audience
-    },
     "makesOffer": offers, 
     "sameAs": [
-        "https://www.instagram.com/cafechaduna",
+        "https://www.instagram.com/chaduna.hub",
     ]
   };
 
@@ -133,21 +128,19 @@ function buildCafeSchema(baseUrl, lang) {
 
   const business = {
     "@context": "https://schema.org",
-    "@type": ["Restaurant", "Cafe", "Bar"],
+    "@type": "Restaurant",
     "@id": `${baseUrl}#business`,
     "name": "Chaduna",
     "alternateName": "Cafe Chaduna",
     "description": t.description,
     "url": baseUrl,
-    "inLanguage": lang,
     "telephone": "+995557629229",
     "priceRange": "₾₾",
-    "servesAlcohol": true,
     "acceptsReservations": true,
     "paymentAccepted": ["Cash", "Credit Card"],
     "currenciesAccepted": "GEL",
     "image": getCafeImages(baseUrl),
-    "servesCuisine": ["Georgian", "European", "Breakfast", "Brunch", "Wine"],
+    "servesCuisine": ["International", "Breakfast", "Coffee", "Wine"],
     "address": address(),
     "geo": geo(),
     "hasMap": map(),
@@ -171,10 +164,6 @@ function buildCafeSchema(baseUrl, lang) {
       feature(t.wineByGlass)
     ],
     "knowsAbout": ["Georgian wine", "international wine", "syrniki", "breakfast", "brunch", "wine bar", "coffee"],
-    "audience": {
-      "@type": "Audience",
-      "audienceType": t.audience
-    },
     "aggregateRating": aggregateRating(),
     "sameAs": [
         "https://www.instagram.com/cafechaduna",
