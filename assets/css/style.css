@@ -1,3 +1,44 @@
+/* Playfair Display Font Faces - Self-hosted */
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/playfair-display/playfair-display-v40-cyrillic_latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/assets/fonts/playfair-display/playfair-display-v40-cyrillic_latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/assets/fonts/playfair-display/playfair-display-v40-cyrillic_latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/assets/fonts/playfair-display/playfair-display-v40-cyrillic_latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('/assets/fonts/playfair-display/playfair-display-v40-cyrillic_latin-800.woff2') format('woff2');
+}
+
 /* Reset */
 :root {
     /* Colors */
@@ -249,6 +290,8 @@ body.menu {
 
 .menu-logo {
     width: 150px;
+    height: auto;
+    aspect-ratio: 800 / 1024;
     display: block;
     margin: 20px auto 40px;
     cursor: pointer;
@@ -720,7 +763,7 @@ body.hub-page .container {
 
 .hub-subtitle {
     font-family: var(--font-primary);
-    font-weight: 300; /* Thinner */
+    font-weight: 400;
     font-size: 24px;
     margin-top: 10px;
     margin-bottom: 40px;

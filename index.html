@@ -8,15 +8,85 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <title>Chaduna - Cafe and Wine Bar in Tbilisi</title>
     <link rel="canonical" href="https://chaduna.com/" />
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Inline critical CSS for above-the-fold content -->
+    <style>
+        /* Critical CSS - Above the fold styles */
+        :root {
+            --color-white: white;
+            --color-black: black;
+            --color-accent: #89393E;
+            --font-primary: 'Playfair Display', Georgia, serif;
+            --font-secondary: Georgia, 'Times New Roman', serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body.landing { height: 100%; overflow: auto; }
+        body { font-family: var(--font-primary); }
+        body.landing {
+            background: var(--color-white);
+            color: var(--color-black);
+            text-align: center;
+        }
+        .container { padding: 40px 20px; }
+        h1 { margin: 0; line-height: 0; }
+        .logo {
+            width: 200px;
+            max-width: 80%;
+            margin: 20px 0 10px;
+            height: auto;
+            aspect-ratio: 800 / 1024;
+        }
+        .description {
+            margin: 0 0 40px;
+            font-size: 20px;
+            line-height: 1.4;
+            letter-spacing: 0.5px;
+        }
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 50px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--color-black);
+            text-decoration: none;
+            font-size: 50px;
+            font-family: var(--font-secondary);
+            font-weight: 500;
+            display: inline-block;
+        }
+        .icons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        .socials img, .address img, .phone img {
+            width: 40px;
+            height: 40px;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 20px 15px; }
+            .logo { width: 150px; }
+            .nav-links a { font-size: 36px; }
+            .description { font-size: 16px; }
+        }
+    </style>
+    
+    <!-- Defer non-critical CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </noscript>
+    
     <meta name="description" content="Chaduna - Cozy cafe and wine bar in old city of Tbilisi. Famous for 60+ kinds of wine and all-day breakfast. Dine in or take out.">
     <meta property="og:title" content="Chaduna - Cafe and Wine Bar">
     <meta property="og:description" content="Cozy wine bar in old city of Tbilisi serving the best syrniki in town, bruschetta, all-day breakfast and 60 + kinds of wine">
     <meta property="og:image" content="https://chaduna.com/assets/img/logos/chaduna-logo.png">
     <meta property="og:url" content="https://chaduna.com">
+    <link rel="preconnect" href="https://cloud.umami.is">
     <script defer src="/assets/js/structured-data.js"></script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
 </head>
@@ -24,7 +94,15 @@
     <main class="container">
 
         <h1>
-            <img src="/assets/img/logos/chaduna-black.png" alt="Chaduna" class="logo">
+            <img src="/assets/img/logos/chaduna-black@1x.webp" 
+                 srcset="/assets/img/logos/chaduna-black@1x.webp 1x,
+                         /assets/img/logos/chaduna-black@2x.webp 2x"
+                 alt="Chaduna" 
+                 class="logo"
+                 width="200" 
+                 height="256"
+                 fetchpriority="high"
+                 loading="eager">
         </h1>
 
         <div class="description">
@@ -40,22 +118,22 @@
         <div class="icons-container">
             <div class="socials">
                 <a href="https://www.instagram.com/cafechaduna" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/img/icons/instagram-black.svg" alt="Instagram" class="icon-normal">
-                    <img src="/assets/img/icons/instagram-red.svg" alt="Instagram" class="icon-hover">
+                    <img src="/assets/img/icons/instagram-black.svg" alt="Instagram" class="icon-normal" width="40" height="40">
+                    <img src="/assets/img/icons/instagram-red.svg" alt="Instagram" class="icon-hover" width="40" height="40">
                 </a>
             </div>
 
             <div class="address">
                 <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/img/icons/maps-black.svg" alt="Address" class="icon-normal">
-                    <img src="/assets/img/icons/maps-red.svg" alt="Address" class="icon-hover">
+                    <img src="/assets/img/icons/maps-black.svg" alt="Address" class="icon-normal" width="40" height="40">
+                    <img src="/assets/img/icons/maps-red.svg" alt="Address" class="icon-hover" width="40" height="40">
                 </a>
             </div>
 
             <div class="phone">
                 <a href="tel:+995557629229">
-                    <img src="/assets/img/icons/phone-black.svg" alt="Phone" class="icon-normal">
-                    <img src="/assets/img/icons/phone-red.svg" alt="Phone" class="icon-hover">
+                    <img src="/assets/img/icons/phone-black.svg" alt="Phone" class="icon-normal" width="40" height="40">
+                    <img src="/assets/img/icons/phone-red.svg" alt="Phone" class="icon-hover" width="40" height="40">
                 </a>
             </div>
         </div>

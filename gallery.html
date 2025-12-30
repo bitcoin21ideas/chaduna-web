@@ -9,65 +9,69 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <title>Chaduna Food Gallery</title>
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cloud.umami.is">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
 </head>
 <body class="menu">
     <header class="menu-header">
         <div class="header-left">
             <a href="/index.html">
-                <img src="/assets/img/icons/home-black.svg" alt="Home">
+                <img src="/assets/img/icons/home-black.svg" alt="Home" width="28" height="28">
             </a>
         </div>
         <div class="header-right">
             <a href="https://www.instagram.com/cafechaduna" target="_blank">
-                <img src="/assets/img/icons/instagram-black.svg" alt="Instagram">
+                <img src="/assets/img/icons/instagram-black.svg" alt="Instagram" width="24" height="24">
             </a>
             <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank">
-                <img src="/assets/img/icons/maps-black.svg" alt="Location">
+                <img src="/assets/img/icons/maps-black.svg" alt="Location" width="24" height="24">
             </a>
             <a href="tel:+995557629229">
-                <img src="/assets/img/icons/phone-black.svg" alt="Phone">
+                <img src="/assets/img/icons/phone-black.svg" alt="Phone" width="24" height="24">
             </a>
         </div>
     </header>
 
     <div class="menu-container">
         <a href="/index.html">
-            <img src="/assets/img/logos/chaduna-black.png" alt="Chaduna Logo" class="menu-logo">
+            <img src="/assets/img/logos/chaduna-black@1x.webp" 
+                 srcset="/assets/img/logos/chaduna-black@1x.webp 1x,
+                         /assets/img/logos/chaduna-black@2x.webp 2x"
+                 alt="Chaduna Logo" 
+                 class="menu-logo"
+                 width="150" 
+                 height="192">
         </a>
 
         <h1>Food Gallery</h1>
-    </br>
+        <br>
         <div class="gallery-grid">
-            <img src="/assets/img/food/all-dishes.webp" alt="All dishes" onclick="openLightbox(this)">
-            <img src="/assets/img/food/selection.webp" alt="Chaduna dishes" onclick="openLightbox(this)">
-            <img src="/assets/img/food/bruschettas.webp" alt="All Bruschettas" onclick="openLightbox(this)">
+            <img src="/assets/img/food/all-dishes.webp" alt="All dishes" onclick="openLightbox(this)" width="300" height="200" loading="eager">
+            <img src="/assets/img/food/selection.webp" alt="Chaduna dishes" onclick="openLightbox(this)" width="300" height="200" loading="eager">
+            <img src="/assets/img/food/bruschettas.webp" alt="All Bruschettas" onclick="openLightbox(this)" width="300" height="200" loading="eager">
         </div>
 
         <h2>Breakfast</h2>
 
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="/assets/img/food/breakfast/chizhi-bizhi.webp" alt="Chizhi Bizhi" onclick="openLightbox(this)">
+                <img src="/assets/img/food/breakfast/chizhi-bizhi.webp" alt="Chizhi Bizhi" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Chizhi Bizhi</p>
             </div>
             <div class="gallery-item">
-                <img src="/assets/img/food/breakfast/frittata.webp" alt="Frittata" onclick="openLightbox(this)">
+                <img src="/assets/img/food/breakfast/frittata.webp" alt="Frittata" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Frittata</p>
             </div>
             <div class="gallery-item">
-                <img src="/assets/img/food/breakfast/scrambled-eggs.webp" alt="Scrambled Eggs" onclick="openLightbox(this)">
+                <img src="/assets/img/food/breakfast/scrambled-eggs.webp" alt="Scrambled Eggs" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Scrambled Eggs</p>
             </div>
             <div class="gallery-item">
-                <img src="/assets/img/food/breakfast/syrniki.webp" alt="Syrniki" onclick="openLightbox(this)">
+                <img src="/assets/img/food/breakfast/syrniki.webp" alt="Syrniki" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Syrniki</p>
             </div>
             <div class="gallery-item">
-                <img src="/assets/img/food/breakfast/quesadilla.webp" alt="Quesadilla" onclick="openLightbox(this)">
+                <img src="/assets/img/food/breakfast/quesadilla.webp" alt="Quesadilla" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Quesadilla</p>
             </div>
         </div>
@@ -76,23 +80,23 @@
 
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="/assets/img/food/bruschetta/carrot-br.webp" alt="Carrot Bruschetta" onclick="openLightbox(this)">
+                <img src="/assets/img/food/bruschetta/carrot-br.webp" alt="Carrot Bruschetta" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Carrot Bruschetta</p>
             </div>
             <div class="gallery-item">
-                <img src="/assets/img/food/bruschetta/pesto-br.webp" alt="Pesto Bruschetta" onclick="openLightbox(this)">
+                <img src="/assets/img/food/bruschetta/pesto-br.webp" alt="Pesto Bruschetta" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Pesto Bruschetta</p>
             </div>
             <div class="gallery-item">
-                <img src="/assets/img/food/bruschetta/champignon-br.webp" alt="Champignon Bruschetta" onclick="openLightbox(this)">
+                <img src="/assets/img/food/bruschetta/champignon-br.webp" alt="Champignon Bruschetta" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Champignon Bruschetta</p>
             </div>
             <div class="gallery-item">
-                <img src="/assets/img/food/bruschetta/spinach-br.webp" alt="Spinach Bruschetta" onclick="openLightbox(this)">
+                <img src="/assets/img/food/bruschetta/spinach-br.webp" alt="Spinach Bruschetta" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Spinach Bruschetta</p>
             </div>
             <div class="gallery-item">
-            <img src="/assets/img/food/bruschetta/bacon-br.webp" alt="Pesto Bruschetta" onclick="openLightbox(this)">
+            <img src="/assets/img/food/bruschetta/bacon-br.webp" alt="Pesto Bruschetta" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Bacon and Apple Bruschetta</p>
             </div>
         </div>
@@ -101,17 +105,17 @@
 
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="/assets/img/food/special/tomato-salad.webp" alt="Tomato Salad" onclick="openLightbox(this)">
+                <img src="/assets/img/food/special/tomato-salad.webp" alt="Tomato Salad" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Tomato Salad</p>
             </div>
             <div class="gallery-item">
-                <img src="/assets/img/food/special/potato.webp" alt="Potato with Bacon" onclick="openLightbox(this)">
+                <img src="/assets/img/food/special/potato.webp" alt="Potato with Bacon" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Potato with Bacon</p>
             </div>
         </div>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="/assets/img/food/special/veggie-casserole.webp" alt="Veggie Casserole" onclick="openLightbox(this)">
+                <img src="/assets/img/food/special/veggie-casserole.webp" alt="Veggie Casserole" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Veggie Casserole</p>
             </div>
         </div>
