@@ -275,6 +275,36 @@ body.landing .nav-links a[href="hub.html"]:hover {
     font-weight: 400;
 }
 
+/* Reserve page centering */
+.menu-container > h2 {
+    text-align: center;
+    justify-content: center;
+    border-bottom: none;
+}
+
+.menu-container > h2 + p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.menu-container > h2 + p a {
+    color: #89393E;
+    text-decoration: none;
+}
+
+.menu-container .address-text {
+    text-align: center;
+}
+
+.menu-container .hours {
+    text-align: center;
+}
+
+.menu-container .hours-title {
+    text-align: center;
+}
+
 /* ===== MENU PAGE STYLES ===== */
 body.menu {
     background: var(--color-white);
