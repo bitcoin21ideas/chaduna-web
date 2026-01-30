@@ -3,13 +3,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Get language (default to en)
   const pageLang = (document.documentElement.lang || 'en').split('-')[0];
   
-  // Logic to determine if this is the Hub or Cafe page
+  // Logic to determine page type
   const isHub = document.body.classList.contains('hub-page') || 
                 window.location.pathname.includes('hub');
+  const isWineTasting = document.body.classList.contains('wine-tasting-page') || 
+                        window.location.pathname.includes('wine-tasting');
 
   if (isHub) {
     const { business, faq } = buildHubSchema(baseUrl, pageLang);
     inject(business);
+    inject(faq);
+  } else if (isWineTasting) {
+    const { event, faq } = buildWineTastingSchema(baseUrl, pageLang);
+    inject(event);
     inject(faq);
   } else {
     const { business, faq } = buildCafeSchema(baseUrl, pageLang);
@@ -100,6 +106,68 @@ function buildHubSchema(baseUrl, lang) {
   return { business, faq };
 }
 
+/* ---------------- WINE TASTING ---------------- */
+
+function buildWineTastingSchema(baseUrl, lang) {
+  const t = wineTastingTranslations[lang] || wineTastingTranslations.en;
+
+  const event = {
+    "@context": "https://schema.org",
+    "@type": "FoodEvent",
+    "@id": `${baseUrl}/wine-tasting#event`,
+    "name": t.name,
+    "description": t.description,
+    "url": `${baseUrl}/wine-tasting.html`,
+    "image": `${baseUrl}/assets/img/logos/chaduna-logo.png`,
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Chaduna",
+      "address": address(),
+      "geo": geo()
+    },
+    "organizer": {
+      "@type": "Restaurant",
+      "@id": `${baseUrl}#business`,
+      "name": "Chaduna",
+      "url": baseUrl
+    },
+    "performer": {
+      "@type": "Organization",
+      "name": "Chaduna"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "70",
+      "priceCurrency": "GEL",
+      "availability": "https://schema.org/InStock",
+      "url": "https://tally.so/r/68egJA",
+      "validFrom": "2024-01-01"
+    },
+    "duration": "PT2H",
+    "isAccessibleForFree": false,
+    "inLanguage": ["en", "ru", "ka"],
+    "about": {
+      "@type": "Thing",
+      "name": "Georgian Wine",
+      "description": "Traditional Georgian winemaking using Qvevri technology"
+    },
+    "typicalAgeRange": "18+",
+    "keywords": ["wine tasting", "Georgian wine", "Qvevri", "Tbilisi wine experience", "wine tour", "amber wine", "natural wine"]
+  };
+
+  const faq = faqPage([
+    { q: t.faq1Question, a: t.faq1Answer },
+    { q: t.faq2Question, a: t.faq2Answer },
+    { q: t.faq3Question, a: t.faq3Answer },
+    { q: t.faq4Question, a: t.faq4Answer },
+    { q: t.faq5Question, a: t.faq5Answer }
+  ]);
+
+  return { event, faq };
+}
+
 /* ---------------- CAFE / WINE BAR ---------------- */
 
 function aggregateRating() {
@@ -163,7 +231,7 @@ function buildCafeSchema(baseUrl, lang) {
       feature(t.takeOut),
       feature(t.wineByGlass)
     ],
-    "knowsAbout": ["Georgian wine", "international wine", "syrniki", "breakfast", "brunch", "wine bar", "coffee"],
+    "knowsAbout": ["Georgian wine", "international wine", "syrniki", "breakfast", "brunch", "wine bar", "coffee", "wine tasting", "Qvevri wine"],
     "aggregateRating": aggregateRating(),
     "sameAs": [
         "https://www.instagram.com/cafechaduna",
@@ -908,4 +976,158 @@ const cafeTranslations = {
     feature7: "خدمة الإفطار اليومية",
     audience: "السياح، السكان المحليون، الرحالة الرقميون، عشاق النبيذ، عشاق الطعام"
 	}
+};
+
+/* ---------------- WINE TASTING TRANSLATIONS ---------------- */
+
+const wineTastingTranslations = {
+  en: {
+    name: "Georgian Wine Tasting at Chaduna",
+    description: "Experience the rich history of Georgian winemaking at Chaduna. Enjoy a curated tasting of 5 distinct wines, learn about Qvevri technology, explore Georgia's unique wine regions, and discover the story of the Cradle of Wine. Duration: 1.5-2 hours. Price: 70 GEL per person. Located near Liberty Square in downtown Tbilisi.",
+    faq1Question: "What is included in the wine tasting?",
+    faq1Answer: "The wine tasting includes 5 distinct Georgian wines, a presentation on the history of Georgian winemaking, an introduction to Qvevri technology, and a guide to Georgia's wine regions. Duration is 1.5-2 hours.",
+    faq2Question: "How much does the wine tasting cost?",
+    faq2Answer: "The wine tasting costs 70 GEL per person. Advance booking is required.",
+    faq3Question: "Where does the wine tasting take place?",
+    faq3Answer: "The wine tasting takes place at Chaduna, located at 18 Galaktion Tabidze Street, near Liberty Square in downtown Tbilisi.",
+    faq4Question: "Do I need to book in advance?",
+    faq4Answer: "Yes, advance booking is required for wine tastings. You can book through our online booking form.",
+    faq5Question: "What will I learn about Georgian wine?",
+    faq5Answer: "You will learn about the 8,000-year history of Georgian winemaking, traditional Qvevri clay vessel technology, Georgia's unique grape varieties, and the different wine regions of Georgia."
+  },
+
+  ru: {
+    name: "Дегустация грузинского вина в Chaduna",
+    description: "Погрузитесь в богатую историю грузинского виноделия в Chaduna. Насладитесь дегустацией 5 уникальных вин, узнайте о технологии квеври, исследуйте уникальные винодельческие регионы Грузии и откройте для себя историю Колыбели вина. Продолжительность: 1.5-2 часа. Цена: 70 лари с человека. Рядом с площадью Свободы в центре Тбилиси.",
+    faq1Question: "Что включено в дегустацию вина?",
+    faq1Answer: "Дегустация вина включает 5 уникальных грузинских вин, презентацию об истории грузинского виноделия, знакомство с технологией квеври и экскурсию по винодельческим регионам Грузии. Продолжительность: 1.5-2 часа.",
+    faq2Question: "Сколько стоит дегустация вина?",
+    faq2Answer: "Дегустация вина стоит 70 лари с человека. Требуется предварительное бронирование.",
+    faq3Question: "Где проходит дегустация вина?",
+    faq3Answer: "Дегустация вина проходит в Chaduna, расположенном по адресу ул. Галактиона Табидзе, 18, рядом с площадью Свободы в центре Тбилиси.",
+    faq4Question: "Нужно ли бронировать заранее?",
+    faq4Answer: "Да, для дегустации вина требуется предварительное бронирование. Вы можете забронировать через нашу онлайн-форму.",
+    faq5Question: "Что я узнаю о грузинском вине?",
+    faq5Answer: "Вы узнаете о 8000-летней истории грузинского виноделия, традиционной технологии квеври, уникальных сортах винограда Грузии и различных винодельческих регионах страны."
+  },
+
+  de: {
+    name: "Georgische Weinverkostung bei Chaduna",
+    description: "Erleben Sie die reiche Geschichte der georgischen Weinherstellung bei Chaduna. Genießen Sie eine kuratierte Verkostung von 5 verschiedenen Weinen, lernen Sie die Qvevri-Technologie kennen, erkunden Sie Georgiens einzigartige Weinregionen und entdecken Sie die Geschichte der Wiege des Weins. Dauer: 1,5-2 Stunden. Preis: 70 GEL pro Person. In der Nähe des Freiheitsplatzes im Zentrum von Tiflis.",
+    faq1Question: "Was ist in der Weinverkostung enthalten?",
+    faq1Answer: "Die Weinverkostung umfasst 5 verschiedene georgische Weine, eine Präsentation zur Geschichte der georgischen Weinherstellung, eine Einführung in die Qvevri-Technologie und einen Führer zu Georgiens Weinregionen. Dauer: 1,5-2 Stunden.",
+    faq2Question: "Wie viel kostet die Weinverkostung?",
+    faq2Answer: "Die Weinverkostung kostet 70 GEL pro Person. Eine Vorabreservierung ist erforderlich.",
+    faq3Question: "Wo findet die Weinverkostung statt?",
+    faq3Answer: "Die Weinverkostung findet bei Chaduna statt, in der Galaktion Tabidze Straße 18, in der Nähe des Freiheitsplatzes im Zentrum von Tiflis.",
+    faq4Question: "Muss ich im Voraus buchen?",
+    faq4Answer: "Ja, eine Vorabreservierung ist für Weinverkostungen erforderlich. Sie können über unser Online-Buchungsformular buchen.",
+    faq5Question: "Was werde ich über georgischen Wein lernen?",
+    faq5Answer: "Sie werden die 8.000-jährige Geschichte der georgischen Weinherstellung, die traditionelle Qvevri-Tonkrug-Technologie, Georgiens einzigartige Rebsorten und die verschiedenen Weinregionen Georgiens kennenlernen."
+  },
+
+  tr: {
+    name: "Chaduna'da Gürcü Şarap Tadımı",
+    description: "Chaduna'da Gürcü şarap yapımının zengin tarihini deneyimleyin. 5 farklı şarabın seçkin tadımının keyfini çıkarın, Qvevri teknolojisini öğrenin, Gürcistan'ın benzersiz şarap bölgelerini keşfedin ve Şarabın Beşiği'nin hikayesini keşfedin. Süre: 1.5-2 saat. Fiyat: Kişi başı 70 GEL. Tiflis şehir merkezinde Özgürlük Meydanı yakınında.",
+    faq1Question: "Şarap tadımına neler dahil?",
+    faq1Answer: "Şarap tadımı 5 farklı Gürcü şarabı, Gürcü şarap yapımının tarihi hakkında sunum, Qvevri teknolojisine giriş ve Gürcistan'ın şarap bölgelerine rehberlik içerir. Süre: 1.5-2 saat.",
+    faq2Question: "Şarap tadımı ne kadar?",
+    faq2Answer: "Şarap tadımı kişi başı 70 GEL'dir. Önceden rezervasyon gereklidir.",
+    faq3Question: "Şarap tadımı nerede gerçekleşiyor?",
+    faq3Answer: "Şarap tadımı, Tiflis şehir merkezinde Özgürlük Meydanı yakınında, Galaktion Tabidze Caddesi 18 numarada bulunan Chaduna'da gerçekleşir.",
+    faq4Question: "Önceden rezervasyon yapmam gerekiyor mu?",
+    faq4Answer: "Evet, şarap tadımları için önceden rezervasyon gereklidir. Online rezervasyon formumuz üzerinden rezervasyon yapabilirsiniz.",
+    faq5Question: "Gürcü şarabı hakkında ne öğreneceğim?",
+    faq5Answer: "Gürcü şarap yapımının 8.000 yıllık tarihi, geleneksel Qvevri kil kap teknolojisi, Gürcistan'ın benzersiz üzüm çeşitleri ve Gürcistan'ın farklı şarap bölgeleri hakkında bilgi edineceksiniz."
+  },
+
+  fr: {
+    name: "Dégustation de vin géorgien chez Chaduna",
+    description: "Découvrez la riche histoire de la vinification géorgienne chez Chaduna. Profitez d'une dégustation de 5 vins distincts, apprenez la technologie Qvevri, explorez les régions viticoles uniques de Géorgie et découvrez l'histoire du Berceau du Vin. Durée: 1h30-2h. Prix: 70 GEL par personne. Près de la place de la Liberté au centre-ville de Tbilissi.",
+    faq1Question: "Qu'est-ce qui est inclus dans la dégustation de vin?",
+    faq1Answer: "La dégustation de vin comprend 5 vins géorgiens distincts, une présentation sur l'histoire de la vinification géorgienne, une introduction à la technologie Qvevri et un guide des régions viticoles de Géorgie. Durée: 1h30-2h.",
+    faq2Question: "Combien coûte la dégustation de vin?",
+    faq2Answer: "La dégustation de vin coûte 70 GEL par personne. La réservation à l'avance est obligatoire.",
+    faq3Question: "Où se déroule la dégustation de vin?",
+    faq3Answer: "La dégustation de vin a lieu chez Chaduna, situé au 18 rue Galaktion Tabidze, près de la place de la Liberté au centre-ville de Tbilissi.",
+    faq4Question: "Dois-je réserver à l'avance?",
+    faq4Answer: "Oui, la réservation à l'avance est obligatoire pour les dégustations de vin. Vous pouvez réserver via notre formulaire de réservation en ligne.",
+    faq5Question: "Qu'apprendrai-je sur le vin géorgien?",
+    faq5Answer: "Vous apprendrez l'histoire de 8 000 ans de la vinification géorgienne, la technologie traditionnelle des jarres en argile Qvevri, les cépages uniques de Géorgie et les différentes régions viticoles du pays."
+  },
+
+  es: {
+    name: "Cata de vino georgiano en Chaduna",
+    description: "Experimente la rica historia de la vinificación georgiana en Chaduna. Disfrute de una cata de 5 vinos distintos, aprenda sobre la tecnología Qvevri, explore las regiones vinícolas únicas de Georgia y descubra la historia de la Cuna del Vino. Duración: 1.5-2 horas. Precio: 70 GEL por persona. Cerca de la Plaza de la Libertad en el centro de Tbilisi.",
+    faq1Question: "¿Qué incluye la cata de vino?",
+    faq1Answer: "La cata de vino incluye 5 vinos georgianos distintos, una presentación sobre la historia de la vinificación georgiana, una introducción a la tecnología Qvevri y una guía de las regiones vinícolas de Georgia. Duración: 1.5-2 horas.",
+    faq2Question: "¿Cuánto cuesta la cata de vino?",
+    faq2Answer: "La cata de vino cuesta 70 GEL por persona. Se requiere reserva anticipada.",
+    faq3Question: "¿Dónde se realiza la cata de vino?",
+    faq3Answer: "La cata de vino se realiza en Chaduna, ubicado en la calle Galaktion Tabidze 18, cerca de la Plaza de la Libertad en el centro de Tbilisi.",
+    faq4Question: "¿Necesito reservar con anticipación?",
+    faq4Answer: "Sí, se requiere reserva anticipada para las catas de vino. Puede reservar a través de nuestro formulario de reserva en línea.",
+    faq5Question: "¿Qué aprenderé sobre el vino georgiano?",
+    faq5Answer: "Aprenderá sobre los 8,000 años de historia de la vinificación georgiana, la tecnología tradicional de vasijas de arcilla Qvevri, las variedades de uva únicas de Georgia y las diferentes regiones vinícolas del país."
+  },
+
+  it: {
+    name: "Degustazione di vino georgiano da Chaduna",
+    description: "Scopri la ricca storia della vinificazione georgiana da Chaduna. Goditi una degustazione di 5 vini distinti, impara la tecnologia Qvevri, esplora le regioni vinicole uniche della Georgia e scopri la storia della Culla del Vino. Durata: 1,5-2 ore. Prezzo: 70 GEL a persona. Vicino a Piazza della Libertà nel centro di Tbilisi.",
+    faq1Question: "Cosa è incluso nella degustazione di vino?",
+    faq1Answer: "La degustazione di vino include 5 vini georgiani distinti, una presentazione sulla storia della vinificazione georgiana, un'introduzione alla tecnologia Qvevri e una guida alle regioni vinicole della Georgia. Durata: 1,5-2 ore.",
+    faq2Question: "Quanto costa la degustazione di vino?",
+    faq2Answer: "La degustazione di vino costa 70 GEL a persona. È richiesta la prenotazione anticipata.",
+    faq3Question: "Dove si svolge la degustazione di vino?",
+    faq3Answer: "La degustazione di vino si svolge da Chaduna, situato in via Galaktion Tabidze 18, vicino a Piazza della Libertà nel centro di Tbilisi.",
+    faq4Question: "Devo prenotare in anticipo?",
+    faq4Answer: "Sì, la prenotazione anticipata è richiesta per le degustazioni di vino. Puoi prenotare tramite il nostro modulo di prenotazione online.",
+    faq5Question: "Cosa imparerò sul vino georgiano?",
+    faq5Answer: "Imparerai gli 8.000 anni di storia della vinificazione georgiana, la tecnologia tradizionale delle anfore di argilla Qvevri, i vitigni unici della Georgia e le diverse regioni vinicole del paese."
+  },
+
+  ka: {
+    name: "ქართული ღვინის დეგუსტაცია Chaduna-ში",
+    description: "გაიცანით ქართული მეღვინეობის მდიდარი ისტორია Chaduna-ში. ისიამოვნეთ 5 განსხვავებული ღვინის დეგუსტაციით, გაეცანით ქვევრის ტექნოლოგიას, შეისწავლეთ საქართველოს უნიკალური ღვინის რეგიონები და აღმოაჩინეთ ღვინის სამშობლოს ისტორია. ხანგრძლივობა: 1.5-2 საათი. ფასი: 70 ლარი ადამიანზე. თავისუფლების მოედნის მახლობლად თბილისის ცენტრში.",
+    faq1Question: "რა შედის ღვინის დეგუსტაციაში?",
+    faq1Answer: "ღვინის დეგუსტაცია მოიცავს 5 განსხვავებულ ქართულ ღვინოს, პრეზენტაციას ქართული მეღვინეობის ისტორიის შესახებ, ქვევრის ტექნოლოგიის გაცნობას და საქართველოს ღვინის რეგიონების გზამკვლევს. ხანგრძლივობა: 1.5-2 საათი.",
+    faq2Question: "რა ღირს ღვინის დეგუსტაცია?",
+    faq2Answer: "ღვინის დეგუსტაცია ღირს 70 ლარი ადამიანზე. საჭიროა წინასწარი დაჯავშნა.",
+    faq3Question: "სად ტარდება ღვინის დეგუსტაცია?",
+    faq3Answer: "ღვინის დეგუსტაცია ტარდება Chaduna-ში, მდებარეობს გალაქტიონ ტაბიძის ქუჩა 18-ში, თავისუფლების მოედნის მახლობლად თბილისის ცენტრში.",
+    faq4Question: "საჭიროა წინასწარ დაჯავშნა?",
+    faq4Answer: "დიახ, ღვინის დეგუსტაციისთვის საჭიროა წინასწარი დაჯავშნა. შეგიძლიათ დაჯავშნოთ ჩვენი ონლაინ დაჯავშნის ფორმით.",
+    faq5Question: "რას შევისწავლი ქართული ღვინის შესახებ?",
+    faq5Answer: "შეისწავლით ქართული მეღვინეობის 8,000 წლიან ისტორიას, ტრადიციულ ქვევრის თიხის ჭურჭლის ტექნოლოგიას, საქართველოს უნიკალურ ყურძნის ჯიშებს და ქვეყნის სხვადასხვა ღვინის რეგიონებს."
+  },
+
+  zh: {
+    name: "Chaduna格鲁吉亚葡萄酒品鉴",
+    description: "在Chaduna体验格鲁吉亚酿酒的丰富历史。享受5种不同葡萄酒的精选品鉴，了解Qvevri技术，探索格鲁吉亚独特的葡萄酒产区，发现葡萄酒摇篮的故事。时长：1.5-2小时。价格：每人70 GEL。位于第比利斯市中心自由广场附近。",
+    faq1Question: "葡萄酒品鉴包括什么？",
+    faq1Answer: "葡萄酒品鉴包括5种不同的格鲁吉亚葡萄酒、格鲁吉亚酿酒历史介绍、Qvevri技术入门以及格鲁吉亚葡萄酒产区指南。时长：1.5-2小时。",
+    faq2Question: "葡萄酒品鉴多少钱？",
+    faq2Answer: "葡萄酒品鉴每人70 GEL。需要提前预订。",
+    faq3Question: "葡萄酒品鉴在哪里举行？",
+    faq3Answer: "葡萄酒品鉴在Chaduna举行，地址是Galaktion Tabidze街18号，位于第比利斯市中心自由广场附近。",
+    faq4Question: "需要提前预订吗？",
+    faq4Answer: "是的，葡萄酒品鉴需要提前预订。您可以通过我们的在线预订表单预订。",
+    faq5Question: "我将了解到什么关于格鲁吉亚葡萄酒的知识？",
+    faq5Answer: "您将了解格鲁吉亚酿酒的8000年历史、传统的Qvevri陶罐技术、格鲁吉亚独特的葡萄品种以及该国不同的葡萄酒产区。"
+  },
+
+  ar: {
+    name: "تذوق النبيذ الجورجي في Chaduna",
+    description: "اكتشف التاريخ الغني لصناعة النبيذ الجورجي في Chaduna. استمتع بتذوق 5 أنواع مختلفة من النبيذ، وتعرف على تقنية كفيفري، واستكشف مناطق النبيذ الفريدة في جورجيا، واكتشف قصة مهد النبيذ. المدة: 1.5-2 ساعة. السعر: 70 GEL للشخص. بالقرب من ساحة الحرية في وسط تبليسي.",
+    faq1Question: "ماذا يشمل تذوق النبيذ؟",
+    faq1Answer: "يشمل تذوق النبيذ 5 أنواع مختلفة من النبيذ الجورجي، وعرض عن تاريخ صناعة النبيذ الجورجي، ومقدمة عن تقنية كفيفري، ودليل لمناطق النبيذ في جورجيا. المدة: 1.5-2 ساعة.",
+    faq2Question: "كم تكلفة تذوق النبيذ؟",
+    faq2Answer: "تكلفة تذوق النبيذ 70 GEL للشخص. الحجز المسبق مطلوب.",
+    faq3Question: "أين يقام تذوق النبيذ؟",
+    faq3Answer: "يقام تذوق النبيذ في Chaduna، الواقع في شارع Galaktion Tabidze 18، بالقرب من ساحة الحرية في وسط تبليسي.",
+    faq4Question: "هل أحتاج للحجز مسبقاً؟",
+    faq4Answer: "نعم، الحجز المسبق مطلوب لتذوق النبيذ. يمكنك الحجز من خلال نموذج الحجز عبر الإنترنت.",
+    faq5Question: "ماذا سأتعلم عن النبيذ الجورجي؟",
+    faq5Answer: "ستتعلم عن تاريخ صناعة النبيذ الجورجي الذي يمتد 8000 عام، وتقنية جرار الطين كفيفري التقليدية، وأصناف العنب الفريدة في جورجيا، ومناطق النبيذ المختلفة في البلاد."
+  }
 };

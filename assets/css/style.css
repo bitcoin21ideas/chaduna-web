@@ -856,3 +856,114 @@ body.hub-page .address a:hover .icon-hover {
         gap: 15px;
     }
 }
+
+/* ===== WINE TASTING PAGE STYLES ===== */
+/* Center all content in wine tasting page */
+.menu-container.wine-tasting-page {
+    text-align: center;
+}
+
+.menu-container > h2:first-of-type {
+    text-align: center;
+    border-bottom: none;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.intro-text {
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.tasting-details {
+    list-style: none;
+    margin-bottom: 50px;
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    text-align: left;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tasting-details li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tasting-details li:last-child {
+    border-bottom: none;
+}
+
+.tasting-details li::before {
+    content: "•";
+    color: var(--color-accent);
+    font-size: 24px;
+    line-height: 0;
+}
+
+.price-tag {
+    font-family: var(--font-primary);
+    font-size: 28px;
+    margin: 30px 0;
+    color: var(--color-accent);
+    text-align: center;
+}
+
+.book-btn {
+    display: inline-block;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 18px 40px;
+    font-size: 20px;
+    text-decoration: none;
+    border: 1px solid var(--color-black);
+    transition: all var(--transition-base);
+    font-family: var(--font-secondary);
+    margin: 0 auto 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.book-btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.availability {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    color: var(--color-black);
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.note {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 60px;
+    font-family: var(--font-secondary);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Wine Tasting Responsive */
+@media (max-width: 768px) {
+    .intro-text {
+        font-size: 16px;
+    }
+    
+    .tasting-details {
+        width: 100%;
+    }
+}
