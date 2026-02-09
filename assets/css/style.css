@@ -39,6 +39,15 @@
     src: url('/assets/fonts/playfair-display/playfair-display-v40-cyrillic_latin-800.woff2') format('woff2');
 }
 
+/* Satoshi Font Face - Self-hosted */
+@font-face {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/playfair-display/satoshi.woff2') format('woff2');
+}
+
 /* Reset */
 :root {
     /* Colors */
@@ -82,6 +91,27 @@ html, body.landing {
 
 body {
     font-family: var(--font-primary);
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background: var(--color-white);
+    color: #333333;
+    font-family: 'Satoshi', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    padding: 8px 20px;
+    margin: 0;
+}
+
+.site-footer a {
+    color: #89393E;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
 }
 
 /* ===== LANDING PAGE STYLES ===== */
