@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     inject(business);
     inject(faq);
   } else if (isWineTasting) {
-    const { event, faq } = buildWineTastingSchema(baseUrl, pageLang);
-    inject(event);
+    const { product, faq } = buildWineTastingSchema(baseUrl, pageLang);
+    inject(product);
     inject(faq);
   } else {
     const { business, faq } = buildCafeSchema(baseUrl, pageLang);
@@ -111,30 +111,16 @@ function buildHubSchema(baseUrl, lang) {
 function buildWineTastingSchema(baseUrl, lang) {
   const t = wineTastingTranslations[lang] || wineTastingTranslations.en;
 
-  const event = {
+  const product = {
     "@context": "https://schema.org",
-    "@type": "FoodEvent",
-    "@id": `${baseUrl}/wine-tasting#event`,
+    "@type": "Product",
+    "@id": `${baseUrl}/wine-tasting#product`,
     "name": t.name,
     "description": t.description,
     "url": `${baseUrl}/wine-tasting.html`,
     "image": `${baseUrl}/assets/img/logos/chaduna-logo.png`,
-    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "location": {
-      "@type": "Place",
-      "name": "Chaduna",
-      "address": address(),
-      "geo": geo()
-    },
-    "organizer": {
-      "@type": "Restaurant",
-      "@id": `${baseUrl}#business`,
-      "name": "Chaduna",
-      "url": baseUrl
-    },
-    "performer": {
-      "@type": "Organization",
+    "brand": {
+      "@type": "Brand",
       "name": "Chaduna"
     },
     "offers": {
@@ -143,17 +129,14 @@ function buildWineTastingSchema(baseUrl, lang) {
       "priceCurrency": "GEL",
       "availability": "https://schema.org/InStock",
       "url": "https://tally.so/r/68egJA",
-      "validFrom": "2024-01-01"
+      "validFrom": "2024-01-01",
+      "availableAtOrFrom": {
+        "@type": "Place",
+        "name": "Chaduna",
+        "address": address(),
+        "geo": geo()
+      }
     },
-    "duration": "PT2H",
-    "isAccessibleForFree": false,
-    "inLanguage": ["en", "ru", "ka"],
-    "about": {
-      "@type": "Thing",
-      "name": "Georgian Wine",
-      "description": "Traditional Georgian winemaking using Qvevri technology"
-    },
-    "typicalAgeRange": "18+",
     "keywords": ["wine tasting", "Georgian wine", "Qvevri", "Tbilisi wine experience", "wine tour", "amber wine", "natural wine"]
   };
 
@@ -165,7 +148,7 @@ function buildWineTastingSchema(baseUrl, lang) {
     { q: t.faq5Question, a: t.faq5Answer }
   ]);
 
-  return { event, faq };
+  return { product, faq };
 }
 
 /* ---------------- CAFE / WINE BAR ---------------- */
