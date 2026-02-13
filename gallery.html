@@ -60,27 +60,27 @@
         <h2>Breakfast</h2>
 
         <div class="gallery-grid">
-            <div class="gallery-item">
+            <div class="gallery-item" id="chizhi-bizhi">
                 <img src="/assets/img/food/breakfast/chizhi-bizhi.webp" alt="Chizhi Bizhi" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Chizhi Bizhi</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" id="frittata">
                 <img src="/assets/img/food/breakfast/frittata.webp" alt="Frittata" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Frittata</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" id="scrambled-eggs">
                 <img src="/assets/img/food/breakfast/scrambled-eggs.webp" alt="Scrambled Eggs" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Scrambled Eggs</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" id="syrniki">
                 <img src="/assets/img/food/breakfast/syrniki.webp" alt="Syrniki" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Syrniki</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" id="chicken-quesadilla">
                 <img src="/assets/img/food/breakfast/chicken-quesadilla.webp" alt="Chicken Quesadilla" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Chicken Quesadilla</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" id="veggie-quesadilla">
                 <img src="/assets/img/food/breakfast/veggie-quesadilla.webp" alt="Veggie Quesadilla" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Veggie Quesadilla</p>
             </div>
@@ -89,23 +89,23 @@
         <h2>Bruschetta</h2>
 
         <div class="gallery-grid">
-            <div class="gallery-item">
+            <div class="gallery-item" id="carrot-bruschetta">
                 <img src="/assets/img/food/bruschetta/carrot-br.webp" alt="Carrot Bruschetta" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Carrot Bruschetta</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" id="pesto-bruschetta">
                 <img src="/assets/img/food/bruschetta/pesto-br.webp" alt="Pesto Bruschetta" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Pesto Bruschetta</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" id="champignon-bruschetta">
                 <img src="/assets/img/food/bruschetta/champignon-br.webp" alt="Champignon Bruschetta" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Champignon Bruschetta</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" id="spinach-bruschetta">
                 <img src="/assets/img/food/bruschetta/spinach-br.webp" alt="Spinach Bruschetta" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Spinach Bruschetta</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" id="bacon-bruschetta">
             <img src="/assets/img/food/bruschetta/bacon-br.webp" alt="Pesto Bruschetta" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Bacon and Apple Bruschetta</p>
             </div>
@@ -114,17 +114,17 @@
         <h2>Chaduna Special</h2>
 
         <div class="gallery-grid">
-            <div class="gallery-item">
+            <div class="gallery-item" id="tomato-salad">
                 <img src="/assets/img/food/special/tomato-salad.webp" alt="Tomato Salad" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Tomato Salad</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" id="potato-with-bacon">
                 <img src="/assets/img/food/special/potato.webp" alt="Potato with Bacon" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Potato with Bacon</p>
             </div>
         </div>
         <div class="gallery-grid">
-            <div class="gallery-item">
+            <div class="gallery-item" id="veggie-casserole">
                 <img src="/assets/img/food/special/veggie-casserole.webp" alt="Veggie Casserole" onclick="openLightbox(this)" width="300" height="200" loading="lazy">
                 <p class="dish-name">Veggie Casserole</p>
             </div>
@@ -277,6 +277,18 @@
                 changeImage(-1);
             }
         }
+
+        // Auto-open lightbox if URL has a dish anchor (e.g. gallery.html#chizhi-bizhi)
+        window.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash;
+            if (hash) {
+                const item = document.querySelector(hash);
+                if (item) {
+                    const img = item.querySelector('img');
+                    if (img) openLightbox(img);
+                }
+            }
+        });
     </script>
 </body>
 </html>

@@ -435,6 +435,11 @@ h2 {
     flex: 1;
 }
 
+.item-name a {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
 .item-price {
     font-weight: 600;
     color: var(--color-black);
