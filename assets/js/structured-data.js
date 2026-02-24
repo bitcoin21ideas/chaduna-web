@@ -315,10 +315,21 @@ function attachMenu(business, lang, baseUrl) {
   const menuRoot = document.querySelector('.menu-container');
   if (!menuRoot) return;
 
+  // VAT note: use the paragraph from the page that mentions 18% (localized)
+  const menuNoteParas = menuRoot.querySelectorAll('.menu-note p');
+  let vatDescription = null;
+  for (const p of menuNoteParas) {
+    if (p.textContent.includes('18%')) {
+      vatDescription = p.textContent.trim();
+      break;
+    }
+  }
+
   const menu = {
     "@type": "Menu",
     "inLanguage": lang,
-    "hasMenuSection": []
+    "hasMenuSection": [],
+    ...(vatDescription && { description: vatDescription })
   };
 
   const dishImageMap = {
@@ -335,46 +346,51 @@ function attachMenu(business, lang, baseUrl) {
     'potato': '/assets/img/food/special/potato.webp'
   };
 
-  document.querySelectorAll('.menu-section').forEach(section => {
-    const sec = {
-      "@type": "MenuSection",
-      "name": section.querySelector('h2')?.textContent || "Section",
-      "hasMenuItem": []
-    };
-
-    section.querySelectorAll('.menu-item').forEach(item => {
-      const name = item.querySelector('.item-name')?.textContent;
-      // Safety check: ensure price exists before matching
-      const priceText = item.querySelector('.item-price')?.textContent; 
-      const price = priceText ? priceText.match(/\d+/) : null;
-
-      if (!name) return;
-      const menuItem = {
-        "@type": "MenuItem",
-        "name": name,
-        ...(price && {
-          "offers": {
-            "@type": "Offer",
-            "price": price[0],
-            "priceCurrency": "GEL"
-          }
-        })
-      };
-
-      // Add image if available
-      const imageKey = name.toLowerCase();
-      for (const [key, imagePath] of Object.entries(dishImageMap)) {
-        if (imageKey.includes(key.toLowerCase())) {
-          menuItem.image = `${baseUrl}${imagePath}`;
-          break;
+  // Build sections from .tab-content: each h2 starts a section, following .menu-item nodes belong to it
+  menuRoot.querySelectorAll('.tab-content').forEach(tabContent => {
+    let currentSection = null;
+    for (const child of tabContent.children) {
+      if (child.tagName === 'H2') {
+        if (currentSection && currentSection.hasMenuItem.length) {
+          menu.hasMenuSection.push(currentSection);
         }
+        const sectionName = (child.textContent.replace(/\s*\d+\s*$/, '').trim() || 'Section');
+        currentSection = {
+          "@type": "MenuSection",
+          "name": sectionName,
+          "hasMenuItem": []
+        };
+      } else if (child.classList && child.classList.contains('menu-item') && currentSection) {
+        const name = child.querySelector('.item-name')?.textContent;
+        const priceText = child.querySelector('.item-price')?.textContent;
+        const price = priceText ? priceText.match(/\d+/) : null;
+
+        if (!name) continue;
+        const menuItem = {
+          "@type": "MenuItem",
+          "name": name,
+          ...(price && {
+            "offers": {
+              "@type": "Offer",
+              "price": price[0],
+              "priceCurrency": "GEL"
+            }
+          })
+        };
+
+        const imageKey = name.toLowerCase();
+        for (const [key, imagePath] of Object.entries(dishImageMap)) {
+          if (imageKey.includes(key.toLowerCase())) {
+            menuItem.image = `${baseUrl}${imagePath}`;
+            break;
+          }
+        }
+
+        currentSection.hasMenuItem.push(menuItem);
       }
-
-      sec.hasMenuItem.push(menuItem);
-    });
-
-    if (sec.hasMenuItem.length) {
-      menu.hasMenuSection.push(sec);
+    }
+    if (currentSection && currentSection.hasMenuItem.length) {
+      menu.hasMenuSection.push(currentSection);
     }
   });
 
