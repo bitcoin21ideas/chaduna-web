@@ -6,17 +6,17 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <title>Reserve a Table at Chaduna</title>
-    <link rel="canonical" href="https://chaduna.com/reserve.html" />
+    <title>Booking received – Chaduna</title>
+    <link rel="canonical" href="https://chaduna.com/form-submitted.html" />
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Reserve a table at Chaduna - Cafe and wine bar in Tbilisi. Book your table online or call us at +995 557 62 92 29.">
-    <meta property="og:title" content="Reserve a Table at Chaduna">
-    <meta property="og:description" content="Reserve a table at Chaduna - Cafe and wine bar in Tbilisi. Book your table online or call us.">
+    <meta name="description" content="Your table booking request at Chaduna Cafe & Wine Bar has been received. We will contact you shortly to confirm.">
+    <meta property="og:title" content="Booking received – Chaduna">
+    <meta property="og:description" content="Your table booking request at Chaduna has been received. We will contact you shortly to confirm.">
     <meta property="og:image" content="https://chaduna.com/assets/img/logos/chaduna-logo.png">
-    <meta property="og:url" content="https://chaduna.com/reserve.html">
+    <meta property="og:url" content="https://chaduna.com/form-submitted.html">
     <meta property="og:type" content="website">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
 </head>
@@ -45,7 +45,7 @@
     </header>
 
     <main>
-    <div class="menu-container">
+    <div class="menu-container form-submitted-page">
         <a href="/index.html">
             <img src="/assets/img/logos/chaduna-black@1x.webp"
                  srcset="/assets/img/logos/chaduna-black@1x.webp 1x,
@@ -57,16 +57,44 @@
                  height="192">
         </a>
 
-        <h2>Request a Table Booking at Chaduna</h2>
+        <p class="thank-you-intro">Thank you for booking a table at <span class="chaduna-name">Chaduna</span> Cafe & Wine Bar. We will contact you shortly to confirm your reservation.</p>
 
-        <p>To request a table, please call us at <a href="tel:+995557629229">+995 557 62 92 29</a> or fill out the form below. We'll confirm your booking personally by phone or Telegram.</p>
+        <br>
 
-        <div class="tally-form-container">
-            <iframe data-tally-src="https://tally.so/embed/68egJA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" loading="lazy" width="100%" height="1008" frameborder="0" marginheight="0" marginwidth="0" title="Reserve a Table at Chaduna"></iframe>
-            <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+        <p class="thank-you-cta">While you wait, why not explore our <a href="/gallery.html">food gallery</a> and <a href="/menus/menu_en.html">menu</a> available in 10 languages or learn about our unforgettable <a href="/wine-tasting.html">wine tasting</a> offer.</p>
+
+        <br>
+
+        <div class="add-to-calendar-wrap">
+            <button type="button" class="book-btn" id="add-to-calendar-btn">Add to calendar</button>
         </div>
 
-    </br>
+        <br>
+
+        <div class="icons-container">
+            <div class="socials">
+                <a href="https://www.instagram.com/cafechaduna" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/img/icons/instagram-black.svg" alt="Instagram" class="icon-normal" width="40" height="40">
+                    <img src="/assets/img/icons/instagram-red.svg" alt="Instagram" class="icon-hover" width="40" height="40">
+                </a>
+            </div>
+
+            <div class="address">
+                <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/img/icons/maps-black.svg" alt="Address" class="icon-normal" width="40" height="40">
+                    <img src="/assets/img/icons/maps-red.svg" alt="Address" class="icon-hover" width="40" height="40">
+                </a>
+            </div>
+
+            <div class="phone">
+                <a href="tel:+995557629229">
+                    <img src="/assets/img/icons/phone-black.svg" alt="Phone" class="icon-normal" width="40" height="40">
+                    <img src="/assets/img/icons/phone-red.svg" alt="Phone" class="icon-hover" width="40" height="40">
+                </a>
+            </div>
+        </div>
+
+        <br>
 
         <div class="address-text">
             <address>18 Galaktion Tabidze Street, Tbilisi</address>
@@ -81,6 +109,6 @@
     </main>
 
     <footer class="site-footer">Powered by <a href="https://loom.ge/en?utm_source=chaduna">loom.ge</a></footer>
+    <script defer src="/assets/js/form-submitted.js"></script>
 </body>
 </html>
-
