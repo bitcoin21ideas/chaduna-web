@@ -5,7 +5,7 @@
 (function () {
     'use strict';
 
-    var CHADUNA_MAPS_URL = 'https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql';
+    var CHADUNA_MAPS_URL = 'https://maps.app.goo.gl/5YQLk8tGwwkAUZMQ8';
     var DESCRIPTION_FOOTER = 'Thank you for reserving a table at Chaduna. We will contact you to confirm. If you need to cancel, call or text us – our contacts are available on https://chaduna.com website. See you soon!';
 
     function getParams() {
