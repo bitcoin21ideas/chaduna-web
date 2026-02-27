@@ -182,7 +182,7 @@ function buildCafeSchema(baseUrl, lang) {
     "@type": "Restaurant",
     "@id": `${baseUrl}#business`,
     "name": "Chaduna",
-    "alternateName": "Cafe Chaduna",
+    "alternateName": ["Cafe Chaduna", "Chaduna Wine Bar", "Chaduna Cafe & Wine Bar"],
     "description": t.description,
     "url": baseUrl,
     "telephone": "+995557629229",
@@ -212,9 +212,81 @@ function buildCafeSchema(baseUrl, lang) {
     "amenityFeature": [
       feature(t.dineIn),
       feature(t.takeOut),
-      feature(t.wineByGlass)
+      feature(t.wineByGlass),
+      feature("Pet Friendly"),
+      feature("Laptop Friendly"),
+      feature("Free Wi-Fi"),
+      feature("Vegetarian Options"),
+      feature("Wine Tasting Experience")
     ],
-    "knowsAbout": ["Georgian wine", "international wine", "syrniki", "breakfast", "brunch", "wine bar", "coffee", "wine tasting", "Qvevri wine"],
+    "knowsAbout": [
+      "Georgian wine", "international wine", "amber wine", "natural wine", "Qvevri wine",
+      "syrniki", "breakfast", "brunch", "wine bar", "coffee",
+      "wine tasting", "Georgian winemaking", "wine education",
+      "pet-friendly cafe", "dog-friendly cafe",
+      "laptop-friendly cafe", "remote work cafe", "digital nomads Tbilisi",
+      "cafe near Liberty Square", "cafe old city Tbilisi"
+    ],
+    "potentialAction": [
+      {
+        "@type": "ReserveAction",
+        "name": "Reserve a Table",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://chaduna.com/reserve.html",
+          "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Table reservation at Chaduna"
+        }
+      }
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "Reservations",
+        "telephone": "+995557629229",
+        "availableLanguage": ["English", "Russian", "Georgian"]
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "Reservations",
+        "url": "https://wa.me/995557629229",
+        "name": "WhatsApp",
+        "availableLanguage": ["English", "Russian", "Georgian"]
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "Reservations",
+        "url": "https://t.me/chaduna_wine",
+        "name": "Telegram",
+        "availableLanguage": ["English", "Russian", "Georgian"]
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "Reservations",
+        "url": "https://www.instagram.com/cafechaduna",
+        "name": "Instagram DM",
+        "availableLanguage": ["English", "Russian", "Georgian"]
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Experiences at Chaduna",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Georgian Wine Tasting",
+          "description": "Immerse yourself in the rich history of the Cradle of Wine. A curated journey through Georgia's unique regions, technologies, and flavors. Tasting of 5 distinct wines, history of Georgian winemaking, guide to regions & Qvevri technology. Duration: 1.5–2 hours.",
+          "price": "70",
+          "priceCurrency": "GEL",
+          "url": "https://chaduna.com/wine-tasting",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2024-01-01"
+        }
+      ]
+    },
     "aggregateRating": aggregateRating(),
     "sameAs": [
         "https://www.instagram.com/cafechaduna",
@@ -230,13 +302,16 @@ function buildCafeSchema(baseUrl, lang) {
     { q: t.faq2Question, a: t.faq2Answer },
     { q: t.faq3Question, a: t.faq3Answer },
     { q: t.faq4Question, a: t.faq4Answer },
-    { q: t.faq5Question, a: t.faq5Answer }
+    { q: t.faq5Question, a: t.faq5Answer },
+    { q: t.faq6Question, a: t.faq6Answer },
+    { q: t.faq7Question, a: t.faq7Answer },
+    { q: t.faq8Question, a: t.faq8Answer }
   ]);
 
   return { business, faq };
 }
 
-/* ---------------- HELPERS ---------------- */
+
 
 function faqPage(items) {
   return {
@@ -427,7 +502,7 @@ const hubTranslations = {
     feature4: "Located in historic old city near Liberty Square metro",
     feature5: "Modern facilities and comfortable workspace",
     feature6: "Daily access 10:00-20:00",
-    feature7: "20% discount in Chhaduna Cafe and Wine Bar for Hub members",
+    feature7: "20% discount in Chaduna Cafe and Wine Bar for Hub members",
     audience: "Digital Nomads, Remote Workers, Freelancers, Entrepreneurs, Students"
   },
 
@@ -713,6 +788,12 @@ const cafeTranslations = {
     faq4Answer: "We are open Tuesday through Sunday from 09:00 to 23:00, and Monday from 09:00 to 15:00.",
     faq5Question: "Do you offer takeout?",
     faq5Answer: "Yes, we offer both dine-in and takeout services. You can enjoy our food and wine in our cozy space or take it to go.",
+    faq6Question: "Is Chaduna pet-friendly?",
+    faq6Answer: "Yes! Chaduna warmly welcomes well-behaved dogs. Your four-legged companion is always a welcome guest at our cafe.",
+    faq7Question: "Can I work on my laptop at Chaduna?",
+    faq7Answer: "Absolutely — many guests enjoy working on their laptops over coffee or a glass of wine. We have free Wi-Fi available. If you need to make video calls, require dedicated desk space, or need ultra-fast connectivity, we recommend Chaduna Hub — our coworking space located in the same building, with day passes from 30 GEL.",
+    faq8Question: "How can I book a table or a wine tasting?",
+    faq8Answer: "You can reserve a table or book a wine tasting (70 GEL/person) via our online form at chaduna.com/reserve.html, on WhatsApp or by phone at +995 557 629 229, on Telegram at @chaduna_wine, or via Instagram DM at @cafechaduna. Wine tastings require advance booking.",
     // Feature list translations
     feature1: "Famous for syrniki (cottage cheese pancakes)",
     feature2: "Wide selection of Georgian and international wines by the glass",
@@ -742,6 +823,12 @@ const cafeTranslations = {
     faq4Answer: "Мы работаем со вторника по воскресенье с 09:00 до 23:00, и в понедельник с 09:00 до 15:00.",
     faq5Question: "Вы предлагаете еду на вынос?",
     faq5Answer: "Да, мы предлагаем как обслуживание в зале, так и на вынос. Вы можете насладиться нашей едой и вином в нашем уютном пространстве или взять заказ с собой.",
+    faq6Question: "Можно ли прийти в Chaduna с собакой?",
+    faq6Answer: "Да! Chaduna рады встретить воспитанных собак. Ваш четвероногий компаньон всегда желанный гость в нашем кафе.",
+    faq7Question: "Можно ли работать за ноутбуком в Chaduna?",
+    faq7Answer: "Конечно — многие гости с удовольствием работают за ноутбуком за чашкой кофе или бокалом вина. У нас есть бесплатный Wi-Fi. Если вам нужны видеозвонки, отдельное рабочее место или сверхбыстрое соединение, рекомендуем Chaduna Hub — наш коворкинг в том же здании, с дневными абонементами от 30 лари.",
+    faq8Question: "Как забронировать столик или дегустацию вина?",
+    faq8Answer: "Вы можете забронировать столик или дегустацию вина (70 лари/чел.) через форму на chaduna.com/reserve.html, по WhatsApp или телефону +995 557 629 229, в Telegram @chaduna_wine или в Instagram DM @cafechaduna. Дегустация вина требует предварительного бронирования.",
     feature1: "Славится сырниками (творожными оладьями)",
     feature2: "Широкий выбор грузинских вин по бокалам",
     feature3: "Расположены в историческом старом городе рядом с метро Площадь Свободы",
@@ -770,6 +857,12 @@ const cafeTranslations = {
     faq4Answer: "Wir sind von Dienstag bis Sonntag von 09:00 bis 23:00 Uhr geöffnet, und montags von 09:00 bis 15:00 Uhr.",
     faq5Question: "Bieten Sie Essen zum Mitnehmen an?",
     faq5Answer: "Ja, wir bieten sowohl Vor-Ort-Service als auch Essen zum Mitnehmen. Sie können unser Essen und Wein in unserem gemütlichen Raum genießen oder zum Mitnehmen bestellen.",
+    faq6Question: "Ist Chaduna tierfreundlich?",
+    faq6Answer: "Ja! Chaduna heißt gut erzogene Hunde herzlich willkommen. Ihr Vierbeiner ist stets ein willkommener Gast in unserem Café.",
+    faq7Question: "Kann ich in Chaduna am Laptop arbeiten?",
+    faq7Answer: "Absolut — viele Gäste arbeiten gerne am Laptop bei einem Kaffee oder einem Glas Wein. Wir haben kostenloses WLAN. Wenn Sie Videoanrufe tätigen, einen dedizierten Arbeitsplatz oder ultraschnelle Verbindung benötigen, empfehlen wir Chaduna Hub — unseren Coworking-Space im selben Gebäude, mit Tagespässen ab 30 GEL.",
+    faq8Question: "Wie kann ich einen Tisch oder eine Weinverkostung buchen?",
+    faq8Answer: "Sie können einen Tisch oder eine Weinverkostung (70 GEL/Person) über unser Online-Formular unter chaduna.com/reserve.html, per WhatsApp oder Telefon +995 557 629 229, Telegram @chaduna_wine oder Instagram DM @cafechaduna reservieren. Weinverkostungen erfordern eine Vorabreservierung.",
     feature1: "Bekannt für Syrniki (Quarkpfannkuchen)",
     feature2: "Große Auswahl georgischer Weine im Glas",
     feature3: "Gelegen in der historischen Altstadt in der Nähe der U-Bahn-Station Freiheitsplatz",
@@ -798,6 +891,12 @@ const cafeTranslations = {
     faq4Answer: "Salı'dan Pazar'a 09:00-23:00, Pazartesi 09:00-15:00 saatleri arasında açığız.",
     faq5Question: "Paket servis sunuyor musunuz?",
     faq5Answer: "Evet, hem içeride yemek hem de paket servis hizmeti sunuyoruz. Yemeklerimizi ve şarabımızı samimi mekanımızda tadabilir veya paket servis olarak alabilirsiniz.",
+    faq6Question: "Chaduna evcil hayvanlara dost mudur?",
+    faq6Answer: "Evet! Chaduna, iyi huylu köpekleri sıcaklaşır. Dört ayaklı arkadaşınız kafemizde her zaman hoş karşılanır.",
+    faq7Question: "Chaduna'da dizüstü bilgisayarla çalışabilir miyim?",
+    faq7Answer: "Kesinlikle — birçok misafirimiz kahve veya şarap içerken dizüstü bilgisayarla çalışmaktan zevk alıyor. Ücretsiz Wi-Fi sunuyoruz. Video görüşmeleri yapmanız, özel çalışma alanı veya ultra hızlı bağlantı gerekiyorsa, aynı binada bulunan Chaduna Hub koworking alanımızı öneririz — günlük geçiş 30 GEL'den başlıyor.",
+    faq8Question: "Masa veya şarap tadımı nasıl rezervasyon yapabilirim?",
+    faq8Answer: "Masa veya şarap tadımı (70 GEL/kişi) rezervasyonu için chaduna.com/reserve.html adresindeki online formumuz, WhatsApp veya telefon +995 557 629 229, Telegram @chaduna_wine veya Instagram DM @cafechaduna aracılığıyla ulaşabilirsiniz. Şarap tadımları için önceden rezervasyon gereklidir.",
     feature1: "Syrniki (lor peyniri kızartması) ile ünlü",
     feature2: "Bardağa geniş Gürcü şarap seçkisi",
     feature3: "Özgürlük Meydanı metro istasyonu yakınında tarihi eski şehirde konumlanmış",
@@ -826,6 +925,12 @@ const cafeTranslations = {
     faq4Answer: "Nous sommes ouverts du mardi au dimanche de 09h00 à 23h00, et le lundi de 09h00 à 15h00.",
     faq5Question: "Offrez-vous la vente à emporter?",
     faq5Answer: "Oui, nous offrons à la fois le service sur place et à emporter. Vous pouvez déguster notre nourriture et vin dans notre espace cosy ou l'emporter.",
+    faq6Question: "Chaduna est-il accessible aux animaux de compagnie?",
+    faq6Answer: "Oui! Chaduna accueille chaleureusement les chiens bien élevés. Votre compagnon à quatre pattes est toujours le bienvenu dans notre café.",
+    faq7Question: "Puis-je travailler sur mon ordinateur portable chez Chaduna?",
+    faq7Answer: "Absolument — de nombreux clients apprécient de travailler sur leur ordinateur portable autour d'un café ou d'un verre de vin. Nous disposons du Wi-Fi gratuit. Si vous avez besoin de passer des appels vidéo, d'un espace de travail dédié ou d'une connexion ultra-rapide, nous recommandons Chaduna Hub — notre espace de coworking dans le même bâtiment, avec des passes journaliers à partir de 30 GEL.",
+    faq8Question: "Comment réserver une table ou une dégustation de vin?",
+    faq8Answer: "Vous pouvez réserver une table ou une dégustation de vin (70 GEL/personne) via notre formulaire en ligne sur chaduna.com/reserve.html, par WhatsApp ou téléphone au +995 557 629 229, Telegram @chaduna_wine ou Instagram DM @cafechaduna. Les dégustations de vin nécessitent une réservation préalable.",
     feature1: "Célèbre pour les syrniki (crêpes au fromage blanc)",
     feature2: "Large sélection de vins géorgiens au verre",
     feature3: "Situé dans la vieille ville historique près de la station de métro place de la Liberté",
@@ -854,6 +959,12 @@ const cafeTranslations = {
     faq4Answer: "Estamos abiertos de martes a domingo de 09:00 a 23:00, y los lunes de 09:00 a 15:00.",
     faq5Question: "¿Ofrecen comida para llevar?",
     faq5Answer: "Sí, ofrecemos tanto servicio para comer aquí como para llevar. Puede disfrutar de nuestra comida y vino en nuestro acogedor espacio o llevarlo para llevar.",
+    faq6Question: "¿Chaduna admite mascotas?",
+    faq6Answer: "¡Sí! Chaduna da la bienvenida a perros bien educados. Su compañero de cuatro patas siempre es un huésped bienvenido en nuestro café.",
+    faq7Question: "¿Puedo trabajar con mi portátil en Chaduna?",
+    faq7Answer: "Por supuesto — muchos clientes disfrutan trabajando con su portátil tomando un café o una copa de vino. Tenemos Wi-Fi gratuito. Si necesita hacer videollamadas, un espacio de trabajo dedicado o conexión ultrarrápida, recomendamos Chaduna Hub — nuestro espacio de coworking en el mismo edificio, con pases diarios desde 30 GEL.",
+    faq8Question: "¿Cómo puedo reservar una mesa o una cata de vinos?",
+    faq8Answer: "Puede reservar una mesa o una cata de vinos (70 GEL/persona) a través de nuestro formulario en línea en chaduna.com/reserve.html, por WhatsApp o teléfono al +995 557 629 229, Telegram @chaduna_wine o Instagram DM @cafechaduna. Las catas de vinos requieren reserva anticipada.",
     feature1: "Famoso por syrniki (tortitas de requesón)",
     feature2: "Amplia selección de vinos georgianos por vaso",
     feature3: "Ubicado en la ciudad vieja histórica cerca de la estación de metro Plaza de la Libertad",
@@ -882,6 +993,12 @@ const cafeTranslations = {
     faq4Answer: "Siamo aperti dal martedì alla domenica dalle 09:00 alle 23:00, e il lunedì dalle 09:00 alle 15:00.",
     faq5Question: "Offrite cibo da asporto?",
     faq5Answer: "Sì, offriamo sia servizio da mangiare qui che da asporto. Potete gustare il nostro cibo e vino nel nostro spazio accogliente o portarlo via.",
+    faq6Question: "Chaduna è pet-friendly?",
+    faq6Answer: "Sì! Chaduna accoglie calorosamente i cani ben educati. Il vostro compagno a quattro zampe è sempre un ospite benvenuto nel nostro caffè.",
+    faq7Question: "Posso lavorare al laptop da Chaduna?",
+    faq7Answer: "Assolutamente — molti ospiti amano lavorare al laptop con un caffè o un bicchiere di vino. Abbiamo Wi-Fi gratuito. Se avete bisogno di fare videochiamate, uno spazio di lavoro dedicato o una connessione ultraveloce, vi consigliamo Chaduna Hub — il nostro spazio coworking nello stesso edificio, con pass giornalieri da 30 GEL.",
+    faq8Question: "Come posso prenotare un tavolo o una degustazione di vino?",
+    faq8Answer: "Potete prenotare un tavolo o una degustazione di vino (70 GEL/persona) tramite il nostro modulo online su chaduna.com/reserve.html, via WhatsApp o telefono al +995 557 629 229, Telegram @chaduna_wine o Instagram DM @cafechaduna. Le degustazioni di vino richiedono prenotazione anticipata.",
     feature1: "Famoso per syrniki (frittelle di ricotta)",
     feature2: "Ampia selezione di vini georgiani al bicchiere",
     feature3: "Situato nella città vecchia storica vicino alla stazione della metropolitana Piazza della Libertà",
@@ -910,6 +1027,12 @@ const cafeTranslations = {
     faq4Answer: "ვართ ღია სამშაბათიდან კვირამდე 09:00-23:00, ხოლო ორშაბათს 09:00-15:00.",
     faq5Question: "გაქვთ წასაღებად მომსახურება?",
     faq5Answer: "დიახ, ვთავაზობთ როგორც დარბაზში, ასევე წასაღებად მომსახურებას. შეგიძლიათ ისიამოვნოთ ჩვენი საჭმლით და ღვინით ჩვენს მყუდრო სივრცეში ან წაიღოთ წასაღებად.",
+    faq6Question: "Chaduna-ში შეიძლება შინაური ცხოველებთან სტუმრობა?",
+    faq6Answer: "დიახ! Chaduna სიამოვნებით მიაღებს კარგად აღზრდილ ძაღლებს. თქვენი ოთხფეხა მეგობარი ყოველთვის სასურველი სტუმარია ჩვენს კაფეში.",
+    faq7Question: "შეიძლება ლეპტოპზე მუშაობა Chaduna-ში?",
+    faq7Answer: "რა თქმა უნდა — ბევრი სტუმარი სიამოვნებით მუშაობს ლეპტოპზე ყავის ან ღვინის ბოკალთან ერთად. გვაქვს უფასო Wi-Fi. თუ გჭირდებათ ვიდეო ზარების გაკეთება, გამოყოფილი სამუშაო ადგილი ან ულტრასწრაფი კავშირი, გირჩევთ Chaduna Hub-ს — ჩვენი კოვორქინგ სივრცე იმავე შენობაში, დღიური გადასვლებით 30 ლარიდან.",
+    faq8Question: "როგორ დავჯავშნო მაგიდა ან ღვინის დეგუსტაცია?",
+    faq8Answer: "შეგიძლიათ დაჯავშნოთ მაგიდა ან ღვინის დეგუსტაცია (70 ლარი/ადამიანი) ჩვენი ონლაინ ფორმით chaduna.com/reserve.html-ზე, WhatsApp-ით ან ტელეფონით +995 557 629 229, Telegram @chaduna_wine ან Instagram DM @cafechaduna. ღვინის დეგუსტაცია საჭიროებს წინასწარ დაჯავშნას.",
     feature1: "ცნობილია სირნიკებით (ნაყინის ბლინებით)",
     feature2: "ქართული ღვინის ფართო არჩევანი ბურგერით",
     feature3: "მდებარეობს ისტორიულ ძველ ქალაქში თავისუფლების მოედნის მეტროსადგურთან ახლოს",
@@ -938,6 +1061,12 @@ const cafeTranslations = {
     faq4Answer: "我们周二至周日09:00-23:00营业，周一09:00-15:00营业。",
     faq5Question: "你们提供外带服务吗？",
     faq5Answer: "是的，我们提供堂食和外带服务。您可以在我们舒适的空间内享用我们的食物和葡萄酒，也可以外带。",
+    faq6Question: "Chaduna允许携带宠物吗？",
+    faq6Answer: "是的！Chaduna热情欢迎举止良好的狗狗。您的四条腿的朋友随时都是我们咖啡馆的受欢迎客人。",
+    faq7Question: "我可以在Chaduna用笔记本电脑工作吗？",
+    faq7Answer: "当然可以——许多客人喜欢一边喝咖啡或品酒一边用笔记本电脑工作。我们提供免费Wi-Fi。如果您需要进行视频通话、需要专用工作台或超高速网络，我们推荐同一栋楼的Chaduna Hub联合办公空间，日票从30 GEL起。",
+    faq8Question: "如何预订餐桌或葡萄酒品鉴？",
+    faq8Answer: "您可以通过chaduna.com/reserve.html的在线表单、WhatsApp或电话+995 557 629 229、Telegram @chaduna_wine或Instagram私信@cafechaduna预订餐桌或葡萄酒品鉴（70 GEL/人）。葡萄酒品鉴需要提前预订。",
     feature1: "以syrniki（白软干酪煎饼）闻名",
     feature2: "精选格鲁吉亚葡萄酒杯装",
     feature3: "位于历史老城区，靠近自由广场地铁站",
@@ -966,6 +1095,12 @@ const cafeTranslations = {
     faq4Answer: "نحن مفتوحون من الثلاثاء إلى الأحد من 09:00 إلى 23:00، والاثنين من 09:00 إلى 15:00.",
     faq5Question: "هل تقدمون طلبات خارجية؟",
     faq5Answer: "نعم، نقدم خدمة تناول الطعام في المطعم والطلبات الخارجية. يمكنك الاستمتاع بطعامنا ونبيذنا في مساحتنا الدافئة أو أخذه للخارج.",
+    faq6Question: "هل Chaduna مناسب للحيوانات الأليفة؟",
+    faq6Answer: "نعم! يرحب Chaduna بالكلاب المؤدبة. رفيقك ذو الأربع أرجل هو دائماً ضيف مرحب به في مقهانا.",
+    faq7Question: "هل يمكنني العمل على حاسوبي المحمول في Chaduna؟",
+    faq7Answer: "بالتأكيد — يستمتع كثير من الضيوف بالعمل على حواسيبهم المحمولة مع قهوة أو كأس من النبيذ. لدينا Wi-Fi مجاني. إذا كنت بحاجة إلى إجراء مكالمات فيديو أو مساحة عمل مخصصة أو اتصال فائق السرعة، نوصي بـ Chaduna Hub — مساحة العمل المشتركة في نفس المبنى، مع تصاريح يومية تبدأ من 30 GEL.",
+    faq8Question: "كيف يمكنني حجز طاولة أو جلسة تذوق نبيذ؟",
+    faq8Answer: "يمكنك حجز طاولة أو جلسة تذوق نبيذ (70 GEL/شخص) عبر نموذجنا الإلكتروني على chaduna.com/reserve.html، أو عبر واتساب أو الهاتف +995 557 629 229، أو تيليغرام @chaduna_wine، أو رسالة مباشرة على إنستغرام @cafechaduna. تذوق النبيذ يتطلب حجزاً مسبقاً.",
     feature1: "مشهور بسيرنيكي (فطائر الجبن القريش)",
     feature2: "مجموعة واسعة من النبيذ الجورجي بالكأس",
     feature3: "يقع في المدينة القديمة التاريخية بالقرب من محطة مترو ساحة الحرية",
@@ -990,7 +1125,7 @@ const wineTastingTranslations = {
     faq3Question: "Where does the wine tasting take place?",
     faq3Answer: "The wine tasting takes place at Chaduna, located at 18 Galaktion Tabidze Street, near Liberty Square in downtown Tbilisi.",
     faq4Question: "Do I need to book in advance?",
-    faq4Answer: "Yes, advance booking is required for wine tastings. You can book through our online booking form.",
+    faq4Answer: "Yes, advance booking is required for wine tastings. You can book via our online form at chaduna.com/reserve.html (select 'wine tasting'), on WhatsApp or by phone at +995 557 629 229, Telegram @chaduna_wine, or Instagram DM @cafechaduna.",
     faq5Question: "What will I learn about Georgian wine?",
     faq5Answer: "You will learn about the 8,000-year history of Georgian winemaking, traditional Qvevri clay vessel technology, Georgia's unique grape varieties, and the different wine regions of Georgia."
   },
@@ -1005,7 +1140,7 @@ const wineTastingTranslations = {
     faq3Question: "Где проходит дегустация вина?",
     faq3Answer: "Дегустация вина проходит в Chaduna, расположенном по адресу ул. Галактиона Табидзе, 18, рядом с площадью Свободы в центре Тбилиси.",
     faq4Question: "Нужно ли бронировать заранее?",
-    faq4Answer: "Да, для дегустации вина требуется предварительное бронирование. Вы можете забронировать через нашу онлайн-форму.",
+    faq4Answer: "Да, для дегустации вина требуется предварительное бронирование. Вы можете забронировать через онлайн-форму на chaduna.com/reserve.html (укажите 'дегустация вина'), по WhatsApp или телефону +995 557 629 229, в Telegram @chaduna_wine или Instagram DM @cafechaduna.",
     faq5Question: "Что я узнаю о грузинском вине?",
     faq5Answer: "Вы узнаете о 8000-летней истории грузинского виноделия, традиционной технологии квеври, уникальных сортах винограда Грузии и различных винодельческих регионах страны."
   },
@@ -1020,7 +1155,7 @@ const wineTastingTranslations = {
     faq3Question: "Wo findet die Weinverkostung statt?",
     faq3Answer: "Die Weinverkostung findet bei Chaduna statt, in der Galaktion Tabidze Straße 18, in der Nähe des Freiheitsplatzes im Zentrum von Tiflis.",
     faq4Question: "Muss ich im Voraus buchen?",
-    faq4Answer: "Ja, eine Vorabreservierung ist für Weinverkostungen erforderlich. Sie können über unser Online-Buchungsformular buchen.",
+    faq4Answer: "Ja, eine Vorabreservierung ist für Weinverkostungen erforderlich. Sie können über unser Online-Formular unter chaduna.com/reserve.html (wählen Sie 'Weinverkostung'), per WhatsApp oder Telefon +995 557 629 229, Telegram @chaduna_wine oder Instagram DM @cafechaduna buchen.",
     faq5Question: "Was werde ich über georgischen Wein lernen?",
     faq5Answer: "Sie werden die 8.000-jährige Geschichte der georgischen Weinherstellung, die traditionelle Qvevri-Tonkrug-Technologie, Georgiens einzigartige Rebsorten und die verschiedenen Weinregionen Georgiens kennenlernen."
   },
@@ -1035,7 +1170,7 @@ const wineTastingTranslations = {
     faq3Question: "Şarap tadımı nerede gerçekleşiyor?",
     faq3Answer: "Şarap tadımı, Tiflis şehir merkezinde Özgürlük Meydanı yakınında, Galaktion Tabidze Caddesi 18 numarada bulunan Chaduna'da gerçekleşir.",
     faq4Question: "Önceden rezervasyon yapmam gerekiyor mu?",
-    faq4Answer: "Evet, şarap tadımları için önceden rezervasyon gereklidir. Online rezervasyon formumuz üzerinden rezervasyon yapabilirsiniz.",
+    faq4Answer: "Evet, şarap tadımları için önceden rezervasyon gereklidir. chaduna.com/reserve.html adresindeki online formumuzdan ('şarap tadımı' seçin), WhatsApp veya telefon +995 557 629 229, Telegram @chaduna_wine veya Instagram DM @cafechaduna üzerinden rezervasyon yapabilirsiniz.",
     faq5Question: "Gürcü şarabı hakkında ne öğreneceğim?",
     faq5Answer: "Gürcü şarap yapımının 8.000 yıllık tarihi, geleneksel Qvevri kil kap teknolojisi, Gürcistan'ın benzersiz üzüm çeşitleri ve Gürcistan'ın farklı şarap bölgeleri hakkında bilgi edineceksiniz."
   },
@@ -1050,7 +1185,7 @@ const wineTastingTranslations = {
     faq3Question: "Où se déroule la dégustation de vin?",
     faq3Answer: "La dégustation de vin a lieu chez Chaduna, situé au 18 rue Galaktion Tabidze, près de la place de la Liberté au centre-ville de Tbilissi.",
     faq4Question: "Dois-je réserver à l'avance?",
-    faq4Answer: "Oui, la réservation à l'avance est obligatoire pour les dégustations de vin. Vous pouvez réserver via notre formulaire de réservation en ligne.",
+    faq4Answer: "Oui, la réservation à l'avance est obligatoire pour les dégustations de vin. Vous pouvez réserver via notre formulaire en ligne sur chaduna.com/reserve.html (sélectionnez 'dégustation de vin'), par WhatsApp ou téléphone au +995 557 629 229, Telegram @chaduna_wine ou Instagram DM @cafechaduna.",
     faq5Question: "Qu'apprendrai-je sur le vin géorgien?",
     faq5Answer: "Vous apprendrez l'histoire de 8 000 ans de la vinification géorgienne, la technologie traditionnelle des jarres en argile Qvevri, les cépages uniques de Géorgie et les différentes régions viticoles du pays."
   },
@@ -1065,7 +1200,7 @@ const wineTastingTranslations = {
     faq3Question: "¿Dónde se realiza la cata de vino?",
     faq3Answer: "La cata de vino se realiza en Chaduna, ubicado en la calle Galaktion Tabidze 18, cerca de la Plaza de la Libertad en el centro de Tbilisi.",
     faq4Question: "¿Necesito reservar con anticipación?",
-    faq4Answer: "Sí, se requiere reserva anticipada para las catas de vino. Puede reservar a través de nuestro formulario de reserva en línea.",
+    faq4Answer: "Sí, se requiere reserva anticipada para las catas de vino. Puede reservar a través de nuestro formulario en línea en chaduna.com/reserve.html (seleccione 'cata de vino'), por WhatsApp o teléfono al +995 557 629 229, Telegram @chaduna_wine o Instagram DM @cafechaduna.",
     faq5Question: "¿Qué aprenderé sobre el vino georgiano?",
     faq5Answer: "Aprenderá sobre los 8,000 años de historia de la vinificación georgiana, la tecnología tradicional de vasijas de arcilla Qvevri, las variedades de uva únicas de Georgia y las diferentes regiones vinícolas del país."
   },
@@ -1080,7 +1215,7 @@ const wineTastingTranslations = {
     faq3Question: "Dove si svolge la degustazione di vino?",
     faq3Answer: "La degustazione di vino si svolge da Chaduna, situato in via Galaktion Tabidze 18, vicino a Piazza della Libertà nel centro di Tbilisi.",
     faq4Question: "Devo prenotare in anticipo?",
-    faq4Answer: "Sì, la prenotazione anticipata è richiesta per le degustazioni di vino. Puoi prenotare tramite il nostro modulo di prenotazione online.",
+    faq4Answer: "Sì, la prenotazione anticipata è richiesta per le degustazioni di vino. Puoi prenotare tramite il nostro modulo online su chaduna.com/reserve.html (seleziona 'degustazione di vino'), via WhatsApp o telefono al +995 557 629 229, Telegram @chaduna_wine o Instagram DM @cafechaduna.",
     faq5Question: "Cosa imparerò sul vino georgiano?",
     faq5Answer: "Imparerai gli 8.000 anni di storia della vinificazione georgiana, la tecnologia tradizionale delle anfore di argilla Qvevri, i vitigni unici della Georgia e le diverse regioni vinicole del paese."
   },
@@ -1095,7 +1230,7 @@ const wineTastingTranslations = {
     faq3Question: "სად ტარდება ღვინის დეგუსტაცია?",
     faq3Answer: "ღვინის დეგუსტაცია ტარდება Chaduna-ში, მდებარეობს გალაქტიონ ტაბიძის ქუჩა 18-ში, თავისუფლების მოედნის მახლობლად თბილისის ცენტრში.",
     faq4Question: "საჭიროა წინასწარ დაჯავშნა?",
-    faq4Answer: "დიახ, ღვინის დეგუსტაციისთვის საჭიროა წინასწარი დაჯავშნა. შეგიძლიათ დაჯავშნოთ ჩვენი ონლაინ დაჯავშნის ფორმით.",
+    faq4Answer: "დიახ, ღვინის დეგუსტაციისთვის საჭიროა წინასწარი დაჯავშნა. შეგიძლიათ დაჯავშნოთ ჩვენი ონლაინ ფორმით chaduna.com/reserve.html-ზე (აირჩიეთ 'ღვინის დეგუსტაცია'), WhatsApp-ით ან ტელეფონით +995 557 629 229, Telegram @chaduna_wine ან Instagram DM @cafechaduna.",
     faq5Question: "რას შევისწავლი ქართული ღვინის შესახებ?",
     faq5Answer: "შეისწავლით ქართული მეღვინეობის 8,000 წლიან ისტორიას, ტრადიციულ ქვევრის თიხის ჭურჭლის ტექნოლოგიას, საქართველოს უნიკალურ ყურძნის ჯიშებს და ქვეყნის სხვადასხვა ღვინის რეგიონებს."
   },
@@ -1110,7 +1245,7 @@ const wineTastingTranslations = {
     faq3Question: "葡萄酒品鉴在哪里举行？",
     faq3Answer: "葡萄酒品鉴在Chaduna举行，地址是Galaktion Tabidze街18号，位于第比利斯市中心自由广场附近。",
     faq4Question: "需要提前预订吗？",
-    faq4Answer: "是的，葡萄酒品鉴需要提前预订。您可以通过我们的在线预订表单预订。",
+    faq4Answer: "是的，葡萄酒品鉴需要提前预订。您可以通过chaduna.com/reserve.html的在线表单（选择'葡萄酒品鉴'）、WhatsApp或电话+995 557 629 229、Telegram @chaduna_wine或Instagram私信@cafechaduna进行预订。",
     faq5Question: "我将了解到什么关于格鲁吉亚葡萄酒的知识？",
     faq5Answer: "您将了解格鲁吉亚酿酒的8000年历史、传统的Qvevri陶罐技术、格鲁吉亚独特的葡萄品种以及该国不同的葡萄酒产区。"
   },
@@ -1125,7 +1260,7 @@ const wineTastingTranslations = {
     faq3Question: "أين يقام تذوق النبيذ؟",
     faq3Answer: "يقام تذوق النبيذ في Chaduna، الواقع في شارع Galaktion Tabidze 18، بالقرب من ساحة الحرية في وسط تبليسي.",
     faq4Question: "هل أحتاج للحجز مسبقاً؟",
-    faq4Answer: "نعم، الحجز المسبق مطلوب لتذوق النبيذ. يمكنك الحجز من خلال نموذج الحجز عبر الإنترنت.",
+    faq4Answer: "نعم، الحجز المسبق مطلوب لتذوق النبيذ. يمكنك الحجز عبر نموذجنا الإلكتروني على chaduna.com/reserve.html (اختر 'تذوق النبيذ')، أو عبر واتساب أو الهاتف +995 557 629 229، أو تيليغرام @chaduna_wine، أو رسالة مباشرة على إنستغرام @cafechaduna.",
     faq5Question: "ماذا سأتعلم عن النبيذ الجورجي؟",
     faq5Answer: "ستتعلم عن تاريخ صناعة النبيذ الجورجي الذي يمتد 8000 عام، وتقنية جرار الطين كفيفري التقليدية، وأصناف العنب الفريدة في جورجيا، ومناطق النبيذ المختلفة في البلاد."
   }
