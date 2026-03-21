@@ -1,0 +1,189 @@
+/* ===== BURGER MENU SIDEBAR ===== */
+
+/* Burger button in header */
+.burger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    color: var(--color-black);
+    line-height: 0;
+    transition: color var(--transition-fast);
+}
+
+.burger-btn:hover {
+    color: var(--color-accent);
+}
+
+.burger-btn svg {
+    display: block;
+    transition: transform var(--transition-fast);
+}
+
+/* Overlay behind sidebar */
+.burger-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+}
+
+.burger-overlay.is-open {
+    display: block;
+}
+
+/* Sidebar panel */
+.burger-sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    height: 100% !important;
+    width: 80vw;
+    background: #ffffff;
+    z-index: 201;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 32px 12px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.burger-sidebar.is-open {
+    transform: translateX(0) !important;
+}
+
+@media (min-width: 768px) {
+    .burger-sidebar {
+        width: auto;
+        min-width: 280px;
+    }
+}
+
+/* Close button inside sidebar — vertically aligned with burger icon in header */
+.burger-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    color: #000000;
+    line-height: 0;
+    margin-bottom: 28px;
+    transition: color 0.2s ease;
+}
+
+.burger-close:hover {
+    color: #89393E;
+}
+
+/* Nav links */
+.burger-nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 64px;
+}
+
+.burger-nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease;
+}
+
+.burger-nav-links a:hover {
+    color: #89393E;
+}
+
+.burger-nav--current {
+    color: #aaaaaa !important;
+}
+
+/* Social icons row */
+.burger-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.burger-social-icons a {
+    display: flex;
+    align-items: center;
+    color: #000000;
+    line-height: 0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.burger-social-icons a:hover {
+    color: #89393E;
+}
+
+.burger-social-icons a svg {
+    display: block;
+    fill: currentColor;
+    transition: fill 0.2s ease;
+}
+
+.burger-social-icons a svg use {
+    fill: currentColor;
+    transition: fill 0.2s ease;
+}
+
+/* Sidebar footer — address near icons, "Powered by" pinned to very bottom */
+.burger-footer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    border-top: 1px solid #eeeeee;
+    padding-top: 28px;
+}
+
+.burger-address {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 0;
+}
+
+.burger-powered {
+    margin-top: auto;
+    padding-bottom: 4px;
+    font-family: system-ui, sans-serif;
+    font-size: 11px;
+    color: #666666;
+}
+
+.burger-powered a {
+    color: #89393E;
+    text-decoration: none;
+}
+
+.burger-powered a:hover {
+    text-decoration: underline;
+}
+
+/* Gallery page title — overrides global h1 { line-height: 0; margin: 0 } */
+.gallery-page-title {
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}

@@ -9,10 +9,11 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <title>Chaduna Menu</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/burger-menu.css">
     <script defer src="/assets/js/structured-data.js"></script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
 </head>
-<body class="menu">
+<body class="menu" data-page="menu">
     <header class="menu-header">
         <div class="header-left">
             <a href="/index.html">
@@ -21,21 +22,6 @@
             </a>
         </div>
         <div class="header-right">
-            <a href="https://www.instagram.com/cafechaduna" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Instagram">
-                <svg class="icon-svg icon-svg--header" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#instagram"/></svg>
-            </a>
-            <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Location">
-                <svg class="icon-svg icon-svg--header" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#maps"/></svg>
-            </a>
-            <a href="https://t.me/chaduna_wine" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Telegram">
-                <svg class="icon-svg icon-svg--header" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#telegram"/></svg>
-            </a>
-            <a href="https://wa.me/995557629229" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="WhatsApp">
-                <svg class="icon-svg icon-svg--header" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#whatsapp"/></svg>
-            </a>
-            <a href="tel:+995557629229" class="icon-link" aria-label="Phone">
-                <svg class="icon-svg icon-svg--header" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#phone"/></svg>
-            </a>
             <div class="lang-dropdown">
                 <button type="button" onclick="toggleLanguage()" class="lang-dropbtn" aria-label="Select Language">
                     <svg class="icon-svg icon-svg--header" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#language"/></svg>
@@ -53,9 +39,54 @@
                     <a href="menu_zh.html">ZH</a>
                 </div>
             </div>
-
+            <button class="burger-btn" onclick="openBurgerMenu()" aria-label="Open menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
         </div>
     </header>
+
+    <div class="burger-overlay" id="burgerOverlay" onclick="closeBurgerMenu()"></div>
+    <nav class="burger-sidebar" id="burgerSidebar" aria-label="Site navigation">
+        <button class="burger-close" onclick="closeBurgerMenu()" aria-label="Close menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <div class="burger-nav-links">
+            <a href="/index.html" data-nav="home">Home</a>
+            <a href="/menus/menu_en.html" data-nav="menu">Menu</a>
+            <a href="/gallery.html" data-nav="gallery">Gallery</a>
+            <a href="/reserve.html" data-nav="reserve">Reserve</a>
+            <a href="/wine-tasting.html" data-nav="wine-tasting">Wine Tasting</a>
+            <a href="/hub.html" data-nav="hub">.hub</a>
+        </div>
+        <div class="burger-social-icons">
+            <a href="https://www.instagram.com/cafechaduna" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#instagram"/></svg>
+            </a>
+            <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank" rel="noopener noreferrer" aria-label="Location">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#maps"/></svg>
+            </a>
+            <a href="https://t.me/chaduna_wine" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#telegram"/></svg>
+            </a>
+            <a href="https://wa.me/995557629229" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#whatsapp"/></svg>
+            </a>
+            <a href="tel:+995557629229" aria-label="Phone">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#phone"/></svg>
+            </a>
+        </div>
+        <div class="burger-footer">
+            <p class="burger-address">18 Galaktion Tabidze Street, Tbilisi</p>
+            <p class="burger-powered">Powered by <a href="https://loom.ge/en?utm_source=chaduna">loom.ge</a></p>
+        </div>
+    </nav>
 
     <main>
     <div class="menu-container">
@@ -339,5 +370,6 @@
     <footer class="site-footer">Powered by <a href="https://loom.ge/en?utm_source=chaduna">loom.ge</a></footer>
 
     <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/burger-menu.js"></script>
 </body>
 </html>
