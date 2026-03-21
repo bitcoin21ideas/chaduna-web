@@ -22,6 +22,9 @@ The project uses a standard, organized static file structure to separate content
 ├── index.html            // The main landing page/homepage.
 ├── hub.html              // Coworking space landing page (pricing, timing, info).
 ├── gallery.html          // Food gallery page with interactive lightbox viewer.
+├── wine-tasting.html     // Wine tasting offer and booking link.
+├── reserve.html          // Table booking page (Tally embed).
+├── form-submitted.html   // Thank-you page after a booking request.
 ├── menus/
 │   ├── menu_en.html      // The interactive food and beverage menu page (English).
 │   ├── menu_ru.html      // Russian menu.
@@ -45,6 +48,7 @@ The project uses a standard, organized static file structure to separate content
     │   └── style.css     // All shared site styling.
     ├── js/
     │   ├── menu.js       // Tab functionality and language dropdown logic.
+    │   ├── form-submitted.js // Add-to-calendar on the booking thank-you page.
     │   └── structured-data.js // JavaScript file for schema.org data (JSON-LD).
     ├── fonts/
     │   └── playfair-display/ // Playfair Display font files (WOFF2 format).
@@ -60,7 +64,7 @@ The project uses a standard, organized static file structure to separate content
 ## ✨ Key Features
 
   * **Multi-Page Layout:** Includes a main entry page, a dedicated menu system, a coworking hub page, and a food gallery.
-  * **Landing Page:** Clean, minimalist homepage (`index.html`) with navigation links, social media icons, address, and opening hours. Features inline critical CSS for fast initial render and deferred non-critical stylesheet loading.
+  * **Landing Page:** Clean, minimalist homepage (`index.html`) with navigation links, social media icons, address, and opening hours. Uses inline critical CSS and deferred loading of the full stylesheet (other pages load `style.css` normally).
   * **Coworking Hub:** A dedicated page (`hub.html`) providing general information about the coworking space, including pricing (30 GEL/day, 100 GEL/week, 300 GEL/month), opening hours (Daily 10:00-20:00), location, and member benefits (2 free beverages and 20% discount at Chaduna).
   * **Interactive Food Gallery:** A visual showcase (`gallery.html`) of menu offerings with an advanced lightbox viewer featuring:
     - Keyboard navigation (Arrow keys, Escape)
@@ -84,8 +88,8 @@ The project uses a standard, organized static file structure to separate content
     - WebP image format for all food photography and logos
     - Responsive images with @1x and @2x variants for retina displays
     - Custom Playfair Display font (WOFF2 format) for typography
-    - Critical CSS inlined on landing page
-    - Deferred non-critical stylesheet loading
+    - Homepage (`index.html`) only: inlined critical CSS and deferred full `style.css` load
+    - Other pages: standard blocking `style.css` link
     - Lazy loading for gallery images
   * **Analytics:** Privacy-friendly analytics using Umami (self-hosted) for tracking page views and user interactions.
   * **Sitemap & Crawler Support:** Includes `robots.txt` and `sitemap.xml` with all pages (hub, gallery, menus) listed for search engine indexing. Sitemap includes hreflang tags for proper language targeting.
