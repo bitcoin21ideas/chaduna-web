@@ -51,8 +51,7 @@
                  height="192">
         </a>
 
-        <h1 style="text-align:center">Food Gallery</h1>
-        <br>
+        <h1 class="gallery-page-title">Food Gallery</h1>
         <div class="gallery-grid">
             <img src="/assets/img/food/all-dishes-thumb.webp" data-full="/assets/img/food/all-dishes.webp" sizes="(max-width: 600px) 181px, 300px" alt="All dishes" onclick="openLightbox(this)" width="300" height="200" loading="eager">
             <img src="/assets/img/food/selection-thumb.webp" data-full="/assets/img/food/selection.webp" sizes="(max-width: 600px) 181px, 300px" alt="Chaduna dishes" onclick="openLightbox(this)" width="300" height="200" loading="eager">
@@ -150,7 +149,7 @@
         <span class="lightbox-close">&times;</span>
         <a class="lightbox-prev" onclick="changeImage(-1, event)">&#10094;</a>
         <a class="lightbox-next" onclick="changeImage(1, event)">&#10095;</a>
-        <img class="lightbox-content" id="lightbox-img" alt="Gallery Image Fullscreen" onclick="toggleZoom(event)">
+        <img class="lightbox-content" id="lightbox-img" alt="Gallery Image Fullscreen" onclick="toggleZoom(event)" loading="lazy">
     </div>
 
     <footer class="site-footer">Powered by <a href="https://loom.ge/en?utm_source=chaduna">loom.ge</a></footer>

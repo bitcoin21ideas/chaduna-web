@@ -347,7 +347,14 @@ body.landing .nav-links a[href="hub.html"]:hover {
     text-align: center;
     font-size: 20px;
     line-height: 1.5;
-    margin-bottom: 1em;
+}
+
+.form-submitted-page .thank-you-intro {
+    margin-bottom: 1.25em;
+}
+
+.form-submitted-page .thank-you-cta {
+    margin-bottom: 1.5em;
 }
 
 .form-submitted-page .chaduna-name {
@@ -363,6 +370,15 @@ body.landing .nav-links a[href="hub.html"]:hover {
 .add-to-calendar-wrap {
     text-align: center;
     margin: 30px 0;
+}
+
+.form-submitted-page .add-to-calendar-wrap {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.form-submitted-page .icons-container {
+    margin-bottom: 1.5rem;
 }
 
 /* ===== MENU PAGE STYLES ===== */
@@ -1025,6 +1041,11 @@ body.hub-page .address a:hover .icon-hover {
     text-align: center;
 }
 
+.availability-line2 {
+    display: block;
+    margin-top: 0.25em;
+}
+
 .note {
     font-size: 14px;
     color: var(--text-muted);
@@ -1043,4 +1064,37 @@ body.hub-page .address a:hover .icon-hover {
     .tasting-details {
         width: 100%;
     }
+}
+
+/* ----- Layout spacing (margin instead of layout <br> / invalid tags) ----- */
+main + footer.site-footer {
+    margin-top: 1.5rem;
+}
+
+.gallery-page-title {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.price-tag-unit {
+    font-size: 16px;
+    color: var(--color-black);
+}
+
+.hub-benefits {
+    margin-top: 1.25rem;
+}
+
+.tally-form-container {
+    margin-bottom: 2rem;
+}
+
+.item-description-line2 {
+    display: block;
+    margin-top: 0.35em;
+}
+
+.menu-wine-bottle-intro-break {
+    display: block;
+    margin-top: 0.5em;
 }
