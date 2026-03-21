@@ -230,43 +230,78 @@ body.landing .nav-links a[href="hub.html"]:hover {
 }
 
 /* Individual icon containers */
-.socials, .address, .phone {
+.socials, .address, .phone, .whatsapp, .telegram {
     margin: 0;
 }
 
-.socials img, .address img, .phone img {
-    width: 40px;
-    height: 40px;
+/* Sprite icons: default black; :hover / :focus-visible use --color-accent */
+a.icon-link:any-link,
+a.icon-link:visited {
+    color: var(--color-black);
+}
+
+a.icon-link {
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a.icon-link:hover {
+    color: var(--color-accent);
+}
+
+a.icon-link:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    color: var(--color-accent);
+}
+
+a.icon-link:focus-visible svg,
+a.icon-link:focus-visible svg use {
+    fill: var(--color-accent);
+}
+
+a.icon-link .icon-svg {
+    display: block;
     transition: transform var(--transition-fast);
 }
 
-.socials img:hover, .address img:hover, .phone img:hover {
+a.icon-link:hover .icon-svg {
     transform: scale(1.1);
 }
 
-.socials a, .address a, .phone a {
-    display: inline-block;
-    position: relative;
+.icon-svg--header {
+    width: 24px;
+    height: 24px;
 }
 
-.icon-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity var(--transition-fast);
+.icon-svg--lg {
+    width: 40px;
+    height: 40px;
 }
 
-.socials a:hover .icon-hover,
-.address a:hover .icon-hover,
-.phone a:hover .icon-hover {
-    opacity: 1;
+a.icon-link svg {
+    fill: var(--color-black);
+    transition: fill var(--transition-fast), transform var(--transition-fast);
 }
 
-.socials a:hover .icon-normal,
-.address a:hover .icon-normal,
-.phone a:hover .icon-normal {
-    opacity: 0;
+a.icon-link:hover svg {
+    fill: var(--color-accent);
+}
+
+/* External sprite: some engines need fill on <use> for correct paint */
+a.icon-link svg use {
+    fill: var(--color-black);
+    transition: fill var(--transition-fast);
+}
+
+a.icon-link:hover svg use {
+    fill: var(--color-accent);
+}
+
+.icons-container a.icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Address Text */
@@ -552,23 +587,22 @@ h2 {
     display: flex;
     gap: 20px;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
-.header-right img {
-    width: 24px;
-    height: 24px;
-    transition: transform var(--transition-fast);
+@media (max-width: 480px) {
+    .header-right {
+        gap: 12px;
+    }
 }
 
-/* Icon Swap Animation */
-.header-left a,
-.header-right a,
-.lang-dropbtn {
+/* Home icon swap (header-left only) */
+.header-left a {
     position: relative;
 }
 
-.header-left .hover-icon,
-.header-right .hover-icon {
+.header-left .hover-icon {
     position: absolute;
     top: 0;
     left: 0;
@@ -576,22 +610,52 @@ h2 {
     transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
-.header-left a:hover .normal-icon,
-.header-right a:hover .normal-icon,
-.lang-dropbtn:hover .normal-icon {
+.header-left a:hover .normal-icon {
     opacity: 0;
 }
 
-.header-left a:hover .hover-icon,
-.header-right a:hover .hover-icon,
-.lang-dropbtn:hover .hover-icon {
+.header-left a:hover .hover-icon {
     opacity: 1;
     transform: scale(1.1);
 }
 
-.header-left .normal-icon,
-.header-right .normal-icon {
+.header-left .normal-icon {
     transition: opacity var(--transition-fast);
+}
+
+/* Menu header: sprite icons + language control (explicit --color-accent hover/focus) */
+.menu-header .header-right a.icon-link:hover,
+.menu-header .header-right a.icon-link:focus-visible {
+    color: var(--color-accent);
+}
+
+.menu-header .header-right a.icon-link:hover svg,
+.menu-header .header-right a.icon-link:hover svg use,
+.menu-header .header-right a.icon-link:focus-visible svg,
+.menu-header .header-right a.icon-link:focus-visible svg use {
+    fill: var(--color-accent);
+}
+
+.menu-header .header-right a.icon-link:hover .icon-svg,
+.menu-header .header-right a.icon-link:focus-visible .icon-svg {
+    transform: scale(1.1);
+}
+
+.menu-header .lang-dropbtn:hover,
+.menu-header .lang-dropbtn:focus-visible {
+    color: var(--color-accent);
+}
+
+.menu-header .lang-dropbtn:hover svg,
+.menu-header .lang-dropbtn:hover svg use,
+.menu-header .lang-dropbtn:focus-visible svg,
+.menu-header .lang-dropbtn:focus-visible svg use {
+    fill: var(--color-accent);
+}
+
+.menu-header .lang-dropbtn:hover .icon-svg,
+.menu-header .lang-dropbtn:focus-visible .icon-svg {
+    transform: scale(1.1);
 }
 
 /* Language Dropdown */
@@ -608,6 +672,51 @@ h2 {
     padding: 0;
     display: flex;
     align-items: center;
+    line-height: 0;
+    color: var(--color-black);
+    transition: color var(--transition-fast);
+}
+
+.lang-dropbtn:hover {
+    color: var(--color-accent);
+}
+
+.lang-dropbtn:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    color: var(--color-accent);
+}
+
+.lang-dropbtn:focus-visible svg,
+.lang-dropbtn:focus-visible svg use {
+    fill: var(--color-accent);
+}
+
+.lang-dropbtn .icon-svg {
+    display: block;
+    transition: transform var(--transition-fast);
+}
+
+.lang-dropbtn:hover .icon-svg {
+    transform: scale(1.1);
+}
+
+.lang-dropbtn svg {
+    fill: var(--color-black);
+    transition: fill var(--transition-fast), transform var(--transition-fast);
+}
+
+.lang-dropbtn:hover svg {
+    fill: var(--color-accent);
+}
+
+.lang-dropbtn svg use {
+    fill: var(--color-black);
+    transition: fill var(--transition-fast);
+}
+
+.lang-dropbtn:hover svg use {
+    fill: var(--color-accent);
 }
 
 .lang-dropdown-content {
@@ -916,18 +1025,6 @@ body.hub-page .nav-links a[href="index.html"]:hover {
 
 body.hub-page .address-text {
     color: var(--color-black);
-}
-
-/* Hub page specific icon handling */
-body.hub-page .socials img, 
-body.hub-page .address img {
-    filter: none; /* Default black icons */
-}
-
-/* Revert inversion for the hover icon so it displays true green */
-body.hub-page .socials a:hover .icon-hover,
-body.hub-page .address a:hover .icon-hover {
-    filter: none;
 }
 
 /* Responsive adjustments for Hub */

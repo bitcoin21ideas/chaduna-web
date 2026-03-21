@@ -63,9 +63,33 @@
             align-items: center;
             gap: 30px;
         }
-        .socials img, .address img, .phone img {
+        .icons-container .icon-svg--lg {
             width: 40px;
             height: 40px;
+        }
+        .icons-container a.icon-link {
+            color: var(--color-black);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .icons-container a.icon-link svg {
+            fill: var(--color-black);
+            transition: fill 0.2s ease, transform 0.2s ease;
+        }
+        .icons-container a.icon-link:hover {
+            color: var(--color-accent);
+        }
+        .icons-container a.icon-link:hover svg,
+        .icons-container a.icon-link:hover svg use {
+            fill: var(--color-accent);
+        }
+        .icons-container a.icon-link:focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 2px;
+        }
+        .icons-container a.icon-link:focus-visible svg,
+        .icons-container a.icon-link:focus-visible svg use {
+            fill: var(--color-accent);
         }
         @media (max-width: 768px) {
             .container { padding: 20px 15px; }
@@ -119,23 +143,32 @@
 
         <div class="icons-container">
             <div class="socials">
-                <a href="https://www.instagram.com/cafechaduna" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/img/icons/instagram-black.svg" alt="Instagram" class="icon-normal" width="40" height="40">
-                    <img src="/assets/img/icons/instagram-red.svg" alt="Instagram" class="icon-hover" width="40" height="40">
+                <a href="https://www.instagram.com/cafechaduna" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Instagram">
+                    <svg class="icon-svg icon-svg--lg" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#instagram"/></svg>
                 </a>
             </div>
 
             <div class="address">
-                <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/img/icons/maps-black.svg" alt="Address" class="icon-normal" width="40" height="40">
-                    <img src="/assets/img/icons/maps-red.svg" alt="Address" class="icon-hover" width="40" height="40">
+                <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Address on Google Maps">
+                    <svg class="icon-svg icon-svg--lg" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#maps"/></svg>
+                </a>
+            </div>
+
+            <div class="telegram">
+                <a href="https://t.me/chaduna_wine" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Telegram">
+                    <svg class="icon-svg icon-svg--lg" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#telegram"/></svg>
+                </a>
+            </div>
+
+            <div class="whatsapp">
+                <a href="https://wa.me/995557629229" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="WhatsApp">
+                    <svg class="icon-svg icon-svg--lg" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#whatsapp"/></svg>
                 </a>
             </div>
 
             <div class="phone">
-                <a href="tel:+995557629229">
-                    <img src="/assets/img/icons/phone-black.svg" alt="Phone" class="icon-normal" width="40" height="40">
-                    <img src="/assets/img/icons/phone-red.svg" alt="Phone" class="icon-hover" width="40" height="40">
+                <a href="tel:+995557629229" class="icon-link" aria-label="Phone">
+                    <svg class="icon-svg icon-svg--lg" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#phone"/></svg>
                 </a>
             </div>
         </div>
