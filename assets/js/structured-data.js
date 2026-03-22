@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const { business, faq } = buildCafeSchema(baseUrl, pageLang);
     inject(business);
     inject(faq);
+    inject(buildMenuBreadcrumbList(baseUrl, pageLang));
   }
 });
 
@@ -156,9 +157,9 @@ function buildWineTastingSchema(baseUrl, lang) {
 function aggregateRating() {
 
   const googleRating = 4.7;
-  const googleCount = 1255;
-  const yandexRating = 5.0;
-  const yandexCount = 243;
+  const googleCount = 1332;
+  const yandexRating = 4.9;
+  const yandexCount = 255;
   
   // Calculate weighted average
   const totalWeighted = (googleRating * googleCount) + (yandexRating * yandexCount);
@@ -384,6 +385,51 @@ function feature(name) {
     "@type": "LocationFeatureSpecification",
     "name": name,
     "value": true
+  };
+}
+
+/** Home + second crumb labels for BreadcrumbList on menu, gallery, and reserve (café branch only). */
+const menuBreadcrumbTranslations = {
+  en: { home: "Home", menu: "Menu", gallery: "Gallery", reserve: "Reserve a table" },
+  ru: { home: "Главная", menu: "Меню", gallery: "Галерея", reserve: "Забронировать стол" },
+  de: { home: "Startseite", menu: "Menü", gallery: "Galerie", reserve: "Tisch reservieren" },
+  tr: { home: "Ana sayfa", menu: "Menü", gallery: "Galeri", reserve: "Masa rezervasyonu" },
+  fr: { home: "Accueil", menu: "Menu", gallery: "Galerie", reserve: "Réserver une table" },
+  es: { home: "Inicio", menu: "Menú", gallery: "Galería", reserve: "Reservar mesa" },
+  it: { home: "Home", menu: "Menu", gallery: "Galleria", reserve: "Prenota un tavolo" },
+  ka: { home: "მთავარი", menu: "მენიუ", gallery: "გალერეა", reserve: "მაგიდის დაჯავშნა" },
+  zh: { home: "首页", menu: "菜单", gallery: "图库", reserve: "预订座位" },
+  ar: { home: "الرئيسية", menu: "القائمة", gallery: "المعرض", reserve: "حجز طاولة" }
+};
+
+function buildMenuBreadcrumbList(baseUrl, lang) {
+  const dp = document.body.getAttribute("data-page");
+  if (dp !== "menu" && dp !== "gallery" && dp !== "reserve") return null;
+  const L = menuBreadcrumbTranslations[lang] || menuBreadcrumbTranslations.en;
+  const secondName = dp === "menu" ? L.menu : dp === "gallery" ? L.gallery : L.reserve;
+
+  let pathname = window.location.pathname || "/";
+  if (!pathname.startsWith("/")) pathname = `/${pathname}`;
+  const pageUrl = new URL(pathname, `${baseUrl}/`).href;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${pageUrl}#breadcrumb`,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": L.home,
+        "item": `${baseUrl}/`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": secondName,
+        "item": pageUrl
+      }
+    ]
   };
 }
 

@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://chaduna.com/</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://chaduna.com/hub.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://chaduna.com/gallery.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -21,8 +21,13 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://chaduna.com/reserve.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://chaduna.com/menus/menu_ar.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://chaduna.com/menus/menu_ar.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://chaduna.com/menus/menu_de.html"/>
@@ -34,10 +39,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://chaduna.com/menus/menu_ru.html"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://chaduna.com/menus/menu_tr.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://chaduna.com/menus/menu_zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/menus/menu_en.html"/>
   </url>
   <url>
     <loc>https://chaduna.com/menus/menu_de.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://chaduna.com/menus/menu_ar.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://chaduna.com/menus/menu_de.html"/>
@@ -49,10 +55,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://chaduna.com/menus/menu_ru.html"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://chaduna.com/menus/menu_tr.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://chaduna.com/menus/menu_zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/menus/menu_en.html"/>
   </url>
   <url>
     <loc>https://chaduna.com/menus/menu_en.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://chaduna.com/menus/menu_ar.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://chaduna.com/menus/menu_de.html"/>
@@ -64,10 +71,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://chaduna.com/menus/menu_ru.html"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://chaduna.com/menus/menu_tr.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://chaduna.com/menus/menu_zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/menus/menu_en.html"/>
   </url>
   <url>
     <loc>https://chaduna.com/menus/menu_es.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://chaduna.com/menus/menu_ar.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://chaduna.com/menus/menu_de.html"/>
@@ -79,10 +87,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://chaduna.com/menus/menu_ru.html"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://chaduna.com/menus/menu_tr.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://chaduna.com/menus/menu_zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/menus/menu_en.html"/>
   </url>
   <url>
     <loc>https://chaduna.com/menus/menu_fr.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://chaduna.com/menus/menu_ar.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://chaduna.com/menus/menu_de.html"/>
@@ -94,10 +103,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://chaduna.com/menus/menu_ru.html"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://chaduna.com/menus/menu_tr.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://chaduna.com/menus/menu_zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/menus/menu_en.html"/>
   </url>
   <url>
     <loc>https://chaduna.com/menus/menu_it.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://chaduna.com/menus/menu_ar.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://chaduna.com/menus/menu_de.html"/>
@@ -109,10 +119,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://chaduna.com/menus/menu_ru.html"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://chaduna.com/menus/menu_tr.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://chaduna.com/menus/menu_zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/menus/menu_en.html"/>
   </url>
   <url>
     <loc>https://chaduna.com/menus/menu_ka.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://chaduna.com/menus/menu_ar.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://chaduna.com/menus/menu_de.html"/>
@@ -124,10 +135,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://chaduna.com/menus/menu_ru.html"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://chaduna.com/menus/menu_tr.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://chaduna.com/menus/menu_zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/menus/menu_en.html"/>
   </url>
   <url>
     <loc>https://chaduna.com/menus/menu_ru.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://chaduna.com/menus/menu_ar.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://chaduna.com/menus/menu_de.html"/>
@@ -139,10 +151,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://chaduna.com/menus/menu_ru.html"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://chaduna.com/menus/menu_tr.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://chaduna.com/menus/menu_zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/menus/menu_en.html"/>
   </url>
   <url>
     <loc>https://chaduna.com/menus/menu_tr.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://chaduna.com/menus/menu_ar.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://chaduna.com/menus/menu_de.html"/>
@@ -154,10 +167,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://chaduna.com/menus/menu_ru.html"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://chaduna.com/menus/menu_tr.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://chaduna.com/menus/menu_zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/menus/menu_en.html"/>
   </url>
   <url>
     <loc>https://chaduna.com/menus/menu_zh.html</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://chaduna.com/menus/menu_ar.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://chaduna.com/menus/menu_de.html"/>
@@ -169,5 +183,6 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://chaduna.com/menus/menu_ru.html"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://chaduna.com/menus/menu_tr.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://chaduna.com/menus/menu_zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/menus/menu_en.html"/>
   </url>
 </urlset>
