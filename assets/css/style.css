@@ -1018,13 +1018,29 @@ body.hub-page .nav-links a:hover {
     color: var(--color-hub-accent);
 }
 
-/* Keep chaduna link red on hub page */
-body.hub-page .nav-links a[href="index.html"]:hover {
-    color: var(--color-accent);
-}
-
 body.hub-page .address-text {
     color: var(--color-black);
+}
+
+/* Hub page: main icon row — hub accent on hover/focus (scoped to main; not site footer) */
+body.hub-page main .icons-container a.icon-link:hover {
+    color: var(--color-hub-accent);
+}
+
+body.hub-page main .icons-container a.icon-link:focus-visible {
+    outline: 2px solid var(--color-hub-accent);
+    outline-offset: 2px;
+    color: var(--color-hub-accent);
+}
+
+body.hub-page main .icons-container a.icon-link:focus-visible svg,
+body.hub-page main .icons-container a.icon-link:focus-visible svg use {
+    fill: var(--color-hub-accent);
+}
+
+body.hub-page main .icons-container a.icon-link:hover svg,
+body.hub-page main .icons-container a.icon-link:hover svg use {
+    fill: var(--color-hub-accent);
 }
 
 /* Responsive adjustments for Hub */
@@ -1360,4 +1376,29 @@ main + footer.site-footer {
     font-family: 'Satoshi', system-ui, sans-serif;
     font-size: 11px;
     color: var(--text-muted);
+}
+
+/* Hub page: green hovers for burger UI (overrides duplicate rules above). .burger-powered unchanged. */
+body.hub-page .burger-btn:hover,
+body.hub-page .burger-btn:focus-visible {
+    color: var(--color-hub-accent);
+}
+
+body.hub-page .burger-close:hover,
+body.hub-page .burger-close:focus-visible {
+    color: var(--color-hub-accent);
+}
+
+/* .burger-sidebar raises specificity over generic .burger-nav-links / .burger-social-icons rules */
+body.hub-page .burger-sidebar .burger-nav-links a:hover {
+    color: var(--color-hub-accent);
+}
+
+body.hub-page .burger-sidebar .burger-social-icons a:hover {
+    color: var(--color-hub-accent);
+}
+
+body.hub-page .burger-sidebar .burger-social-icons a:hover svg,
+body.hub-page .burger-sidebar .burger-social-icons a:hover svg use {
+    fill: var(--color-hub-accent);
 }

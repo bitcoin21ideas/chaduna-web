@@ -187,3 +187,27 @@
     margin-top: 0.5rem;
     margin-bottom: 2rem;
 }
+
+/* Hub page: green hovers — this file loads after style.css; .burger-powered unchanged */
+body.hub-page .burger-btn:hover,
+body.hub-page .burger-btn:focus-visible {
+    color: var(--color-hub-accent);
+}
+
+body.hub-page .burger-close:hover,
+body.hub-page .burger-close:focus-visible {
+    color: var(--color-hub-accent);
+}
+
+body.hub-page .burger-sidebar .burger-nav-links a:hover {
+    color: var(--color-hub-accent);
+}
+
+body.hub-page .burger-sidebar .burger-social-icons a:hover {
+    color: var(--color-hub-accent);
+}
+
+body.hub-page .burger-sidebar .burger-social-icons a:hover svg,
+body.hub-page .burger-sidebar .burger-social-icons a:hover svg use {
+    fill: var(--color-hub-accent);
+}
