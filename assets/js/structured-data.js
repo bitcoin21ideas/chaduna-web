@@ -4,10 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const pageLang = (document.documentElement.lang || 'en').split('-')[0];
   
   // Logic to determine page type
-  const isHub = document.body.classList.contains('hub-page') || 
-                window.location.pathname.includes('hub');
-  const isWineTasting = document.body.classList.contains('wine-tasting-page') || 
-                        window.location.pathname.includes('wine-tasting');
+  const pageData = document.body.dataset.page;
+  const isHub = pageData === 'hub' || window.location.pathname.includes('hub');
+  const isWineTasting = pageData === 'wine-tasting' || window.location.pathname.includes('wine-tasting');
 
   if (isHub) {
     const { business, faq } = buildHubSchema(baseUrl, pageLang);
@@ -27,6 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function inject(obj) {
   if (!obj) return;
+  // Skip if a static block with the same @id already exists
+  if (obj['@id']) {
+    const existing = document.head.querySelectorAll('script[type="application/ld+json"]');
+    for (const el of existing) {
+      try {
+        const parsed = JSON.parse(el.textContent);
+        if (parsed['@id'] === obj['@id']) {
+          // Merge: enrich the existing block rather than duplicate it
+          const merged = Object.assign({}, parsed, obj);
+          el.textContent = JSON.stringify(merged);
+          return;
+        }
+      } catch (e) {}
+    }
+  }
   const s = document.createElement('script');
   s.type = 'application/ld+json';
   s.textContent = JSON.stringify(obj);
@@ -69,13 +83,13 @@ function buildHubSchema(baseUrl, lang) {
     "@id": `${baseUrl}/hub#business`,
     "name": t.name,
     "description": t.description,
-    "url": `${baseUrl}/hub`,
+    "url": `${baseUrl}/hub.html`,
     "telephone": "+995557629229",
     "priceRange": "₾₾",
     "image": `${baseUrl}/assets/img/logos/hub-logo.png`,
     "address": address(),
     "geo": geo(),
-    "hasMap": map(),
+    "hasMap": "https://www.google.com/maps/place/chaduna.hub/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440dc37f3d8b29:0xa644a73c14199980!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11lcgt9x4k",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -93,6 +107,7 @@ function buildHubSchema(baseUrl, lang) {
     "makesOffer": offers, 
     "sameAs": [
         "https://www.instagram.com/chaduna.hub",
+        "https://www.google.com/maps/place/chaduna.hub/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440dc37f3d8b29:0xa644a73c14199980!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11lcgt9x4k"
     ]
   };
 
@@ -119,7 +134,7 @@ function buildWineTastingSchema(baseUrl, lang) {
     "name": t.name,
     "description": t.description,
     "url": `${baseUrl}/wine-tasting.html`,
-    "image": `${baseUrl}/assets/img/logos/chaduna-logo.png`,
+    "image": `${baseUrl}/assets/img/chaduna-og.webp`,
     "brand": {
       "@type": "Brand",
       "name": "Chaduna"
@@ -222,7 +237,7 @@ function buildCafeSchema(baseUrl, lang) {
     ],
     "knowsAbout": [
       "Georgian wine", "international wine", "amber wine", "natural wine", "Qvevri wine",
-      "syrniki", "breakfast", "brunch", "wine bar", "coffee",
+      "syrniki", "chizhi bizhi", "shakshuka", "breakfast", "brunch", "wine bar", "coffee",
       "wine tasting", "Georgian winemaking", "wine education",
       "pet-friendly cafe", "dog-friendly cafe",
       "laptop-friendly cafe", "remote work cafe", "digital nomads Tbilisi",
@@ -292,6 +307,8 @@ function buildCafeSchema(baseUrl, lang) {
     "sameAs": [
         "https://www.instagram.com/cafechaduna",
         "https://www.google.com/maps/place/Chaduna/@41.6906646,44.8008924,17z/data=!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql",
+        "https://t.me/chaduna_wine",
+        "https://wa.me/995557629229",
         "https://yandex.com/maps/org/chaduna/20144441734/"
     ]
   };
@@ -356,7 +373,7 @@ function map() {
 function getCafeImages(baseUrl) {
   return [
     // Main/hero images
-    `${baseUrl}/assets/img/logos/chaduna-logo.png`,
+    `${baseUrl}/assets/img/chaduna-og.webp`,
     `${baseUrl}/assets/img/food/all-dishes.webp`,
     `${baseUrl}/assets/img/food/selection.webp`,
     
@@ -549,7 +566,7 @@ const hubTranslations = {
     feature4: "Located in historic old city near Liberty Square metro",
     feature5: "Modern facilities and comfortable workspace",
     feature6: "Daily access 10:00-20:00",
-    feature7: "20% discount in Chaduna Cafe and Wine Bar for Hub members",
+    feature7: "2 complimentary beverages and20% discount in Chaduna Cafe and Wine Bar for Hub members",
     audience: "Digital Nomads, Remote Workers, Freelancers, Entrepreneurs, Students"
   },
 
@@ -817,7 +834,7 @@ const hubTranslations = {
 
 const cafeTranslations = {
   en: {
-    description: "Cozy cafe and wine bar in Tbilisi near Liberty Square, downtown Tbilisi, old city. Famous for syrniki (cottage cheese pancakes), bruschetta, shakshuka, all-day breakfasts, and more than 60 types of wines. Close to Liberty Square metro station. Dine in or take out.",
+    description: "Cozy cafe and wine bar in Tbilisi near Liberty Square, downtown Tbilisi, old city. Famous for syrniki (cottage cheese pancakes), bruschetta, chizhi bizhi – Georgian egg dish similar to shakshuka, all-day breakfasts, and more than 60 types of wines. Close to Liberty Square metro station. Dine in or take out.",
     dineIn: "Dine in",
     takeOut: "Take out",
     popularItems: "Popular Items",
@@ -826,7 +843,7 @@ const cafeTranslations = {
     georgianWine: "Georgian wine",
     // FAQ translations
     faq1Question: "What is Chaduna famous for?",
-    faq1Answer: "Chaduna is a cozy cafe and wine bar in Tbilisi, famous for syrniki (cottage cheese pancakes), bruschetta, shakshuka, breakfast, brunch, and a wide selection of Georgian and international wines. Located near Liberty Square in downtown Tbilisi, old city.",
+    faq1Answer: "Chaduna is a cozy cafe and wine bar in Tbilisi, famous for syrniki (cottage cheese pancakes), bruschetta, chizhi bizhi – Georgian egg dish similar to shakshuka, breakfast, brunch, and a wide selection of Georgian and international wines. Located near Liberty Square in downtown Tbilisi, old city.",
     faq2Question: "Do you serve Georgian wine?",
     faq2Answer: "Yes, we offer a wide selection of Georgian and international wines including white, red, and amber wines by the glass. We also serve Chacha, a traditional Georgian spirit.",
     faq3Question: "Where is Chaduna located?",
@@ -855,7 +872,7 @@ const cafeTranslations = {
     audience: "Tourists, Locals, Digital Nomads, Wine Enthusiasts, Food Lovers"
   },
   ru: {
-    description: "Уютное кафе и винный бар в Тбилиси рядом с площадью Свободы, в центре города, в старом городе. Известны сырниками, брускеттой, завтраками весь день, и 60 видами вин. Близко к станции метро Площадь Свободы.",
+    description: "Уютное кафе и винный бар в Тбилиси рядом с площадью Свободы, в центре города, в старом городе. Известны сырниками, брускеттой, чижи-бижи – завтраком наподобие шакшуки, завтраками весь день, и 60 видами вин. Близко к станции метро Площадь Свободы.",
     dineIn: "Есть зал",
     takeOut: "Навынос",
     popularItems: "Популярные блюда",
@@ -863,7 +880,7 @@ const cafeTranslations = {
     wineByGlass: "Вино бокалами",
     georgianWine: "Грузинское вино",
     faq1Question: "Чем славится Chaduna?",
-    faq1Answer: "Chaduna - уютное кафе и винный бар в Тбилиси, известны сырниками (творожными оладьями), брускеттой, шакшукой, завтраком, бранчем и широким выбором грузинских вин. Расположены рядом с площадью Свободы в центре Тбилиси, в старом городе.",
+    faq1Answer: "Chaduna - уютное кафе и винный бар в Тбилиси, известны сырниками (творожными оладьями), брускеттой, чижи-бижи – завтраком наподобие шакшуки, завтраком, бранчем и широким выбором грузинских вин. Расположены рядом с площадью Свободы в центре Тбилиси, в старом городе.",
     faq2Question: "Вы подаете грузинское вино?",
     faq2Answer: "Да, мы предлагаем широкий выбор грузинских вин, включая белые, красные и янтарные вина бокалами. Мы также подаем чачу, традиционный грузинский напиток.",
     faq3Question: "Где находится Chaduna?",
@@ -891,7 +908,7 @@ const cafeTranslations = {
   },
 
   de: {
-    description: "Gemütliches Café und Weinbar in Tiflis in der Nähe des Freiheitsplatzes, im Zentrum von Tiflis, in der Altstadt. Bekannt für Syrniki (Quarkpfannkuchen), Bruschetta, Shakshuka, Frühstück, Brunch, Mittagessen und Abendessen. In der Nähe der U-Bahn-Station Freiheitsplatz. Vor Ort essen oder zum Mitnehmen.",
+    description: "Gemütliches Café und Weinbar in Tiflis in der Nähe des Freiheitsplatzes, im Zentrum von Tiflis, in der Altstadt. Bekannt für Syrniki (Quarkpfannkuchen), Bruschetta, Chizhi Bizhi – georgisches Eiergericht ähnlich wie Shakshuka, Frühstück, Brunch, Mittagessen und Abendessen. In der Nähe der U-Bahn-Station Freiheitsplatz. Vor Ort essen oder zum Mitnehmen.",
     dineIn: "Vor Ort essen",
     takeOut: "Zum Mitnehmen",
     popularItems: "Beliebte Gerichte",
@@ -899,7 +916,7 @@ const cafeTranslations = {
     wineByGlass: "Wein im Glas",
     georgianWine: "Georgischer Wein",
     faq1Question: "Wofür ist Chaduna bekannt?",
-    faq1Answer: "Chaduna ist ein gemütliches Café und Weinbar in Tiflis, bekannt für Syrniki (Quarkpfannkuchen), Bruschetta, Shakshuka, Frühstück, Brunch und eine große Auswahl georgischer Weine. Gelegen in der Nähe des Freiheitsplatzes im Zentrum von Tiflis, in der Altstadt.",
+    faq1Answer: "Chaduna ist ein gemütliches Café und Weinbar in Tiflis, bekannt für Syrniki (Quarkpfannkuchen), Bruschetta, Chizhi Bizhi – georgisches Eiergericht ähnlich wie Shakshuka, Frühstück, Brunch und eine große Auswahl georgischer Weine. Gelegen in der Nähe des Freiheitsplatzes im Zentrum von Tiflis, in der Altstadt.",
     faq2Question: "Servieren Sie georgischen Wein?",
     faq2Answer: "Ja, wir bieten eine große Auswahl georgischer Weine, einschließlich Weiß-, Rot- und Bernsteinweine im Glas. Wir servieren auch Chacha, einen traditionellen georgischen Schnaps.",
     faq3Question: "Wo befindet sich Chaduna?",
@@ -927,7 +944,7 @@ const cafeTranslations = {
 	},
 
 	tr: {
-    description: "Tiflis'te Özgürlük Meydanı yakınında, şehir merkezinde, eski şehirde samimi bir kafe ve şarap barı. Syrniki (lor peyniri kızartması), bruschetta, shakshuka, kahvaltı, brunch, öğle yemeği ve akşam yemeği ile ünlü. Özgürlük Meydanı metro istasyonuna yakın. İçeride yemek veya paket servis.",
+    description: "Tiflis'te Özgürlük Meydanı yakınında, şehir merkezinde, eski şehirde samimi bir kafe ve şarap barı. Syrniki (lor peyniri kızartması), bruschetta, Chizhi Bizhi – shakshukaya benzer Gürcü yumurta yemeği, kahvaltı, brunch, öğle yemeği ve akşam yemeği ile ünlü. Özgürlük Meydanı metro istasyonuna yakın. İçeride yemek veya paket servis.",
     dineIn: "İçeride yemek",
     takeOut: "Paket servis",
     popularItems: "Popüler Yemekler",
@@ -935,7 +952,7 @@ const cafeTranslations = {
     wineByGlass: "İçecek bardağa",
     georgianWine: "Grup İçecekleri",
     faq1Question: "Chaduna neyle ünlü?",
-    faq1Answer: "Chaduna, Tiflis'te samimi bir kafe ve şarap barıdır. Syrniki (lor peyniri kızartması), bruschetta, shakshuka, kahvaltı, brunch ve geniş bir Gürcü şarap seçkisi ile ünlüdür. Özgürlük Meydanı yakınında, şehir merkezinde, eski şehirde yer almaktadır.",
+    faq1Answer: "Chaduna, Tiflis'te samimi bir kafe ve şarap barıdır. Syrniki (lor peyniri kızartması), bruschetta, Chizhi Bizhi – shakshukaya benzer Gürcü yumurta yemeği, kahvaltı, brunch ve geniş bir Gürcü şarap seçkisi ile ünlüdür. Özgürlük Meydanı yakınında, şehir merkezinde, eski şehirde yer almaktadır.",
     faq2Question: "Gürcü şarabı servis ediyor musunuz?",
     faq2Answer: "Evet, beyaz, kırmızı ve kehribar şarapları bardağa dahil olmak üzere geniş bir Gürcü şarap seçkisi sunuyoruz. Ayrıca geleneksel bir Gürcü içkisi olan Chacha da servis ediyoruz.",
     faq3Question: "Chaduna nerede bulunuyor?",
@@ -963,7 +980,7 @@ const cafeTranslations = {
 	},
 
 	fr: {
-    description: "Café cosy et bar à vin à Tbilissi près de la place de la Liberté, au centre-ville de Tbilissi, dans la vieille ville. Célèbre pour les syrniki (crêpes au fromage blanc), bruschetta, shakshuka, petit-déjeuner, brunch, déjeuner et dîner. Près de la station de métro place de la Liberté. Sur place ou à emporter.",
+    description: "Café cosy et bar à vin à Tbilissi près de la place de la Liberté, au centre-ville de Tbilissi, dans la vieille ville. Célèbre pour les syrniki (crêpes au fromage blanc), bruschetta, chizhi bizhi – plat géorgien à base d'œufs similaire à la shakshuka, petit-déjeuner, brunch, déjeuner et dîner. Près de la station de métro place de la Liberté. Sur place ou à emporter.",
     dineIn: "Sur place",
     takeOut: "À emporter",
     popularItems: "Plats populaires",
@@ -971,7 +988,7 @@ const cafeTranslations = {
     wineByGlass: "Vin par verre",
     georgianWine: "Vin géorgien",
     faq1Question: "Pour quoi Chaduna est-il célèbre?",
-    faq1Answer: "Chaduna est un café cosy et bar à vin à Tbilissi, célèbre pour les syrniki (crêpes au fromage blanc), bruschetta, shakshuka, petit-déjeuner, brunch et une large sélection de vins géorgiens. Situé près de la place de la Liberté au centre-ville de Tbilissi, dans la vieille ville.",
+    faq1Answer: "Chaduna est un café cosy et bar à vin à Tbilissi, célèbre pour les syrniki (crêpes au fromage blanc), bruschetta, chizhi bizhi – plat géorgien à base d'œufs similaire à la shakshuka, petit-déjeuner, brunch et une large sélection de vins géorgiens. Situé près de la place de la Liberté au centre-ville de Tbilissi, dans la vieille ville.",
     faq2Question: "Servez-vous du vin géorgien?",
     faq2Answer: "Oui, nous offrons une large sélection de vins géorgiens, y compris les vins blancs, rouges et ambrés au verre. Nous servons également le Chacha, une eau-de-vie géorgienne traditionnelle.",
     faq3Question: "Où se trouve Chaduna?",
@@ -999,7 +1016,7 @@ const cafeTranslations = {
 	},
 
 	es: {
-    description: "Acogedor café y bar de vinos en Tbilisi cerca de la Plaza de la Libertad, en el centro de Tbilisi, en la ciudad vieja. Famoso por syrniki (tortitas de requesón), bruschetta, shakshuka, desayuno, brunch, almuerzo y cena. Cerca de la estación de metro Plaza de la Libertad. Comer aquí o para llevar.",
+    description: "Acogedor café y bar de vinos en Tbilisi cerca de la Plaza de la Libertad, en el centro de Tbilisi, en la ciudad vieja. Famoso por syrniki (tortitas de requesón), bruschetta, chizhi bizhi – plato georgiano de huevos similar al shakshuka, desayuno, brunch, almuerzo y cena. Cerca de la estación de metro Plaza de la Libertad. Comer aquí o para llevar.",
     dineIn: "Comer aquí",
     takeOut: "Para llevar",
     popularItems: "Platos populares",
@@ -1007,7 +1024,7 @@ const cafeTranslations = {
     wineByGlass: "Vino por vaso",
     georgianWine: "Vino georgiano",
     faq1Question: "¿Por qué es famoso Chaduna?",
-    faq1Answer: "Chaduna es un acogedor café y bar de vinos en Tbilisi, famoso por syrniki (tortitas de requesón), bruschetta, shakshuka, desayuno, brunch y una amplia selección de vinos georgianos. Ubicado cerca de la Plaza de la Libertad en el centro de Tbilisi, en la ciudad vieja.",
+    faq1Answer: "Chaduna es un acogedor café y bar de vinos en Tbilisi, famoso por syrniki (tortitas de requesón), bruschetta, chizhi bizhi – plato georgiano de huevos similar al shakshuka, desayuno, brunch y una amplia selección de vinos georgianos. Ubicado cerca de la Plaza de la Libertad en el centro de Tbilisi, en la ciudad vieja.",
     faq2Question: "¿Sirven vino georgiano?",
     faq2Answer: "Sí, ofrecemos una amplia selección de vinos georgianos, incluyendo vinos blancos, tintos y ámbar por vaso. También servimos Chacha, un licor tradicional georgiano.",
     faq3Question: "¿Dónde está ubicado Chaduna?",
@@ -1035,7 +1052,7 @@ const cafeTranslations = {
 	},
 
 	it: {
-    description: "Accogliente caffè e wine bar a Tbilisi vicino a Piazza della Libertà, nel centro di Tbilisi, nella città vecchia. Famoso per syrniki (frittelle di ricotta), bruschetta, shakshuka, colazione, brunch, pranzo e cena. Vicino alla stazione della metropolitana Piazza della Libertà. Da asporto o da mangiare qui.",
+    description: "Accogliente caffè e wine bar a Tbilisi vicino a Piazza della Libertà, nel centro di Tbilisi, nella città vecchia. Famoso per syrniki (frittelle di ricotta), bruschetta, chizhi bizhi – piatto georgiano a base di uova simile alla shakshuka, colazione, brunch, pranzo e cena. Vicino alla stazione della metropolitana Piazza della Libertà. Da asporto o da mangiare qui.",
     dineIn: "Da mangiare qui",
     takeOut: "Da asporto",
     popularItems: "Piatti popolari",
@@ -1043,7 +1060,7 @@ const cafeTranslations = {
     wineByGlass: "Vino per bicchiere",
     georgianWine: "Vino georgiano",
     faq1Question: "Per cosa è famoso Chaduna?",
-    faq1Answer: "Chaduna è un accogliente caffè e wine bar a Tbilisi, famoso per syrniki (frittelle di ricotta), bruschetta, shakshuka, colazione, brunch e un'ampia selezione di vini georgiani. Situato vicino a Piazza della Libertà nel centro di Tbilisi, nella città vecchia.",
+    faq1Answer: "Chaduna è un accogliente caffè e wine bar a Tbilisi, famoso per syrniki (frittelle di ricotta), bruschetta, chizhi bizhi – piatto georgiano a base di uova simile alla shakshuka, colazione, brunch e un'ampia selezione di vini georgiani. Situato vicino a Piazza della Libertà nel centro di Tbilisi, nella città vecchia.",
     faq2Question: "Servite vino georgiano?",
     faq2Answer: "Sì, offriamo un'ampia selezione di vini georgiani, inclusi vini bianchi, rossi e ambrati al bicchiere. Serviamo anche Chacha, un liquore tradizionale georgiano.",
     faq3Question: "Dove si trova Chaduna?",
@@ -1107,7 +1124,7 @@ const cafeTranslations = {
 	},
 
 	zh: {
-    description: "第比利斯舒适的咖啡馆和葡萄酒吧，位于自由广场附近，市中心，老城区。以syrniki（白软干酪煎饼）、意式烤面包、shakshuka、早餐、早午餐、午餐和晚餐而闻名。靠近自由广场地铁站。堂食或外带。",
+    description: "第比利斯舒适的咖啡馆和葡萄酒吧，位于自由广场附近，市中心，老城区。以syrniki（白软干酪煎饼）、意式烤面包、Chizhi Bizhi（格鲁吉亚鸡蛋菜肴，类似shakshuka）、早餐、早午餐、午餐和晚餐而闻名。靠近自由广场地铁站。堂食或外带。",
     dineIn: "堂食",
     takeOut: "外带",
     popularItems: "热门菜品",
@@ -1115,7 +1132,7 @@ const cafeTranslations = {
     wineByGlass: "葡萄酒杯装",
     georgianWine: "格鲁吉亚葡萄酒",
     faq1Question: "Chaduna以什么闻名？",
-    faq1Answer: "Chaduna是第比利斯一家舒适的咖啡馆和葡萄酒吧，以syrniki（白软干酪煎饼）、意式烤面包、shakshuka、早餐、早午餐和精选格鲁吉亚葡萄酒而闻名。位于自由广场附近，市中心，老城区。",
+    faq1Answer: "Chaduna是第比利斯一家舒适的咖啡馆和葡萄酒吧，以syrniki（白软干酪煎饼）、意式烤面包、Chizhi Bizhi（格鲁吉亚鸡蛋菜肴，类似shakshuka）、早餐、早午餐和精选格鲁吉亚葡萄酒而闻名。位于自由广场附近，市中心，老城区。",
     faq2Question: "你们提供格鲁吉亚葡萄酒吗？",
     faq2Answer: "是的，我们提供精选的格鲁吉亚葡萄酒，包括白葡萄酒、红葡萄酒和琥珀葡萄酒杯装。我们还提供Chacha，一种传统的格鲁吉亚烈酒。",
     faq3Question: "Chaduna在哪里？",
