@@ -1100,7 +1100,7 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
     border: 1px solid var(--border-light);
     background: var(--bg-light);
     padding: 16px 16px;
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 .wine-tasting-page .included-item h4 {
@@ -1166,7 +1166,7 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
 
 .wine-tasting-page .faq-item {
     border: 1px solid var(--border-light);
-    border-radius: 10px;
+    border-radius: 0;
     background: var(--color-white);
     margin-bottom: 12px;
     overflow: hidden;
