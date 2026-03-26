@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Chaduna – Гид по Тбилиси</title>
+    <link rel="canonical" href="https://chaduna.com/tbilisi-guide_ru.html" />
+    <link rel="alternate" hreflang="en" href="https://chaduna.com/tbilisi-guide.html" />
+    <link rel="alternate" hreflang="ru" href="https://chaduna.com/tbilisi-guide_ru.html" />
+    <link rel="alternate" hreflang="x-default" href="https://chaduna.com/tbilisi-guide.html" />
+    <meta name="description" content="Гид по Тбилиси: лучшие места для завтрака, дегустация вин и уютные кафе для работы с ноутбуком в старом городе.">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/burger-menu.css">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
+</head>
+<body class="menu" data-page="tbilisi-guide">
+
+    <header class="menu-header">
+        <div class="header-left">
+            <a href="/index_ru.html">
+                <img src="/assets/img/icons/home-black.svg" alt="Главная" class="normal-icon">
+                <img src="/assets/img/icons/home-red.svg" alt="Главная" class="hover-icon">
+            </a>
+        </div>
+        <div class="header-right">
+            <div class="lang-dropdown">
+                <button type="button" onclick="switchLanguage()" class="lang-dropbtn" aria-label="Выберите язык">
+                    <svg class="icon-svg icon-svg--header" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#language"/></svg>
+                </button>
+                <div id="langDropdown" class="lang-dropdown-content">
+                    <a href="#" onclick="switchLanguage()">EN / RU</a>
+                </div>
+            </div>
+            <button class="burger-btn" onclick="openBurgerMenu()" aria-label="Открыть меню">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="burger-overlay" id="burgerOverlay" onclick="closeBurgerMenu()"></div>
+    <nav class="burger-sidebar" id="burgerSidebar" aria-label="Навигация">
+        <button class="burger-close" onclick="closeBurgerMenu()" aria-label="Закрыть меню">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <div class="burger-nav-links">
+            <a href="/index_ru.html" data-nav="home">главная</a>
+            <a href="/menus/menu_ru.html" data-nav="menu">меню</a>
+            <a href="/gallery.html" data-nav="gallery">галерея</a>
+            <a href="/reserve.html" data-nav="reserve">бронирование</a>
+            <a href="/wine-tasting_ru.html" data-nav="wine-tasting">дегустация</a>
+            <a href="/hub.html" data-nav="hub">.hub</a>
+        </div>
+    </nav>
+
+    <main>
+    <div class="menu-container wine-tasting-page">
+        <a href="/index_ru.html">
+            <img src="/assets/img/logos/chaduna-black@1x.webp" alt="Chaduna Logo" class="menu-logo" width="150" height="192">
+        </a>
+
+        <h2>Гид по Тбилиси</h2>
+
+        <div class="intro-text">
+            <p>Добро пожаловать в Тбилиси! В этом гиде мы собрали наши любимые рекомендации, которые помогут вам получить максимум впечатлений от этого исторического и яркого города.</p>
+        </div>
+
+        <section class="tasting-section">
+            <h3>Что стоит попробовать в Chaduna</h3>
+            <div class="included-items">
+                <div class="included-item">
+                    <a href="/breakfast_ru.html"><h4>Завтраки в Старом Тбилиси</h4></a>
+                    <p>Начните свой день с наших знаменитых сырников и фирменного Чижи-Бижи.</p>
+                </div>
+                <div class="included-item">
+                    <a href="/wine-tasting_ru.html"><h4>Дегустация грузинских вин</h4></a>
+                    <p>Откройте для себя богатую историю «Колыбели вина» на нашей профессиональной дегустации.</p>
+                </div>
+                <div class="included-item">
+                    <a href="/laptop-friendly-cafe_ru.html"><h4>Место для работы</h4></a>
+                    <p>Найдите идеальную атмосферу для продуктивной работы в нашем коворкинге .hub.</p>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <div class="address-text">
+            <p>Мы находимся в самом сердце Старого Тбилиси, по адресу ул. Галактиона Табидзе 18.</p>
+        </div>
+    </div>
+    </main>
+
+    <footer class="site-footer">Powered by <a href="https://loom.ge/en?utm_source=chaduna">loom.ge</a></footer>
+
+    <script src="/assets/js/burger-menu.js"></script>
+    <script src="/assets/js/menu.js"></script>
+</body>
+</html>

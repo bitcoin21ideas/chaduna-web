@@ -218,6 +218,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/menus/menu_en.html"/>
   </url>
   <url>
+    <loc>https://chaduna.com/tbilisi-guide.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chaduna.com/tbilisi-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chaduna.com/tbilisi-guide_ru.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/tbilisi-guide.html"/>
+  </url>
+  <url>
+    <loc>https://chaduna.com/tbilisi-guide_ru.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chaduna.com/tbilisi-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chaduna.com/tbilisi-guide_ru.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/tbilisi-guide.html"/>
+  </url>
+  <url>
     <loc>https://chaduna.com/laptop-friendly-cafe.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.7</priority>
