@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <title>Chaduna Hub - Coworking Space in Tbilisi</title>
-    <link rel="canonical" href="https://chaduna.com/hub.html" />
+    <title>Chaduna Hub - Коворкинг в Тбилиси</title>
+    <link rel="canonical" href="https://chaduna.com/hub_ru.html" />
+    <link rel="alternate" hreflang="en" href="https://chaduna.com/hub.html" />
+    <link rel="alternate" hreflang="ru" href="https://chaduna.com/hub_ru.html" />
+    <link rel="alternate" hreflang="x-default" href="https://chaduna.com/hub.html" />
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/burger-menu.css">
-    <meta name="description" content="Chaduna Hub - Coworking space in Tbilisi. 30GEL/day, 100GEL/week, 300GEL/month. Comfortable workspace with cafe amenities.">
-    <meta property="og:title" content="Chaduna Hub - Coworking Space in Tbilisi">
-    <meta property="og:description" content="Coworking space in Tbilisi. 30GEL/day, 100GEL/week, 300GEL/month. Comfortable workspace with cafe amenities.">
+    <meta name="description" content="Chaduna Hub - Коворкинг в Тбилиси. 30 лари/день, 100 лари/неделя, 300 лари/месяц. Комфортное рабочее пространство с услугами кафе.">
+    <meta property="og:title" content="Chaduna Hub - Коворкинг в Тбилиси">
+    <meta property="og:description" content="Коворкинг в Тбилиси. 30 лари/день, 100 лари/неделя, 300 лари/месяц. Комфортное рабочее пространство с услугами кафе.">
     <meta property="og:image" content="https://chaduna.com/assets/img/logos/hub-logo.png">
-    <meta property="og:url" content="https://chaduna.com/hub.html">
+    <meta property="og:url" content="https://chaduna.com/hub_ru.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Chaduna Hub - Coworking Space in Tbilisi">
-    <meta name="twitter:description" content="Coworking space in Tbilisi. 30GEL/day, 100GEL/week, 300GEL/month. Comfortable workspace with cafe amenities.">
+    <meta name="twitter:title" content="Chaduna Hub - Коворкинг в Тбилиси">
+    <meta name="twitter:description" content="Коворкинг в Тбилиси. 30 лари/день, 100 лари/неделя, 300 лари/месяц. Комфортное рабочее пространство с услугами кафе.">
     <meta name="twitter:image" content="https://chaduna.com/assets/img/logos/hub-logo.png">
     <script type="application/ld+json">
 {
@@ -26,7 +29,7 @@
   "@type": "LocalBusiness",
   "@id": "https://chaduna.com/hub#business",
   "name": "Chaduna Hub",
-  "url": "https://chaduna.com/hub.html",
+  "url": "https://chaduna.com/hub_ru.html",
   "telephone": "+995557629229",
   "priceRange": "₾₾",
   "image": "https://chaduna.com/assets/img/logos/hub-logo.png",
@@ -37,9 +40,9 @@
   ],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "18 Galaktion Tabidze Street",
-    "addressLocality": "Tbilisi",
-    "addressRegion": "Tbilisi",
+    "streetAddress": "ул. Галактиона Табидзе 18",
+    "addressLocality": "Тбилиси",
+    "addressRegion": "Тбилиси",
     "postalCode": "0108",
     "addressCountry": "GE"
   },
@@ -64,21 +67,21 @@
 <body class="menu hub-page" data-page="hub">
     <header class="menu-header">
         <div class="header-left">
-            <a href="/index.html">
-                <img src="/assets/img/icons/home-black.svg" alt="Home" class="normal-icon">
-                <img src="/assets/img/icons/home-green.svg" alt="Home" class="hover-icon">
+            <a href="/index_ru.html">
+                <img src="/assets/img/icons/home-black.svg" alt="Главная" class="normal-icon">
+                <img src="/assets/img/icons/home-red.svg" alt="Главная" class="hover-icon">
             </a>
         </div>
         <div class="header-right">
             <div class="lang-dropdown">
-                <button type="button" onclick="switchLanguage()" class="lang-dropbtn" aria-label="Select Language">
+                <button type="button" onclick="switchLanguage()" class="lang-dropbtn" aria-label="Выберите язык">
                     <svg class="icon-svg icon-svg--header" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#language"/></svg>
                 </button>
                 <div id="langDropdown" class="lang-dropdown-content">
                     <a href="#" onclick="switchLanguage()">EN / RU</a>
                 </div>
             </div>
-            <button class="burger-btn" onclick="openBurgerMenu()" aria-label="Open menu">
+            <button class="burger-btn" onclick="openBurgerMenu()" aria-label="Открыть меню">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -89,26 +92,26 @@
     </header>
 
     <div class="burger-overlay" id="burgerOverlay" onclick="closeBurgerMenu()"></div>
-    <nav class="burger-sidebar" id="burgerSidebar" aria-label="Site navigation">
-        <button class="burger-close" onclick="closeBurgerMenu()" aria-label="Close menu">
+    <nav class="burger-sidebar" id="burgerSidebar" aria-label="Навигация">
+        <button class="burger-close" onclick="closeBurgerMenu()" aria-label="Закрыть меню">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 <line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
         </button>
         <div class="burger-nav-links">
-            <a href="/index.html" data-nav="home">home</a>
-            <a href="/menus/menu_en.html" data-nav="menu">menu</a>
-            <a href="/gallery.html" data-nav="gallery">gallery</a>
-            <a href="/reserve.html" data-nav="reserve">reserve</a>
-            <a href="/wine-tasting.html" data-nav="wine-tasting">wine tasting</a>
+            <a href="/index_ru.html" data-nav="home">главная</a>
+            <a href="/menus/menu_ru.html" data-nav="menu">меню</a>
+            <a href="/gallery.html" data-nav="gallery">галерея</a>
+            <a href="/reserve.html" data-nav="reserve">бронирование</a>
+            <a href="/wine-tasting_ru.html" data-nav="wine-tasting">дегустация</a>
             <a href="/hub.html" data-nav="hub">.hub</a>
         </div>
         <div class="burger-social-icons">
             <a href="https://www.instagram.com/chaduna.hub" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#instagram"/></svg>
             </a>
-            <a href="https://www.google.com/maps/place/chaduna.hub/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440dc37f3d8b29:0xa644a73c14199980!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11lcgt9x4k" target="_blank" rel="noopener noreferrer" aria-label="Location">
+            <a href="https://www.google.com/maps/place/chaduna.hub/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440dc37f3d8b29:0xa644a73c14199980!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11lcgt9x4k" target="_blank" rel="noopener noreferrer" aria-label="Карта">
                 <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#maps"/></svg>
             </a>
             <a href="https://t.me/chaduna_wine" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
@@ -117,12 +120,12 @@
             <a href="https://wa.me/995557629229" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#whatsapp"/></svg>
             </a>
-            <a href="tel:+995557629229" aria-label="Phone">
+            <a href="tel:+995557629229" aria-label="Телефон">
                 <svg width="24" height="24" viewBox="0 0 24 24" style="transform: scale(1.1)" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#phone"/></svg>
             </a>
         </div>
         <div class="burger-footer">
-            <p class="burger-address">18 Galaktion Tabidze Street, Tbilisi</p>
+            <p class="burger-address">ул. Галактиона Табидзе 18, Тбилиси</p>
             <p class="burger-powered">Powered by <a href="https://loom.ge/en?utm_source=chaduna">loom.ge</a></p>
         </div>
     </nav>
@@ -131,32 +134,32 @@
         
         <h1 class="hub-title">.hub</h1>
         
-        <div class="hub-subtitle">coworking space</div>
+        <div class="hub-subtitle">коворкинг</div>
 
         <div class="nav-links">
-            <a href="menus/menu_en.html">menu</a>
-            <a href="index.html">chaduna</a>
+            <a href="menus/menu_ru.html">меню</a>
+            <a href="index_ru.html">chaduna</a>
         </div>
 
         <div class="hub-description">
-            <p>Enjoy comfortable working zones, reliable high-speed internet, and exclusive perks when you join <strong>.hub</strong> coworking space.</p>
+            <p>Наслаждайтесь комфортными рабочими зонами, стабильным высокоскоростным интернетом и эксклюзивными привилегиями, став резидентом коворкинга <strong>.hub</strong>.</p>
             <div class="hub-benefits">
-                <p><strong>.hub</strong> guests get 2 complimentary beverages and a 20% discount at <strong>Chaduna</strong>.</p>
+                <p>Гости <strong>.hub</strong> получают 2 бесплатных напитка и скидку 20% в кафе и винном баре <strong>Chaduna</strong>.</p>
             </div>
             
             <div class="hub-passes">
                 <div class="pass-grid">
                     <div class="pass-item">
-                        <div class="pass-label">Daily</div>
-                        <div class="pass-price">30 GEL</div>
+                        <div class="pass-label">День</div>
+                        <div class="pass-price">30 лари</div>
                     </div>
                     <div class="pass-item">
-                        <div class="pass-label">Weekly</div>
-                        <div class="pass-price">100 GEL</div>
+                        <div class="pass-label">Неделя</div>
+                        <div class="pass-price">100 лари</div>
                     </div>
                     <div class="pass-item">
-                        <div class="pass-label">Monthly</div>
-                        <div class="pass-price">300 GEL</div>
+                        <div class="pass-label">Месяц</div>
+                        <div class="pass-price">300 лари</div>
                     </div>
                 </div>
             </div>
@@ -172,7 +175,7 @@
             </div>
 
             <div class="address">
-                <a href="https://www.google.com/maps/place/chaduna.hub/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440dc37f3d8b29:0xa644a73c14199980!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11lcgt9x4k" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Address on Google Maps">
+                <a href="https://www.google.com/maps/place/chaduna.hub/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440dc37f3d8b29:0xa644a73c14199980!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11lcgt9x4k" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Адрес">
                     <svg class="icon-svg icon-svg--lg" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#maps"/></svg>
                 </a>
             </div>
@@ -190,19 +193,19 @@
             </div>
 
             <div class="phone">
-                <a href="tel:+995557629229" class="icon-link" aria-label="Phone">
+                <a href="tel:+995557629229" class="icon-link" aria-label="Телефон">
                     <svg class="icon-svg icon-svg--lg" width="40" height="40" viewBox="0 0 24 24" style="transform: scale(1.1)" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#phone"/></svg>
                 </a>
             </div>
         </div>
 
         <div class="address-text">
-            <address>18 Galaktion Tabidze Street, Tbilisi</address>
+            <address>ул. Галактиона Табидзе 18, Тбилиси</address>
         </div>
 
         <div class="hours">
-            <div class="hours-title">HOURS</div>
-            <p>Daily 10:00-20:00</p>
+            <div class="hours-title">ЧАСЫ РАБОТЫ</div>
+            <p>Ежедневно 10:00-20:00</p>
         </div>
 
     </main>

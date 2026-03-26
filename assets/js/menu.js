@@ -12,7 +12,9 @@ function switchLanguage() {
         '/index_ru.html': '/index.html',
         '/': '/index_ru.html',
         '/wine-tasting.html': '/wine-tasting_ru.html',
-        '/wine-tasting_ru.html': '/wine-tasting.html'
+        '/wine-tasting_ru.html': '/wine-tasting.html',
+        '/hub.html': '/hub_ru.html',
+        '/hub_ru.html': '/hub.html'
     };
 
     // If exact match found
