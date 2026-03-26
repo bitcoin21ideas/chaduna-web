@@ -1059,9 +1059,60 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
 }
 
 /* ===== WINE TASTING PAGE STYLES ===== */
-/* Center all content in wine tasting page */
 .menu-container.wine-tasting-page {
+    text-align: left;
+}
+
+.wine-tasting-page .menu-logo,
+.wine-tasting-page > a,
+.wine-tasting-page > h2,
+.wine-tasting-page .intro-text,
+.wine-tasting-page .price-tag {
     text-align: center;
+}
+
+.wine-tasting-page .tasting-section {
+    text-align: left;
+    margin-top: 34px;
+}
+
+.wine-tasting-page .tasting-section > h3 {
+    font-family: var(--font-primary);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 36px;
+}
+
+.wine-tasting-page .tasting-section p {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text-dark);
+}
+
+.wine-tasting-page .included-items {
+    display: grid;
+    gap: 14px;
+}
+
+.wine-tasting-page .included-item {
+    border: 1px solid var(--border-light);
+    background: var(--bg-light);
+    padding: 16px 16px;
+    border-radius: 10px;
+}
+
+.wine-tasting-page .included-item h4 {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: var(--color-black);
+}
+
+.wine-tasting-page .included-item p {
+    margin: 0;
 }
 
 .menu-container > h2:first-of-type {
@@ -1088,9 +1139,10 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
     font-family: var(--font-secondary);
     font-size: 18px;
     text-align: left;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+    max-width: 650px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .tasting-details li {
@@ -1110,6 +1162,77 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
     color: var(--color-accent);
     font-size: 24px;
     line-height: 0;
+}
+
+.wine-tasting-page .faq-item {
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    background: var(--color-white);
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.wine-tasting-page .faq-item summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    user-select: none;
+}
+
+.wine-tasting-page .faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.wine-tasting-page .faq-item summary::marker {
+    content: "";
+}
+
+.wine-tasting-page .faq-toggle {
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--border-medium);
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    flex: 0 0 auto;
+}
+
+.wine-tasting-page .faq-toggle::before {
+    content: "+";
+    font-size: 16px;
+    line-height: 1;
+    transform: translateY(-1px);
+}
+
+.wine-tasting-page .faq-item[open] .faq-toggle::before {
+    content: "–";
+}
+
+.wine-tasting-page .faq-question {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+    color: var(--color-black);
+}
+
+.wine-tasting-page .faq-item summary:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.wine-tasting-page .faq-answer {
+    padding: 0 16px 16px;
+}
+
+.wine-tasting-page .faq-answer p {
+    margin: 0;
 }
 
 .price-tag {
@@ -1166,6 +1289,21 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
     font-family: var(--font-secondary);
     font-style: italic;
     text-align: center;
+}
+
+.wine-tasting-page .note {
+    text-align: center;
+}
+
+.wine-tasting-page > p.note {
+    text-align: center;
+}
+
+.wine-tasting-page .book-btn {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Wine Tasting Responsive */

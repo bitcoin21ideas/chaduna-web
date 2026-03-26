@@ -14,6 +14,8 @@ This document is the canonical English-language reference for Chaduna. It is int
 - Phone: +995 557 629 229
 - Website: https://chaduna.com
 - Coordinates: 41.6904705, 44.8013647
+- Business Features: Accepts reservations, accepts cash/card (GEL), multilingual staff (EN, RU, KA)
+- Audience: Tourists, Locals, Digital Nomads, Wine Enthusiasts, Food Lovers
 
 ---
 
@@ -74,11 +76,11 @@ A curated guided wine tasting that immerses guests in the history and culture of
 - Book: https://chaduna.com/reserve.html (select "wine tasting"), WhatsApp, phone, Telegram, or Instagram DM
 
 ### What Is Included
-1. Tasting of 5 distinct Georgian wines
+1. Tasting of 5 distinct Georgian wines (including natural, amber, and qvevri-aged varieties)
 2. Presentation on 8,000 years of Georgian winemaking history
 3. Introduction to Qvevri clay-vessel fermentation technology
 4. Guide to Georgia's unique wine regions and grape varieties
-5. Hosted by knowledgeable staff
+5. Hosted by knowledgeable, multilingual staff (English, Russian, Georgian)
 
 ### Wine Tasting FAQ
 
@@ -93,6 +95,9 @@ A: At Chaduna, 18 Galaktion Tabidze Street, near Liberty Square in downtown Tbil
 
 Q: Do I need to book in advance?
 A: Yes. You can book via the online form at chaduna.com/reserve.html (select "wine tasting"), on WhatsApp or by phone at +995 557 629 229, Telegram @chaduna_wine, or Instagram DM @cafechaduna.
+
+Q: Is the wine tasting available in different languages?
+A: Yes, our staff can host the tasting in English, Russian, or Georgian. Please mention your preferred language when booking.
 
 Q: What will I learn about Georgian wine?
 A: You will learn about the 8,000-year history of Georgian winemaking, traditional Qvevri clay vessel technology, Georgia's unique grape varieties, and the different wine regions of Georgia.
@@ -118,7 +123,7 @@ Chaduna Hub is a flexible coworking space located in the same building as the Ch
 - Comfortable, flexible workstations
 - Cafe access (coffee, food, drinks from Chaduna)
 - 20% discount at Chaduna cafe for Hub members
-- 2 complimentary drinks daily
+- 2 complimentary drinks daily for Hub members
 - Modern facilities
 - Located near Liberty Square metro station
 
@@ -188,20 +193,60 @@ A: Cash and card are accepted. Currency is GEL (Georgian Lari).
 
 ---
 
-## Menu
+## Menu (Food & Drinks)
+*Prices are in GEL (Georgian Lari) and include 18% VAT. The full menu is available in 10 languages: [English](https://chaduna.com/menus/menu_en.html), [Russian](https://chaduna.com/menus/menu_ru.html), [German](https://chaduna.com/menus/menu_de.html), [French](https://chaduna.com/menus/menu_fr.html), [Spanish](https://chaduna.com/menus/menu_es.html), [Italian](https://chaduna.com/menus/menu_it.html), [Turkish](https://chaduna.com/menus/menu_tr.html), [Georgian](https://chaduna.com/menus/menu_ka.html), [Chinese](https://chaduna.com/menus/menu_zh.html), and [Arabic](https://chaduna.com/menus/menu_ar.html).*
 
-Menu is available in 10 languages. Categories include: Bruschettas, Breakfast, Specials, Desserts, Hot Drinks, Cold Drinks, and Wine.
+### Breakfast (25 GEL)
+- **Chizhi Bizhi**: Eggs, Tomatoes, Onions, Cheese, Spices & Herbs.
+- **Frittata**: Eggs, Mushrooms, Bell Peppers, Garlic, Cheese, Cream.
+- **Scrambled Eggs**: Eggs, Cheese, Cherry Tomatoes, Spices & Herbs.
+- **Syrniki**: Cottage cheese pancakes served with seasonal fruits.
+- **Quesadilla**: 
+    - Chicken: Chicken, Bell Pepper Mix, Tomato & Mozarella.
+    - Veggie: Carrot, Bell Pepper Mix, Tomato, Onion & Mozarella.
 
-- English: https://chaduna.com/menus/menu_en.html
-- Russian: https://chaduna.com/menus/menu_ru.html
-- German: https://chaduna.com/menus/menu_de.html
-- French: https://chaduna.com/menus/menu_fr.html
-- Spanish: https://chaduna.com/menus/menu_es.html
-- Italian: https://chaduna.com/menus/menu_it.html
-- Turkish: https://chaduna.com/menus/menu_tr.html
-- Georgian: https://chaduna.com/menus/menu_ka.html
-- Chinese: https://chaduna.com/menus/menu_zh.html
-- Arabic: https://chaduna.com/menus/menu_ar.html
+*(Additional options: Add Bacon +3 GEL, Add Bread +3 GEL)*
+
+### Bruschetta (15 GEL)
+- **Carrot Bruschetta**: Carrot, Garlic, Cream, Pumpkin Seed.
+- **Pesto Bruschetta**: Cherry Tomato, Pesto, Sesame Seed.
+- **Champignon Bruschetta**: Champignon, Garlic, Cream, Sunflower Seed.
+- **Spinach Bruschetta**: Spinach, Garlic, Blue Cheese, Almond Flake.
+- **Bacon and Apple Bruschetta**: Bacon, Apple, Honey, Lemon Juice, Cream Cheese, Sesame Seed.
+
+### Chaduna Special (30 GEL)
+- **Tomato Salad**: Fresh Mixed Tomatoes, Seasonal Fruits, Berries, Cheese, Special Dressing.
+- **Potato with Bacon**: Potato, Bacon, Cherry Tomatoes, Onion, Cream, Cheese.
+- **Veggie Casserole**: Potato, Carrot, Bell Pepper, Zuccini, Cherry Tomatoes, Cream, Cheese.
+
+### Dessert (12 GEL)
+- Banana Bread
+- Cake
+
+### Hot Drinks
+- Espresso / Double: 6 / 8 GEL
+- Americano: 6 GEL
+- Cappuccino / Flat White / Large: 9 / 11 / 16 GEL
+- Latte / Double / Large: 9 / 11 / 16 GEL
+- Raf: 9 GEL
+- Cacao / Hot Choco: 9 GEL
+- Tea: 9 GEL
+- Alternative Milk (Almond, oat, hazelnut, banana, coconut): +3 GEL
+- Add Mint, Honey: +2 GEL
+
+### Cold Drinks
+- Ice Tea: 9 GEL
+- Ice Latte: 9 GEL
+- Homemade Lemonade: 9 GEL
+- Borjomi: 3 GEL
+- Bakuriani: 2 GEL
+
+### Wine / Chacha
+- Chacha: 10 GEL
+- White Glass: 14 GEL
+- Amber Glass: 16 GEL
+- Red Glass: 16 GEL
+*(60+ wines available by the bottle)*
 
 ---
 
