@@ -1059,7 +1059,6 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
 }
 
 /* ===== WINE TASTING PAGE STYLES ===== */
-/* Center all content in wine tasting page */
 .menu-container.wine-tasting-page {
     text-align: left;
 }
@@ -1293,7 +1292,11 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
 }
 
 .wine-tasting-page .note {
-    text-align: left;
+    text-align: center;
+}
+
+.wine-tasting-page > p.note {
+    text-align: center;
 }
 
 .wine-tasting-page .book-btn {
