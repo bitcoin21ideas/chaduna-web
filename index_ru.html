@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <title>Chaduna - Cafe and Wine Bar in Tbilisi</title>
-    <link rel="canonical" href="https://chaduna.com/" />
+    <title>Chaduna - Кафе и винный бар в Тбилиси</title>
+    <link rel="canonical" href="https://chaduna.com/index_ru.html" />
+    <link rel="alternate" hreflang="en" href="https://chaduna.com/" />
+    <link rel="alternate" hreflang="ru" href="https://chaduna.com/index_ru.html" />
+    <link rel="alternate" hreflang="x-default" href="https://chaduna.com/" />
     
-    <!-- Inline critical CSS for above-the-fold content -->
     <style>
-        /* Critical CSS - Above the fold styles */
         :root {
             --color-white: white;
             --color-black: black;
@@ -83,13 +84,15 @@
         .icons-container a.icon-link:hover svg use {
             fill: var(--color-accent);
         }
-        .icons-container a.icon-link:focus-visible {
-            outline: 2px solid var(--color-accent);
-            outline-offset: 2px;
+        .lang-switcher {
+            margin-bottom: 20px;
         }
-        .icons-container a.icon-link:focus-visible svg,
-        .icons-container a.icon-link:focus-visible svg use {
-            fill: var(--color-accent);
+        .lang-switcher a {
+            color: var(--color-black);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
         @media (max-width: 768px) {
             .container { padding: 20px 15px; }
@@ -99,70 +102,9 @@
         }
     </style>
     
-    <!-- Defer non-critical CSS -->
     <link rel="stylesheet" href="/assets/css/style.css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="/assets/css/style.css">
-    </noscript>
     
-    <meta name="description" content="Chaduna - Cozy cafe and wine bar in old city of Tbilisi. Famous for 60+ kinds of wine and all-day breakfast. Dine in or take out.">
-    <meta property="og:title" content="Chaduna - Cafe and Wine Bar">
-    <meta property="og:description" content="Cozy wine bar in old city of Tbilisi serving the best syrniki in town, bruschetta, all-day breakfast and 60 + kinds of wine">
-    <meta property="og:image" content="https://chaduna.com/assets/img/chaduna-og.webp">
-    <meta property="og:url" content="https://chaduna.com/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Chaduna - Cafe and Wine Bar">
-    <meta name="twitter:description" content="Cozy cafe and wine bar in old city of Tbilisi serving the best syrniki in town, bruschetta, all-day breakfast and 60 + wines">
-    <meta name="twitter:image" content="https://chaduna.com/assets/img/chaduna-og.webp">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "@id": "https://chaduna.com#business",
-  "name": "Chaduna",
-  "url": "https://chaduna.com",
-  "telephone": "+995557629229",
-  "priceRange": "₾₾",
-  "servesCuisine": ["International", "Breakfast", "Coffee", "Wine"],
-  "hasMap": "https://maps.app.goo.gl/KVxcbbUx8NuiaHnXA",
-  "sameAs": [
-    "https://www.instagram.com/cafechaduna",
-    "https://www.google.com/maps/place/Chaduna/@41.6906646,44.8008924,17z/data=!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql",
-    "https://t.me/chaduna_wine",
-    "https://wa.me/995557629229",
-    "https://yandex.com/maps/org/chaduna/20144441734/"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "18 Galaktion Tabidze Street",
-    "addressLocality": "Tbilisi",
-    "addressRegion": "Tbilisi",
-    "postalCode": "0108",
-    "addressCountry": "GE"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 41.6904705,
-    "longitude": 44.8013647
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Monday",
-      "opens": "09:00",
-      "closes": "15:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "09:00",
-      "closes": "23:00"
-    }
-  ]
-}
-    </script>
-    <link rel="preconnect" href="https://cloud.umami.is">
+    <meta name="description" content="Chaduna - уютное кафе и винный бар в старом городе Тбилиси. Известны нашими завтраками, винной картой и дегустациями.">
     <script defer src="/assets/js/structured-data.js"></script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="1686d847-3a61-4404-ad8a-10b20e6cc87a"></script>
 </head>
@@ -177,23 +119,21 @@
             <img src="/assets/img/logos/chaduna-black@1x.webp" 
                  srcset="/assets/img/logos/chaduna-black@1x.webp 1x,
                          /assets/img/logos/chaduna-black@2x.webp 2x"
-                 alt="Chaduna — Cafe and Wine Bar in Tbilisi. All-day breakfast, bruschetta, chizhi bizhi, wine tasting, and more." 
+                 alt="Chaduna — Кафе и винный бар в Тбилиси." 
                  class="logo"
                  width="200" 
-                 height="256"
-                 fetchpriority="high"
-                 loading="eager">
+                 height="256">
         </h1>
 
         <div class="description">
-            <p>cafe and wine bar</p>
+            <p>кафе и винный бар</p>
         </div>
 
         <div class="nav-links">
-            <a href="menus/menu_en.html">menu</a>
-            <a href="gallery.html">food gallery</a>
-            <a href="reserve.html">reserve a table</a>
-            <a href="wine-tasting.html">wine tasting</a>
+            <a href="menus/menu_ru.html">меню</a>
+            <a href="gallery.html">галерея</a>
+            <a href="reserve.html">бронирование</a>
+            <a href="wine-tasting_ru.html">дегустация</a>
             <a href="hub.html">.hub</a>
         </div>
 
@@ -205,7 +145,7 @@
             </div>
 
             <div class="address">
-                <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Address on Google Maps">
+                <a href="https://www.google.com/maps/place/Chaduna/@41.6904745,44.7987898,17z/data=!3m1!4b1!4m6!3m5!1s0x40440daa8cec339d:0x9d8e3e318703149c!8m2!3d41.6904705!4d44.8013647!16s%2Fg%2F11j3kfxyql" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Адрес">
                     <svg class="icon-svg icon-svg--lg" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#maps"/></svg>
                 </a>
             </div>
@@ -223,7 +163,7 @@
             </div>
 
             <div class="phone">
-                <a href="tel:+995557629229" class="icon-link" aria-label="Phone">
+                <a href="tel:+995557629229" class="icon-link" aria-label="Телефон">
                     <svg class="icon-svg icon-svg--lg" width="40" height="40" viewBox="0 0 24 24" style="transform: scale(1.1)" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#phone"/></svg>
                 </a>
             </div>
@@ -232,19 +172,19 @@
         <br>
 
         <div class="address-text">
-            <address>18 Galaktion Tabidze Street, Tbilisi</address>
+            <address>ул. Галактиона Табидзе 18, Тбилиси</address>
         </div>
 
         <br>
 
         <div class="description">
-            <p>all-day breakfast · wine tasting · old town Tbilisi</p>
+            <p>завтраки весь день · дегустация вин · старый город Тбилиси</p>
         </div>
 
         <div class="hours">
-            <div class="hours-title">HOURS</div>
-            <p>Tuesday - Sunday: 09:00 - 23:00</p>
-            <p>Monday: 09:00 - 15:00</p>
+            <div class="hours-title">ЧАСЫ РАБОТЫ</div>
+            <p>Вторник - Воскресенье: 09:00 - 23:00</p>
+            <p>Понедельник: 09:00 - 15:00</p>
         </div>
 
     </main>
