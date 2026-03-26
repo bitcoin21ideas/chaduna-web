@@ -22,6 +22,15 @@ function toggleLanguage() {
     document.querySelector('.lang-dropdown').classList.toggle('show');
 }
 
+function switchLanguage() {
+    const currentPath = window.location.pathname;
+    if (currentPath.endsWith('_ru.html')) {
+        window.location.href = currentPath.replace('_ru.html', '.html');
+    } else if (currentPath.endsWith('.html')) {
+        window.location.href = currentPath.replace('.html', '_ru.html');
+    }
+}
+
 window.onclick = function(event) {
     if (!event.target.closest('.lang-dropbtn')) {
         var dropdowns = document.getElementsByClassName("lang-dropdown");

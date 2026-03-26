@@ -98,12 +98,11 @@
         </div>
         <div class="header-right">
             <div class="lang-dropdown">
-                <button type="button" onclick="toggleLanguage()" class="lang-dropbtn" aria-label="Select Language">
+                <button type="button" onclick="switchLanguage()" class="lang-dropbtn" aria-label="Select Language">
                     <svg class="icon-svg icon-svg--header" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#language"/></svg>
                 </button>
                 <div id="langDropdown" class="lang-dropdown-content">
-                    <a href="wine-tasting.html">EN</a>
-                    <a href="wine-tasting_ru.html">RU</a>
+                    <a href="#" onclick="switchLanguage()">EN / RU</a>
                 </div>
             </div>
             <button class="burger-btn" onclick="openBurgerMenu()" aria-label="Open menu">
