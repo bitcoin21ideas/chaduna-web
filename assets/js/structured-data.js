@@ -301,7 +301,7 @@ function buildCafeSchema(baseUrl, lang) {
           "description": "Immerse yourself in the rich history of the Cradle of Wine. A curated journey through Georgia's unique regions, technologies, and flavors. Tasting of 5 distinct wines, history of Georgian winemaking, guide to regions & Qvevri technology. Duration: 1.5–2 hours.",
           "price": "70",
           "priceCurrency": "GEL",
-          "url": "https://chaduna.com/wine-tasting",
+          "url": "https://chaduna.com/wine-tasting.html",
           "availability": "https://schema.org/InStock",
           "validFrom": "2024-01-01"
         }
