@@ -28,6 +28,14 @@
             </a>
         </div>
         <div class="header-right">
+            <div class="lang-dropdown">
+                <button type="button" onclick="switchLanguage()" class="lang-dropbtn" aria-label="Select Language">
+                    <svg class="icon-svg icon-svg--header" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/img/icons/chaduna-icons.svg#language"/></svg>
+                </button>
+                <div id="langDropdown" class="lang-dropdown-content">
+                    <a href="#" onclick="switchLanguage()">EN / RU</a>
+                </div>
+            </div>
             <button class="burger-btn" onclick="openBurgerMenu()" aria-label="Open menu">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -49,6 +57,8 @@
         <div class="intro-text">
             <p>Start your day in the heart of historic Old Tbilisi at Chaduna. We offer a cozy, laptop-friendly atmosphere perfect for enjoying breakfast at your own pace. With our full all-day breakfast menu, you can savor our signature dishes, including our famous syrniki and the local favorite Chizhi Bizhi, whenever the mood strikes.</p>
         </div>
+
+        <a href="/reserve.html" class="book-btn" onclick="umami.track('Book-Now-Click')">Book a table now</a>
 
         <section class="tasting-section">
             <h3>Menu Highlights</h3>
@@ -72,6 +82,10 @@
             </div>
         </section>
 
+        <div class="menu-cta">
+            <a href="/menus/menu_en.html" class="book-btn">View full menu</a>
+        </div>
+
         <section class="tasting-section">
             <h3>Practical Info</h3>
             <ul class="tasting-details">
@@ -81,6 +95,10 @@
                 <li><strong>Getting here</strong>: Short walk from Liberty Square metro station. Easily accessible from all central tourist areas.</li>
             </ul>
         </section>
+
+        <div class="menu-cta">
+            <a href="/gallery.html" class="book-btn">See our food gallery</a>
+        </div>
 
         <section class="tasting-section">
             <h3>FAQ</h3>
@@ -102,11 +120,8 @@
             </details>
         </section>
 
-        <a href="/reserve.html" class="book-btn" onclick="umami.track('Book-Now-Click')">Reserve a table</a>
+        <a href="/reserve.html" class="book-btn" onclick="umami.track('Book-Now-Click')">Book a table now</a>
         
-        <div class="internal-links">
-            <p><a href="/menus/menu_en.html">View full menu</a> | <a href="/gallery.html">See photo gallery</a></p>
-        </div>
     </div>
     </main>
 
