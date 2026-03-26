@@ -14,7 +14,11 @@ function switchLanguage() {
         '/wine-tasting.html': '/wine-tasting_ru.html',
         '/wine-tasting_ru.html': '/wine-tasting.html',
         '/hub.html': '/hub_ru.html',
-        '/hub_ru.html': '/hub.html'
+        '/hub_ru.html': '/hub.html',
+        '/laptop-friendly-cafe.html': '/laptop-friendly-cafe_ru.html',
+        '/laptop-friendly-cafe_ru.html': '/laptop-friendly-cafe.html',
+        '/tbilisi-guide.html': '/tbilisi-guide_ru.html',
+        '/tbilisi-guide_ru.html': '/tbilisi-guide.html'
     };
 
     // If exact match found
