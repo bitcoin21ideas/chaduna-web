@@ -255,7 +255,8 @@ A: Cash and card are accepted. Currency is GEL (Georgian Lari).
 - Home: https://chaduna.com
 - Menu (EN): https://chaduna.com/menus/menu_en.html
 - Reserve: https://chaduna.com/reserve.html
-- Wine Tasting: https://chaduna.com/wine-tasting.html
+- Wine Tasting (EN): https://chaduna.com/wine-tasting.html
+- Wine Tasting (RU): https://chaduna.com/wine-tasting_ru.html
 - Hub Coworking: https://chaduna.com/hub.html
 - Food Gallery: https://chaduna.com/gallery.html
 - Sitemap: https://chaduna.com/sitemap.xml
