@@ -1,22 +1,3 @@
-// Tab Functionality
-function showTab(tabName, event) {
-    // Hide all tab contents
-    const contents = document.querySelectorAll('.tab-content');
-    contents.forEach(content => content.classList.remove('active'));
-
-    // Remove active class from all tabs
-    const tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => tab.classList.remove('active'));
-
-    // Show selected tab content
-    document.getElementById(tabName).classList.add('active');
-
-    // Add active class to clicked tab
-    if (event) {
-        event.currentTarget.classList.add('active');
-    }
-}
-
 // Language Dropdown Functionality
 function toggleLanguage() {
     document.querySelector('.lang-dropdown').classList.toggle('show');
@@ -24,10 +5,30 @@ function toggleLanguage() {
 
 function switchLanguage() {
     const currentPath = window.location.pathname;
+    
+    // Define the pairs for switching
+    const mappings = {
+        '/index.html': '/index_ru.html',
+        '/index_ru.html': '/index.html',
+        '/': '/index_ru.html',
+        '/wine-tasting.html': '/wine-tasting_ru.html',
+        '/wine-tasting_ru.html': '/wine-tasting.html'
+    };
+
+    // If exact match found
+    if (mappings[currentPath]) {
+        window.location.href = mappings[currentPath];
+        return;
+    }
+
+    // Default fallback: toggle _ru suffix
     if (currentPath.endsWith('_ru.html')) {
         window.location.href = currentPath.replace('_ru.html', '.html');
     } else if (currentPath.endsWith('.html')) {
         window.location.href = currentPath.replace('.html', '_ru.html');
+    } else {
+        // Fallback for root
+        window.location.href = '/index_ru.html';
     }
 }
 
@@ -42,5 +43,3 @@ window.onclick = function(event) {
         }
     }
 }
-
-
