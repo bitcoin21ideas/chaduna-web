@@ -9,7 +9,6 @@ This repository contains the source code for the static website for Chaduna, a c
 The project is hosted via GitHub Pages and is configured to use a custom domain.
 
   * **Live URL:** [`https://chaduna.com`](https://chaduna.com)
-  * **GitHub Pages URL:** `https://bitcoin21ideas.github.io/chaduna-web/`
 
 -----
 
@@ -19,12 +18,22 @@ The project uses a standard, organized static file structure to separate content
 
 ```text
 /
-├── index.html            // The main landing page/homepage.
-├── hub.html              // Coworking space landing page (pricing, timing, info).
-├── gallery.html          // Food gallery page with interactive lightbox viewer.
-├── wine-tasting.html     // Wine tasting offer and booking link.
+├── index.html            // Main landing page/homepage (EN).
+├── index_ru.html         // Main landing page/homepage (RU).
+├── hub.html              // Coworking page (EN).
+├── hub_ru.html           // Coworking page (RU).
+├── gallery.html          // Food gallery page.
+├── wine-tasting.html     // Wine tasting page (EN).
+├── wine-tasting_ru.html  // Wine tasting page (RU).
+├── breakfast.html        // Breakfast landing page (EN).
+├── breakfast_ru.html     // Breakfast landing page (RU).
+├── laptop-friendly-cafe.html    // Laptop-friendly/coworking explainer (EN).
+├── laptop-friendly-cafe_ru.html // Laptop-friendly/coworking explainer (RU).
+├── tbilisi-guide.html    // Tbilisi guide page (EN).
+├── tbilisi-guide_ru.html // Tbilisi guide page (RU).
 ├── reserve.html          // Table booking page (Tally embed).
-├── form-submitted.html   // Thank-you page after a booking request.
+├── form-submitted.html   // Thank-you page after a booking request (noindex).
+├── yandex_db50264587e1b3cd.html // Yandex verification page.
 ├── menus/
 │   ├── menu_en.html      // The interactive food and beverage menu page (English).
 │   ├── menu_ru.html      // Russian menu.
@@ -38,25 +47,29 @@ The project uses a standard, organized static file structure to separate content
 │   └── menu_ar.html      // Arabic menu.
 ├── CNAME                 // GitHub Pages file for custom domain setup (chaduna.com).
 ├── robots.txt            // Instructions for web crawlers.
-├── sitemap.xml           // XML sitemap listing all site URLs with hreflang tags for search engines.
+├── sitemap.xml           // XML sitemap listing indexed URLs with hreflang tags.
+├── llms.txt              // AI crawler-facing summary file.
+├── llms-full.txt         // Extended AI crawler-facing context file.
 ├── favicon.svg           // SVG favicon.
 ├── favicon.png           // PNG favicon.
 ├── favicon.ico           // ICO favicon.
 ├── .gitignore            // List of files and folders to ignore (e.g., .DS_Store).
 └── assets/
     ├── css/
-    │   └── style.css     // All shared site styling.
+    │   ├── style.css     // Main shared site styling.
+    │   └── burger-menu.css // Burger sidebar styling.
     ├── js/
+    │   ├── burger-menu.js // Burger menu open/close and current-page highlighting.
     │   ├── menu.js       // Tab functionality and language dropdown logic.
     │   ├── form-submitted.js // Add-to-calendar on the booking thank-you page.
     │   └── structured-data.js // JavaScript file for schema.org data (JSON-LD).
     ├── fonts/
-    │   └── playfair-display/ // Playfair Display font files (WOFF2 format).
+    │   └── playfair-display/ // Playfair Display files + satoshi.woff2.
     └── img/
-        ├── logos/        // Site logos (WebP format with @1x and @2x variants).
+        ├── logos/        // Site logos (WebP with @1x and @2x variants).
         ├── icons/        // SVG icons for social media, maps, phone, home, and language.
         ├── background/   // Background images.
-        └── food/         // Food photography for the gallery (WebP format, organized by category).
+        └── food/         // Food photography for the gallery (WebP, organized by category).
 ```
 
 -----
@@ -92,7 +105,7 @@ The project uses a standard, organized static file structure to separate content
     - Other pages: standard blocking `style.css` link
     - Lazy loading for gallery images
   * **Analytics:** Privacy-friendly analytics using Umami (self-hosted) for tracking page views and user interactions.
-  * **Sitemap & Crawler Support:** Includes `robots.txt` and `sitemap.xml` with all pages (hub, gallery, menus) listed for search engine indexing. Sitemap includes hreflang tags for proper language targeting.
+  * **Sitemap & Crawler Support:** Includes `robots.txt`, `sitemap.xml`, `llms.txt`, and `llms-full.txt`. Sitemap uses hreflang/x-default for bilingual EN/RU page pairs and localized menu pages.
   * **Custom Domain:** Configured for the domain `chaduna.com` using the **`CNAME`** file.
   * **Responsive Design:** Fully responsive layout optimized for mobile, tablet, and desktop devices with touch-friendly interactions.
 
@@ -102,7 +115,7 @@ The project uses a standard, organized static file structure to separate content
 
 This project is deployed using **GitHub Pages**.
 
-1.  **Repository Setup:** All code is pushed to the `main` branch.
+1.  **Branch Model:** `main` is the production branch; `dev` is the active development branch.
 2.  **Pages Configuration:** Deployment is configured to build from the **`main`** branch using the **`/ (root)`** directory.
 3.  **Custom Domain:** The `CNAME` file configures the custom domain `chaduna.com` for GitHub Pages.
 4.  **Static Files:** All HTML, CSS, JavaScript, and image files are served directly without any build process, ensuring fast deployment and easy updates.
