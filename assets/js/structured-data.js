@@ -156,13 +156,17 @@ function buildWineTastingSchema(baseUrl, lang) {
     "keywords": ["wine tasting", "Georgian wine", "Qvevri", "Tbilisi wine experience", "wine tour", "amber wine", "natural wine"]
   };
 
-  const faq = faqPage([
+  const faqItems = [
     { q: t.faq1Question, a: t.faq1Answer },
     { q: t.faq2Question, a: t.faq2Answer },
     { q: t.faq3Question, a: t.faq3Answer },
     { q: t.faq4Question, a: t.faq4Answer },
-    { q: t.faq5Question, a: t.faq5Answer }
-  ]);
+    { q: t.faq5Question, a: t.faq5Answer },
+    { q: t.faq6Question, a: t.faq6Answer },
+    { q: t.faq7Question, a: t.faq7Answer }
+  ].filter(item => item.q && item.a);
+
+  const faq = faqPage(faqItems);
 
   return { product, faq };
 }
@@ -1202,16 +1206,20 @@ const wineTastingTranslations = {
   en: {
     name: "Georgian Wine Tasting at Chaduna",
     description: "Experience the rich history of Georgian winemaking at Chaduna. Enjoy a curated tasting of 5 distinct wines, learn about Qvevri technology, explore Georgia's unique wine regions, and discover the story of the Cradle of Wine. Duration: 1.5-2 hours. Price: 70 GEL per person. Located near Liberty Square in downtown Tbilisi.",
-    faq1Question: "What is included in the wine tasting?",
-    faq1Answer: "The wine tasting includes 5 distinct Georgian wines, a presentation on the history of Georgian winemaking, an introduction to Qvevri technology, and a guide to Georgia's wine regions. Duration is 1.5-2 hours.",
-    faq2Question: "How much does the wine tasting cost?",
-    faq2Answer: "The wine tasting costs 70 GEL per person. Advance booking is required.",
-    faq3Question: "Where does the wine tasting take place?",
-    faq3Answer: "The wine tasting takes place at Chaduna, located at 18 Galaktion Tabidze Street, near Liberty Square in downtown Tbilisi.",
-    faq4Question: "Do I need to book in advance?",
-    faq4Answer: "Yes, advance booking is required for wine tastings. You can book via our online form at chaduna.com/reserve.html (select 'wine tasting'), on WhatsApp or by phone at +995 557 629 229, Telegram @chaduna_wine, or Instagram DM @cafechaduna.",
-    faq5Question: "What will I learn about Georgian wine?",
-    faq5Answer: "You will learn about the 8,000-year history of Georgian winemaking, traditional Qvevri clay vessel technology, Georgia's unique grape varieties, and the different wine regions of Georgia."
+    faq1Question: "Do I need to know anything about wine beforehand?",
+    faq1Answer: "No — this tasting is designed for beginners and curious drinkers. We’ll guide you through how to taste, how to describe what you like, and what makes Georgian wine unique.",
+    faq2Question: "Is the tasting available in English/Russian?",
+    faq2Answer: "Yes. We can host the tasting in English, Russian, or Georgian — please mention your preferred language when booking.",
+    faq3Question: "Can I book for a private group?",
+    faq3Answer: "Yes. Private group tastings are available on request, subject to availability and group size.",
+    faq4Question: "What wines are included?",
+    faq4Answer: "We taste 5 wines with a mix of styles (including amber, natural, and qvevri-aged), selected by our team based on what’s in great form that week. The lineup typically represents different Georgian regions and approaches.",
+    faq5Question: "Is food served during the tasting?",
+    faq5Answer: "This is a wine-focused experience. If you’d like to add food, you’re welcome to order from our menu before or after the tasting (or alongside, depending on timing and service).",
+    faq6Question: "What is your cancellation policy?",
+    faq6Answer: "Please cancel if you changed your mind — all cancellations are free.",
+    faq7Question: "How far in advance should I book?",
+    faq7Answer: "We recommend booking at least 24 hours in advance so we can schedule your tasting and prepare the wines."
   },
 
   ru: {

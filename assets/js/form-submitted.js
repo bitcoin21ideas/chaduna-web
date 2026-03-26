@@ -122,6 +122,9 @@
         btn.addEventListener('click', function () {
             var ics = buildIcs(params);
             if (!ics) return;
+            if (window.umami && typeof window.umami.track === 'function') {
+                window.umami.track('Add-To-Calendar-Click');
+            }
             var filename = 'chaduna-booking-' + (params.date || 'event') + '.ics';
             downloadIcs(ics, filename);
         });

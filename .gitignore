@@ -13,3 +13,7 @@ Thumbs.db
 
 # cursor files
 .cursor/
+
+# Claude Code
+CLAUDE.md
+.claude/
