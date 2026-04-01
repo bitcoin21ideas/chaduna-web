@@ -49,3 +49,24 @@ window.onclick = function(event) {
         }
     }
 }
+
+function showTab(tabName, event) {
+    var tabContents = document.getElementsByClassName('tab-content');
+    for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove('active');
+    }
+
+    var tabs = document.getElementsByClassName('tab');
+    for (var j = 0; j < tabs.length; j++) {
+        tabs[j].classList.remove('active');
+    }
+
+    var activeContent = document.getElementById(tabName);
+    if (activeContent) {
+        activeContent.classList.add('active');
+    }
+
+    if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
+    }
+}
