@@ -88,6 +88,6 @@ Allow: /
 
 Sitemap: https://chaduna.com/sitemap.xml
 
-AI-readable site summaries
-Concise: https://chaduna.com/llms.txt
-Detailed: https://chaduna.com/llms-full.txt
+# AI-readable site summaries (for LLM crawlers, not standard robots.txt syntax)
+# Concise: https://chaduna.com/llms.txt
+# Detailed: https://chaduna.com/llms-full.txt
