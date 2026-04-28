@@ -1,0 +1,56 @@
+/* ===== BURGER MENU (DARK THEME) ===== */
+/* Scoped to Winyl Sessions only */
+
+body.winyl-sessions-page .burger-overlay {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+body.winyl-sessions-page .burger-sidebar {
+    background: var(--color-black);
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.6);
+}
+
+body.winyl-sessions-page .burger-close {
+    color: var(--color-white);
+}
+
+body.winyl-sessions-page .burger-close:hover,
+body.winyl-sessions-page .burger-close:focus-visible {
+    color: var(--color-accent);
+}
+
+body.winyl-sessions-page .burger-nav-links a {
+    color: var(--text-light);
+}
+
+body.winyl-sessions-page .burger-nav-links a:hover,
+body.winyl-sessions-page .burger-nav-links a:focus-visible {
+    color: var(--color-white);
+}
+
+body.winyl-sessions-page .burger-nav--current {
+    color: rgba(255, 255, 255, 0.38) !important;
+}
+
+body.winyl-sessions-page .burger-social-icons a {
+    color: var(--color-white);
+}
+
+body.winyl-sessions-page .burger-social-icons a:hover,
+body.winyl-sessions-page .burger-social-icons a:focus-visible {
+    color: var(--color-accent);
+}
+
+body.winyl-sessions-page .burger-footer {
+    border-top-color: rgba(255, 255, 255, 0.14);
+}
+
+body.winyl-sessions-page .burger-address,
+body.winyl-sessions-page .burger-powered {
+    color: var(--text-light);
+}
+
+body.winyl-sessions-page .burger-powered a {
+    color: var(--color-accent);
+}
+
