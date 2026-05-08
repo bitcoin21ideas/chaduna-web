@@ -30,7 +30,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--overlay-medium);
     z-index: 200;
 }
 
@@ -46,13 +46,13 @@
     bottom: 0 !important;
     height: 100% !important;
     width: 80vw;
-    background: #ffffff;
+    background: var(--color-white);
     z-index: 201;
     display: flex;
     flex-direction: column;
     padding: 10px 32px 12px;
     transform: translateX(100%);
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-base);
     overflow-y: auto;
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
 }
@@ -77,14 +77,14 @@
     display: flex;
     align-items: center;
     align-self: flex-end;
-    color: #000000;
+    color: var(--color-black);
     line-height: 0;
     margin-bottom: 28px;
-    transition: color 0.2s ease;
+    transition: color var(--transition-fast);
 }
 
 .burger-close:hover {
-    color: #89393E;
+    color: var(--color-accent);
 }
 
 /* Nav links */
@@ -98,20 +98,20 @@
 
 .burger-nav-links a {
     text-decoration: none;
-    color: #000000;
-    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--color-black);
+    font-family: var(--font-primary);
     font-size: 22px;
     font-weight: 400;
     letter-spacing: 0.02em;
-    transition: color 0.2s ease;
+    transition: color var(--transition-fast);
 }
 
 .burger-nav-links a:hover {
-    color: #89393E;
+    color: var(--color-accent);
 }
 
 .burger-nav--current {
-    color: #aaaaaa !important;
+    color: var(--burger-nav-current) !important;
 }
 
 /* Social icons row */
@@ -125,25 +125,25 @@
 .burger-social-icons a {
     display: flex;
     align-items: center;
-    color: #000000;
+    color: var(--color-black);
     line-height: 0;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color var(--transition-fast);
 }
 
 .burger-social-icons a:hover {
-    color: #89393E;
+    color: var(--color-accent);
 }
 
 .burger-social-icons a svg {
     display: block;
     fill: currentColor;
-    transition: fill 0.2s ease;
+    transition: fill var(--transition-fast);
 }
 
 .burger-social-icons a svg use {
     fill: currentColor;
-    transition: fill 0.2s ease;
+    transition: fill var(--transition-fast);
 }
 
 /* Sidebar footer — address near icons, "Powered by" pinned to very bottom */
@@ -152,14 +152,14 @@
     flex-direction: column;
     flex: 1;
     text-align: center;
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid var(--border-light);
     padding-top: 28px;
 }
 
 .burger-address {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: var(--font-primary);
     font-size: 13px;
-    color: #666666;
+    color: var(--text-muted);
     margin-bottom: 0;
 }
 
@@ -168,24 +168,16 @@
     padding-bottom: 4px;
     font-family: system-ui, sans-serif;
     font-size: 11px;
-    color: #666666;
+    color: var(--text-muted);
 }
 
 .burger-powered a {
-    color: #89393E;
+    color: var(--color-accent);
     text-decoration: none;
 }
 
 .burger-powered a:hover {
     text-decoration: underline;
-}
-
-/* Gallery page title — overrides global h1 { line-height: 0; margin: 0 } */
-.gallery-page-title {
-    text-align: center;
-    line-height: 1.2;
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
 }
 
 /* Hub page: green hovers — this file loads after style.css; .burger-powered unchanged */

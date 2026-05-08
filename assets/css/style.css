@@ -77,6 +77,13 @@
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-base: 0.3s ease;
+
+    /* z-index */
+    --z-header-sticky: 100;
+    --z-lang-dropdown: 101;
+    --z-lightbox: 1000;
+    --z-lightbox-close: 1001;
+    --z-lightbox-nav: 1002;
 }
 
 * {
@@ -365,32 +372,26 @@ a.icon-link:hover svg use,
 
 /* ===== RESERVE PAGE OVERRIDES ===== */
 /* Reserve page centering */
-.menu-container > h2 {
-    text-align: center;
-    justify-content: center;
-    border-bottom: none;
-}
-
-.menu-container > h2 + p {
+body[data-page="reserve"] .menu-container > h2 + p {
     text-align: center;
     font-size: 20px;
     font-weight: 400;
 }
 
-.menu-container > h2 + p a {
+body[data-page="reserve"] .menu-container > h2 + p a {
     color: var(--color-accent);
     text-decoration: none;
 }
 
-.menu-container .address-text {
+body[data-page="reserve"] .menu-container .address-text {
     text-align: center;
 }
 
-.menu-container .hours {
+body[data-page="reserve"] .menu-container .hours {
     text-align: center;
 }
 
-.menu-container .hours-title {
+body[data-page="reserve"] .menu-container .hours-title {
     text-align: center;
 }
 
@@ -479,7 +480,7 @@ a .menu-logo:hover {
     background: none;
     color: var(--text-muted);
     font-family: var(--font-primary);
-    transition: all var(--transition-base);
+    transition: color var(--transition-base);
 }
 
 .tab.active {
@@ -587,7 +588,7 @@ h2 {
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: var(--z-header-sticky);
 }
 
 .header-left a,
@@ -669,7 +670,7 @@ h2 {
     background-color: var(--color-white);
     min-width: 60px;
     box-shadow: 0px 8px 16px 0px var(--shadow-soft);
-    z-index: 101;
+    z-index: var(--z-lang-dropdown);
     overflow: hidden;
 }
 
@@ -745,6 +746,12 @@ h2 {
     padding: 20px 0;
 }
 
+body[data-page="gallery"] .menu-container > h2 {
+    text-align: center;
+    border-bottom: none;
+    display: block;
+}
+
 /* Mobile optimization for gallery */
 @media (max-width: 600px) {
     .gallery-grid {
@@ -790,7 +797,7 @@ h2 {
 /* Lightbox */
 .lightbox {
     position: fixed;
-    z-index: 1000;
+    z-index: var(--z-lightbox);
     left: 0;
     top: 0;
     width: 100%;
@@ -846,7 +853,7 @@ h2 {
     font-weight: bold;
     cursor: pointer;
     transition: color var(--transition-fast);
-    z-index: 1001;
+    z-index: var(--z-lightbox-close);
     background: var(--overlay-medium);
     width: 50px;
     height: 50px;
@@ -875,7 +882,7 @@ h2 {
     transition: background-color var(--transition-base);
     border-radius: 0 3px 3px 0;
     user-select: none;
-    z-index: 1002;
+    z-index: var(--z-lightbox-nav);
     background: var(--overlay-light);
 }
 
@@ -1055,7 +1062,8 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
     margin: 0;
 }
 
-.menu-container > h2:first-of-type {
+body[data-page="reserve"] .menu-container > h2:first-of-type,
+body[data-page="wine-tasting"] .menu-container > h2:first-of-type {
     text-align: center;
     border-bottom: none;
     display: block;
@@ -1260,6 +1268,14 @@ main + footer.site-footer {
     margin-top: 1.5rem;
 }
 
+/* Gallery page title — overrides global h1 { line-height: 0; margin: 0 } */
+.gallery-page-title {
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
 .price-tag-unit {
     font-size: 16px;
     color: var(--color-black);
@@ -1281,161 +1297,4 @@ main + footer.site-footer {
 .menu-wine-bottle-intro-break {
     display: block;
     margin-top: 0.5em;
-}
-/* ===== WINYL SESSIONS THEME ===== */
-
-/* Winyl Sessions */
-body.menu.winyl-sessions-page {
-    background: var(--color-black);
-    color: var(--text-light);
-}
-
-body.winyl-sessions-page .menu-header {
-    background: var(--color-black);
-}
-
-body.winyl-sessions-page .burger-btn {
-    color: var(--color-white);
-}
-
-body.winyl-sessions-page .menu-logo {
-    opacity: 1;
-}
-
-body.menu.winyl-sessions-page h2 {
-    color: var(--color-white);
-    border-bottom-color: rgba(255, 255, 255, 0.14);
-}
-
-body.winyl-sessions-page .winyl-title {
-    margin: 22px 0 6px;
-}
-
-body.winyl-sessions-page .intro-text,
-body.winyl-sessions-page .address-text {
-    color: var(--text-light);
-}
-
-body.winyl-sessions-page .address-text address {
-    color: var(--text-light);
-}
-
-body.winyl-sessions-page .winyl-kicker {
-    margin-top: 10px;
-    text-align: center;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-size: 13px;
-    color: var(--text-light);
-}
-
-body.winyl-sessions-page .winyl-subkicker {
-    margin-top: 0;
-    margin-bottom: 18px;
-    text-align: center;
-    font-size: 14px;
-    color: var(--text-light);
-    opacity: 0.9;
-}
-
-body.winyl-sessions-page .winyl-hero-copy {
-    font-family: var(--font-secondary);
-    font-size: 20px;
-    line-height: 1.6;
-    margin: 18px auto 18px;
-    max-width: 600px;
-    text-align: center;
-    color: var(--color-white);
-}
-
-body.winyl-sessions-page .winyl-meta {
-    text-align: center;
-    font-family: var(--font-secondary);
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 28px;
-    color: var(--text-light);
-}
-
-body.winyl-sessions-page .winyl-figure {
-    margin: 28px 0;
-}
-
-body.winyl-sessions-page .winyl-figure img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: none;
-    background: transparent;
-}
-
-body.winyl-sessions-page .winyl-quote {
-    border-left: 2px solid rgba(255, 255, 255, 0.18);
-    padding-left: 16px;
-    margin: 48px 0 34px;
-    color: var(--text-light);
-}
-
-body.winyl-sessions-page .winyl-quote p {
-    font-family: var(--font-secondary);
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-body.winyl-sessions-page .winyl-section p {
-    font-family: var(--font-secondary);
-    font-size: 18px;
-    line-height: 1.7;
-    color: var(--text-light);
-    text-align: center;
-}
-
-body.winyl-sessions-page .book-btn {
-    background-color: var(--color-black);
-    border-color: var(--color-white);
-    color: var(--color-white);
-    font-weight: 700;
-}
-
-body.winyl-sessions-page .book-btn:hover {
-    background-color: var(--color-white);
-    color: var(--color-black);
-    border-color: var(--color-white);
-}
-
-body.winyl-sessions-page .book-btn:active {
-    background-color: var(--color-white);
-    color: var(--color-black);
-    border-color: var(--color-white);
-}
-
-body.winyl-sessions-page .book-btn:focus-visible {
-    outline: 2px solid var(--color-white);
-    outline-offset: 3px;
-}
-
-/* Winyl buttons inside .nav-links should not inherit link hover scaling */
-body.winyl-sessions-page .nav-links a.book-btn {
-    font-size: 20px;
-    transform: none;
-}
-
-body.winyl-sessions-page .nav-links a.book-btn:hover {
-    transform: none;
-}
-
-/* Shared wide button option for Winyl pages */
-body.winyl-sessions-page .book-btn--wide {
-    width: 360px;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-body.winyl-sessions-page .site-footer {
-    background: var(--color-black);
-    color: var(--text-light);
-}
-
-body.winyl-sessions-page .site-footer a {
-    color: var(--color-accent);
 }

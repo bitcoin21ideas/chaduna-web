@@ -1,0 +1,165 @@
+/* ===== WINYL SESSIONS THEME ===== */
+
+/* Winyl Sessions */
+body.menu.winyl-sessions-page {
+    background: var(--color-black);
+    color: var(--text-light);
+}
+
+body.winyl-sessions-page .menu-header {
+    background: var(--color-black);
+}
+
+body.winyl-sessions-page .burger-btn {
+    color: var(--color-white);
+}
+
+body.winyl-sessions-page .menu-logo {
+    opacity: 1;
+}
+
+body.menu.winyl-sessions-page h2 {
+    display: block;
+    justify-content: initial;
+    align-items: initial;
+    text-align: center;
+    color: var(--color-white);
+    border-bottom-color: rgba(255, 255, 255, 0.14);
+}
+
+body.winyl-sessions-page .winyl-title {
+    margin: 22px 0 6px;
+}
+
+body.winyl-sessions-page .intro-text,
+body.winyl-sessions-page .address-text {
+    color: var(--text-light);
+}
+
+body.winyl-sessions-page .address-text {
+    text-align: center;
+}
+
+body.winyl-sessions-page .address-text address {
+    color: var(--text-light);
+}
+
+body.winyl-sessions-page .winyl-kicker {
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+body.winyl-sessions-page .winyl-subkicker {
+    margin-top: 0;
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+body.winyl-sessions-page .winyl-hero-copy {
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 18px auto 18px;
+    max-width: 600px;
+    text-align: center;
+    color: var(--color-white);
+}
+
+body.winyl-sessions-page .winyl-meta {
+    text-align: center;
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    color: var(--text-light);
+}
+
+body.winyl-sessions-page .winyl-figure {
+    margin: 28px 0;
+}
+
+body.winyl-sessions-page .winyl-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    background: transparent;
+}
+
+body.winyl-sessions-page .winyl-quote {
+    border-left: 2px solid rgba(255, 255, 255, 0.18);
+    padding-left: 16px;
+    margin: 48px 0 34px;
+    color: var(--text-light);
+}
+
+body.winyl-sessions-page .winyl-quote p {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+body.winyl-sessions-page .winyl-section p {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text-light);
+    text-align: center;
+}
+
+body.winyl-sessions-page .book-btn {
+    background-color: var(--color-black);
+    border-color: var(--color-white);
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+body.winyl-sessions-page .book-btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-white);
+}
+
+body.winyl-sessions-page .book-btn:active {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-white);
+}
+
+body.winyl-sessions-page .book-btn:focus-visible {
+    outline: 2px solid var(--color-white);
+    outline-offset: 3px;
+}
+
+/* Winyl buttons inside .nav-links should not inherit link hover scaling */
+body.winyl-sessions-page .nav-links a.book-btn {
+    font-size: 20px;
+    transform: none;
+}
+
+body.winyl-sessions-page .nav-links a.book-btn:hover {
+    transform: none;
+}
+
+/* Shared wide button option for Winyl pages */
+body.winyl-sessions-page .book-btn--wide {
+    width: 360px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body.winyl-sessions-page .site-footer {
+    background: var(--color-black);
+    color: var(--text-light);
+}
+
+body.winyl-sessions-page .site-footer a {
+    color: var(--color-accent);
+}
