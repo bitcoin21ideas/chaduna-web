@@ -48,7 +48,7 @@
     src: url('/assets/fonts/playfair-display/satoshi.woff2') format('woff2');
 }
 
-/* Reset */
+/* Design tokens */
 :root {
     /* Colors */
     --color-white: white;
@@ -173,6 +173,7 @@ body.landing .nav-links a[href="hub.html"]:hover {
     color: var(--color-hub-accent);
 }
 
+/* ===== HUB-RELATED CLASSES (HUB PAGE) ===== */
 .hub-description {
     margin: 20px 0;
     font-family: var(--font-primary);
@@ -222,6 +223,7 @@ body.landing .nav-links a[href="hub.html"]:hover {
     color: var(--text-dark);
 }
 
+/* ===== ICONS (SHARED) ===== */
 /* Icons Container */
 .icons-container {
     display: flex;
@@ -331,6 +333,7 @@ a.icon-link:hover svg use,
     font-style: normal;
 }
 
+/* ===== ADDRESS / DESCRIPTION / HOURS (SHARED) ===== */
 /* Description */
 .description {
     margin: 0 0 40px;
@@ -360,6 +363,7 @@ a.icon-link:hover svg use,
     font-weight: 400;
 }
 
+/* ===== RESERVE PAGE OVERRIDES ===== */
 /* Reserve page centering */
 .menu-container > h2 {
     text-align: center;
@@ -390,6 +394,7 @@ a.icon-link:hover svg use,
     text-align: center;
 }
 
+/* ===== FORM-SUBMITTED PAGE ===== */
 /* Form-submitted thank-you page */
 .form-submitted-page .thank-you-intro,
 .form-submitted-page .thank-you-cta {
@@ -665,7 +670,6 @@ h2 {
     min-width: 60px;
     box-shadow: 0px 8px 16px 0px var(--shadow-soft);
     z-index: 101;
-    border-radius: 0px;
     overflow: hidden;
 }
 
@@ -868,7 +872,7 @@ h2 {
     color: var(--color-white);
     font-weight: bold;
     font-size: 30px;
-    transition: var(--transition-base);
+    transition: background-color var(--transition-base);
     border-radius: 0 3px 3px 0;
     user-select: none;
     z-index: 1002;
@@ -1037,7 +1041,6 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
     border: 1px solid var(--border-light);
     background: var(--bg-light);
     padding: 16px 16px;
-    border-radius: 0;
 }
 
 .wine-tasting-page .included-item h4 {
@@ -1103,7 +1106,6 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
 
 .wine-tasting-page .faq-item {
     border: 1px solid var(--border-light);
-    border-radius: 0;
     background: var(--color-white);
     margin-bottom: 12px;
     overflow: hidden;
@@ -1131,7 +1133,6 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
     width: 18px;
     height: 18px;
     border: 1px solid var(--border-medium);
-    border-radius: 0px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1188,7 +1189,7 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
     font-size: 20px;
     text-decoration: none;
     border: 1px solid var(--color-accent);
-    transition: all var(--transition-base);
+    transition: background-color var(--transition-base), color var(--transition-base);
     font-family: var(--font-secondary);
     margin: 0 auto 30px;
     cursor: pointer;
@@ -1254,10 +1255,39 @@ body.hub-page main .icons-container a.icon-link:hover svg use {
     }
 }
 
-/* ===== WINYL SESSIONS PAGE STYLES ===== */
+/* ----- Layout spacing (margin instead of layout <br> / invalid tags) ----- */
+main + footer.site-footer {
+    margin-top: 1.5rem;
+}
+
+.price-tag-unit {
+    font-size: 16px;
+    color: var(--color-black);
+}
+
+.hub-benefits {
+    margin-top: 1.25rem;
+}
+
+.tally-form-container {
+    margin-bottom: 2rem;
+}
+
+.item-description-line2 {
+    display: block;
+    margin-top: 0.35em;
+}
+
+.menu-wine-bottle-intro-break {
+    display: block;
+    margin-top: 0.5em;
+}
+/* ===== WINYL SESSIONS THEME ===== */
+
+/* Winyl Sessions */
 body.menu.winyl-sessions-page {
-    background: var(--color-black) !important;
-    color: var(--text-light) !important;
+    background: var(--color-black);
+    color: var(--text-light);
 }
 
 body.winyl-sessions-page .menu-header {
@@ -1273,7 +1303,7 @@ body.winyl-sessions-page .menu-logo {
 }
 
 body.menu.winyl-sessions-page h2 {
-    color: var(--color-white) !important;
+    color: var(--color-white);
     border-bottom-color: rgba(255, 255, 255, 0.14);
 }
 
@@ -1361,22 +1391,22 @@ body.winyl-sessions-page .winyl-section p {
 }
 
 body.winyl-sessions-page .book-btn {
-    background-color: var(--color-black) !important;
-    border-color: var(--color-white) !important;
-    color: var(--color-white) !important;
+    background-color: var(--color-black);
+    border-color: var(--color-white);
+    color: var(--color-white);
     font-weight: 700;
 }
 
 body.winyl-sessions-page .book-btn:hover {
-    background-color: var(--color-white) !important;
-    color: var(--color-black) !important;
-    border-color: var(--color-white) !important;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-white);
 }
 
 body.winyl-sessions-page .book-btn:active {
-    background-color: var(--color-white) !important;
-    color: var(--color-black) !important;
-    border-color: var(--color-white) !important;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-white);
 }
 
 body.winyl-sessions-page .book-btn:focus-visible {
@@ -1386,12 +1416,12 @@ body.winyl-sessions-page .book-btn:focus-visible {
 
 /* Winyl buttons inside .nav-links should not inherit link hover scaling */
 body.winyl-sessions-page .nav-links a.book-btn {
-    font-size: 20px !important;
-    transform: none !important;
+    font-size: 20px;
+    transform: none;
 }
 
 body.winyl-sessions-page .nav-links a.book-btn:hover {
-    transform: none !important;
+    transform: none;
 }
 
 /* Shared wide button option for Winyl pages */
@@ -1408,228 +1438,4 @@ body.winyl-sessions-page .site-footer {
 
 body.winyl-sessions-page .site-footer a {
     color: var(--color-accent);
-}
-
-/* ----- Layout spacing (margin instead of layout <br> / invalid tags) ----- */
-main + footer.site-footer {
-    margin-top: 1.5rem;
-}
-
-.gallery-page-title {
-    text-align: center;
-    line-height: 1.2;
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
-}
-
-.price-tag-unit {
-    font-size: 16px;
-    color: var(--color-black);
-}
-
-.hub-benefits {
-    margin-top: 1.25rem;
-}
-
-.tally-form-container {
-    margin-bottom: 2rem;
-}
-
-.item-description-line2 {
-    display: block;
-    margin-top: 0.35em;
-}
-
-.menu-wine-bottle-intro-break {
-    display: block;
-    margin-top: 0.5em;
-}
-
-/* ===== BURGER MENU ===== */
-
-/* Burger button in header */
-.burger-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    color: var(--color-black);
-    line-height: 0;
-    transition: color var(--transition-fast);
-}
-
-.burger-btn:hover {
-    color: var(--color-accent);
-}
-
-.burger-btn svg {
-    display: block;
-    transition: transform var(--transition-fast);
-}
-
-/* Overlay behind sidebar */
-.burger-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: var(--overlay-medium);
-    z-index: 200;
-}
-
-.burger-overlay.is-open {
-    display: block;
-}
-
-/* Sidebar panel */
-.burger-sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 80vw;
-    background: var(--color-white);
-    z-index: 201;
-    display: flex;
-    flex-direction: column;
-    padding: 24px 32px;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    overflow-y: auto;
-}
-
-.burger-sidebar.is-open {
-    transform: translateX(0);
-}
-
-@media (min-width: 768px) {
-    .burger-sidebar {
-        width: auto;
-        min-width: 260px;
-    }
-}
-
-/* Close button inside sidebar */
-.burger-close {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    align-self: flex-end;
-    color: var(--color-black);
-    line-height: 0;
-    margin-bottom: 32px;
-    transition: color var(--transition-fast);
-}
-
-.burger-close:hover {
-    color: var(--color-accent);
-}
-
-/* Nav links */
-.burger-nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    flex: 1;
-    justify-content: center;
-}
-
-.burger-nav-links a {
-    text-decoration: none;
-    color: var(--color-black);
-    font-family: var(--font-primary);
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    transition: color var(--transition-fast);
-}
-
-.burger-nav-links a:hover {
-    color: var(--color-accent);
-}
-
-.burger-nav--current {
-    color: var(--burger-nav-current) !important;
-}
-
-/* Social icons row */
-.burger-social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 40px;
-    margin-bottom: 32px;
-}
-
-.burger-social-icons a {
-    display: flex;
-    align-items: center;
-    color: var(--color-black);
-    line-height: 0;
-    transition: color var(--transition-fast);
-}
-
-.burger-social-icons a:hover {
-    color: var(--color-accent);
-}
-
-.burger-social-icons a svg {
-    display: block;
-    fill: currentColor;
-    transition: fill var(--transition-fast);
-}
-
-.burger-social-icons a svg use {
-    fill: currentColor;
-    transition: fill var(--transition-fast);
-}
-
-/* Sidebar footer (pinned to bottom) */
-.burger-footer {
-    text-align: center;
-    border-top: 1px solid var(--border-light);
-    padding-top: 16px;
-}
-
-.burger-address {
-    font-family: var(--font-primary);
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-}
-
-.burger-powered {
-    font-family: 'Satoshi', system-ui, sans-serif;
-    font-size: 11px;
-    color: var(--text-muted);
-}
-
-/* Hub page: green hovers for burger UI (overrides duplicate rules above). .burger-powered unchanged. */
-body.hub-page .burger-btn:hover,
-body.hub-page .burger-btn:focus-visible {
-    color: var(--color-hub-accent);
-}
-
-body.hub-page .burger-close:hover,
-body.hub-page .burger-close:focus-visible {
-    color: var(--color-hub-accent);
-}
-
-/* .burger-sidebar raises specificity over generic .burger-nav-links / .burger-social-icons rules */
-body.hub-page .burger-sidebar .burger-nav-links a:hover {
-    color: var(--color-hub-accent);
-}
-
-body.hub-page .burger-sidebar .burger-social-icons a:hover {
-    color: var(--color-hub-accent);
-}
-
-body.hub-page .burger-sidebar .burger-social-icons a:hover svg,
-body.hub-page .burger-sidebar .burger-social-icons a:hover svg use {
-    fill: var(--color-hub-accent);
 }
