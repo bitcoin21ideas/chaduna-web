@@ -2,7 +2,7 @@
 /* Scoped to Winyl Sessions only */
 
 body.winyl-sessions-page .burger-overlay {
-    background: rgba(0, 0, 0, 0.75);
+    background: var(--winyl-overlay);
 }
 
 body.winyl-sessions-page .burger-sidebar {
@@ -29,7 +29,7 @@ body.winyl-sessions-page .burger-nav-links a:focus-visible {
 }
 
 body.winyl-sessions-page .burger-nav--current {
-    color: rgba(255, 255, 255, 0.38) !important;
+    color: var(--burger-nav-current) !important;
 }
 
 body.winyl-sessions-page .burger-social-icons a {
@@ -42,7 +42,7 @@ body.winyl-sessions-page .burger-social-icons a:focus-visible {
 }
 
 body.winyl-sessions-page .burger-footer {
-    border-top-color: rgba(255, 255, 255, 0.14);
+    border-top-color: var(--winyl-border-subtle);
 }
 
 body.winyl-sessions-page .burger-address,

@@ -69,6 +69,8 @@
     --overlay-medium: rgba(0,0,0,0.5);
     --overlay-light: rgba(0,0,0,0.3);
     --overlay-white-light: rgba(255,255,255,0.1);
+    --winyl-border-subtle: rgba(255, 255, 255, 0.14);
+    --winyl-overlay: rgba(0, 0, 0, 0.75);
 
     /* Fonts */
     --font-primary: 'Playfair Display', Georgia, serif;
@@ -81,6 +83,8 @@
     /* z-index */
     --z-header-sticky: 100;
     --z-lang-dropdown: 101;
+    --z-burger-overlay: 200;
+    --z-burger-sidebar: 201;
     --z-lightbox: 1000;
     --z-lightbox-close: 1001;
     --z-lightbox-nav: 1002;
@@ -140,7 +144,7 @@ body.landing {
 }
 
 /* Logo */
-h1 {
+body.landing h1 {
     margin: 0;
     line-height: 0;
 }
@@ -268,13 +272,6 @@ a.icon-link:focus-visible,
     color: var(--color-accent);
 }
 
-a.icon-link:focus-visible svg,
-a.icon-link:focus-visible svg use,
-.lang-dropbtn:focus-visible svg,
-.lang-dropbtn:focus-visible svg use {
-    fill: var(--color-accent);
-}
-
 a.icon-link .icon-svg,
 .lang-dropbtn .icon-svg {
     display: block;
@@ -300,25 +297,15 @@ a.icon-link:focus-visible .icon-svg,
 
 a.icon-link svg,
 .lang-dropbtn svg {
-    fill: var(--color-black);
+    fill: currentColor;
     transition: fill var(--transition-fast), transform var(--transition-fast);
-}
-
-a.icon-link:hover svg,
-.lang-dropbtn:hover svg {
-    fill: var(--color-accent);
 }
 
 /* External sprite: some engines need fill on <use> for correct paint */
 a.icon-link svg use,
 .lang-dropbtn svg use {
-    fill: var(--color-black);
+    fill: currentColor;
     transition: fill var(--transition-fast);
-}
-
-a.icon-link:hover svg use,
-.lang-dropbtn:hover svg use {
-    fill: var(--color-accent);
 }
 
 .icons-container a.icon-link {
@@ -503,7 +490,7 @@ a .menu-logo:hover {
 }
 
 /* Category Headers */
-h2 {
+.menu-container h2 {
     font-size: 28px;
     margin: 30px 0 20px;
     color: var(--color-black);
@@ -979,16 +966,6 @@ body.hub-page main .icons-container a.icon-link:focus-visible {
     outline: 2px solid var(--color-hub-accent);
     outline-offset: 2px;
     color: var(--color-hub-accent);
-}
-
-body.hub-page main .icons-container a.icon-link:focus-visible svg,
-body.hub-page main .icons-container a.icon-link:focus-visible svg use {
-    fill: var(--color-hub-accent);
-}
-
-body.hub-page main .icons-container a.icon-link:hover svg,
-body.hub-page main .icons-container a.icon-link:hover svg use {
-    fill: var(--color-hub-accent);
 }
 
 /* Responsive adjustments for Hub */

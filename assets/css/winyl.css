@@ -24,7 +24,7 @@ body.menu.winyl-sessions-page h2 {
     align-items: initial;
     text-align: center;
     color: var(--color-white);
-    border-bottom-color: rgba(255, 255, 255, 0.14);
+    border-bottom-color: var(--winyl-border-subtle);
 }
 
 body.winyl-sessions-page .winyl-title {
