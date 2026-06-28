@@ -266,4 +266,24 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://chaduna.com/laptop-friendly-cafe_ru.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chaduna.com/laptop-friendly-cafe.html"/>
   </url>
+  <url>
+    <loc>https://chaduna.com/winyl-sessions/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://chaduna.com/winyl-sessions/mac-miller/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://chaduna.com/winyl-sessions/james-blake/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://chaduna.com/winyl-sessions/moderat/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.5</priority>
+  </url>
 </urlset>
